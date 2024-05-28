@@ -1,0 +1,21 @@
+@use '/src/styles/style.scss';
+
+.titleGroup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px 20px;
+  margin-bottom: 32px;
+  border: 2px solid #FFFFFF;
+  border-radius: 12px;
+}
+
+.title {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: style.$title_font_size;
+  font-weight: 700;
+}
