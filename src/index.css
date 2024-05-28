@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+/* 跳轉section時，上方預留之高度 */
+:root {
+  scroll-padding-top: 35px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;

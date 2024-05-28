@@ -67,7 +67,7 @@
 .closeBtn {
   @extend %hamburgerBtn;
   position: absolute;
-  background-image: url('../../public/svg/closeBtn.svg');
+  background-image: url('../../public/svg/close_btn.svg');
 }
 
 .logoGroup {
@@ -198,8 +198,4 @@
   .language {
     margin: 0;
   }
-}
-
-@media screen and (min-width: 1400px) {
-  
 }

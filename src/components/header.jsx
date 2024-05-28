@@ -72,7 +72,7 @@ const Header = () => {
         <hr className={styles.hr} />
         <div className={styles.downloadBtn}>
           活動電子手冊下載
-          <object data="/svg/downloadBtn.svg" className={styles.downloadIcon}> </object>
+          <object data="/svg/download_btn.svg" aria-label="downlowd" className={styles.downloadIcon}> </object>
         </div>
         <div className={styles.language}>
           <button className={`${styles.languageBtn} ${styles.active}`}>繁體中文</button>
