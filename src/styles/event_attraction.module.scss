@@ -16,7 +16,7 @@
     position: absolute;
     z-index: -1;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 188px;
     background-color: style.$light_green;
     background-image: url(../../public/svg/bg_2.svg);
@@ -133,7 +133,7 @@
     content: '';
     position: absolute;
     top: -10vw;
-    width: 100vw;
+    width: 100%;
     height: 10vw;
     background-image: url(../../public/svg/bg_3.svg);
     background-position: top center;
@@ -145,7 +145,7 @@
     content: '';
     position: absolute;
     top: -240px;
-    right: 20%;
+    right: 25%;
     width: 394px;
     height: 270px;
     background-image: url(../../public/bg/bg_3_item.png);
