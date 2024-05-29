@@ -35,7 +35,7 @@
   background-color: style.$purple;
   border-radius: 0;
   box-shadow: 0px 4px 40px 0px #0000001A;
-  font-size: 20px;
+  font-size: style.$font_size;
   color: white;
   transition: width 0.5s ease;
   
@@ -100,6 +100,7 @@
 .link {
   text-decoration: none;
   color: white;
+  font-weight: style.$body_font_weight;
 }
 
 .hr {
@@ -165,7 +166,8 @@
     background-color: style.$purple;
     border-radius: 0 0 44px 44px;
     box-shadow: 0px 4px 40px 0px #0000001A;
-    font-size: 18px;
+    font-size: style.$body_font_size;
+    font-weight: style.$body_font_weight;
   }
 
   .closeBtn {

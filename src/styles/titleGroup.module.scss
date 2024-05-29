@@ -6,8 +6,9 @@
   align-items: center;
   justify-content: center;
   gap: 12px;
-  padding: 8px 20px;
   margin-bottom: 32px;
+  padding: 8px 20px;
+  width: fit-content;
   border: 2px solid #FFFFFF;
   border-radius: 12px;
 }
@@ -16,6 +17,6 @@
   margin: 0;
   padding: 0;
   color: white;
-  font-size: style.$title_font_size;
-  font-weight: 700;
+  font-size: style.$H2_font_size;
+  font-weight: style.$title_font_weight;
 }
