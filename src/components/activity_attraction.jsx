@@ -1,4 +1,4 @@
-import styles from '../styles/event_attraction.module.scss';
+import styles from '../styles/activity_attraction.module.scss';
 import TitleGroup from './titleGroup';
 
 const cardList = [{

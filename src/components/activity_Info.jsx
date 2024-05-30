@@ -1,4 +1,4 @@
-import styles from '../styles/event_info.module.scss';
+import styles from '../styles/activity_info.module.scss';
 
 const Info = () => {
   return (

@@ -1,4 +1,4 @@
-import styles from '../styles/event_landscape.module.scss';
+import styles from '../styles/activity_landscape.module.scss';
 import TitleGroup from './titleGroup';
 
 const cardList = [{
@@ -42,12 +42,12 @@ const Landscape = () => {
   return (
     <section className={styles.container}>
       <div className={styles.bg}></div>
+      <div className={styles.wrapper}>
       <TitleGroup
         imgLeft='svg/icon_star_left.svg'
         title='周邊地景'
         imgRight='svg/icon_star_right.svg'
       />
-      <div className={styles.wrapper}>
         <div className={styles.cardList}>
           {cardList.map(card => {
             return <Card props={card} />

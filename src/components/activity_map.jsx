@@ -1,4 +1,4 @@
-import styles from '../styles/event_map.module.scss';
+import styles from '../styles/activity_map.module.scss';
 import TitleGroup from './titleGroup';
 
 const Map = () => {
