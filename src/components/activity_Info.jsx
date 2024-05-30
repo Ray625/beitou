@@ -1,12 +1,14 @@
 import styles from '../styles/activity_info.module.scss';
+import { ImgTitle } from './titleGroup';
 
 const Info = () => {
   return (
     <section className={styles.container} id='info'>
       <div className={styles.wrapper}>
-        <div className={styles.titleGroup}>
-          <h2 className={styles.title}>活動資訊</h2>
-        </div>
+        <ImgTitle
+          title='活動資訊'
+          img='/title/title_1.png'
+        />
         <div className={styles.describe}>2024北投夏日魔法節以酒家菜與那卡西為活動主軸，我們計劃以「復刻北投百年歷史酒家菜，高朋滿座同歡唱」作為活動大亮點，吸引遊客夏日遊北投品嚐美食與旅遊，冬季來北投泡湯，吸引遊客們在不同季節造訪北投！</div>
         <div className={styles.infoGroup}>
           <div className={styles.time}>

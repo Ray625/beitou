@@ -1,5 +1,5 @@
 import styles from '../styles/activity_attraction.module.scss';
-import TitleGroup from './titleGroup';
+import { TitleGroup } from './titleGroup';
 
 const cardList = [{
   num: '/number/icon_1.png',

@@ -6,6 +6,7 @@ import Map from './components/activity_map';
 import Attraction from './components/activity_attraction';
 import Landscape from './components/activity_landscape';
 import Activity from './components/activity_main';
+import Apply from './components/activity_apply';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Attraction />
       <Landscape />
       <Activity />
+      <Apply />
     </div>
   );
 }

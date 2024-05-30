@@ -1,0 +1,30 @@
+@use '/src/styles/style.scss';
+
+.linkBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  height: fit-content;
+  padding: 16px 24px;
+  border-radius: 37.5px;
+  font-size: style.$font_size;
+  color: white;
+  border-width: 2px;
+  border-style: solid;
+  transition: all 0.1s ease;
+  &:hover {
+    cursor: pointer;
+    .icon {
+      transform: translate( 4px,0);
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  transition: all 0.1s ease;
+}

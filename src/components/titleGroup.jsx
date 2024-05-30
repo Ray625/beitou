@@ -10,4 +10,12 @@ const TitleGroup = ({ imgLeft, imgRight, title }) => {
   )
 }
 
-export default TitleGroup;
+const ImgTitle = ({ title, img }) => {
+  return (
+    <div className={styles.imgTitleGroup} style={{ backgroundImage: `url(${img})`}}>
+      <h2 className={styles.imgTitle}>{title}</h2>
+    </div>
+  )
+}
+
+export {TitleGroup, ImgTitle};

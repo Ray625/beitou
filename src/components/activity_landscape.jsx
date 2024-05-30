@@ -1,5 +1,5 @@
 import styles from '../styles/activity_landscape.module.scss';
-import TitleGroup from './titleGroup';
+import { TitleGroup } from './titleGroup';
 
 const cardList = [{
   title: '星空祝福',

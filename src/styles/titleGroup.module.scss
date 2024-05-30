@@ -20,3 +20,18 @@
   font-size: style.$H2_font_size;
   font-weight: style.$title_font_weight;
 }
+
+.imgTitleGroup {
+  width: 240px;
+  height: 100px;
+  margin-bottom: 40px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.imgTitle {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}

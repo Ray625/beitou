@@ -1,5 +1,5 @@
 import styles from '../styles/activity_map.module.scss';
-import TitleGroup from './titleGroup';
+import { TitleGroup } from './titleGroup';
 
 const Map = () => {
   return (
