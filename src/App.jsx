@@ -7,6 +7,8 @@ import Attraction from './components/activity_attraction';
 import Landscape from './components/activity_landscape';
 import Activity from './components/activity_main';
 import Apply from './components/activity_apply';
+import Collect from './components/activity_collect';
+import CollectSocail from './components/activity_collect_social';
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <Landscape />
       <Activity />
       <Apply />
+      <Collect />
+      <CollectSocail />
     </div>
   );
 }

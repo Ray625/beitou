@@ -1,0 +1,122 @@
+@use '/src/styles/style.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding-top: 12px;
+  padding-bottom: 34px;
+  background-color: style.$light_green;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: style.$wrapper_width;
+  color: white;
+}
+
+.describe {
+  width: 55%;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-size: style.$font_size;
+  font-weight: style.$body_font_weight;
+  line-height: 32px;
+  text-align: center;
+}
+
+.point {
+  margin-bottom: 64px;
+  font-size: style.$body_font_size;
+  font-weight: style.$body_font_weight;
+  line-height: 28px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.rule {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 72px;
+    left: -14vw;
+    width: 14vw;
+    height: 15vw;
+    background-image: url('../../public/bg/bg_6_item_1.png');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 72px;
+    right: -12vw;
+    width: 12vw;
+    height: 11vw;
+    background-image: url('../../public/bg/bg_6_item_2.png');
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+  }
+}
+
+.img {
+  width: 40vw;
+  height: auto;
+  margin-bottom: 72px;
+}
+
+.prizeGroup {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 80px;
+  margin-bottom: 72px;
+}
+
+.prize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prizeImg {
+  width: auto;
+  height: 200px;
+  margin-bottom: 24px;
+}
+
+.tag {
+  margin-bottom: 12px;
+  padding: 4px 16px;
+  border-radius: 8px;
+  background-color: style.$dark_green;
+  font-size: style.$body_font_size;
+  font-weight: style.$title_font_weight;
+  line-height: 32px;
+}
+
+.title {
+  font-size: style.$H3_font_size;
+  font-weight: style.$title_font_weight;
+  line-height: 32px;
+}
+
+.subtitle {
+  font-size: style.$font_size;
+  font-weight: style.$body_font_weight;
+  line-height: 32px;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: style.$note_font_size;
+  font-weight: style.$body_font_weight;
+  opacity: 0.6;
+}

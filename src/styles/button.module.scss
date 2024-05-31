@@ -11,20 +11,23 @@
   padding: 16px 24px;
   border-radius: 37.5px;
   font-size: style.$font_size;
+  font-weight: style.$title_font_weight;
+  line-height: 28px;
   color: white;
   border-width: 2px;
   border-style: solid;
-  transition: all 0.1s ease;
+  transition: all 0.2s ease;
   &:hover {
     cursor: pointer;
     .icon {
-      transform: translate( 4px,0);
+      transform: translate(4px, 0);
     }
   }
 }
 
 .icon {
+  padding-top: 2px;
   width: 24px;
-  height: 24px;
-  transition: all 0.1s ease;
+  height: 26px;
+  transition: transform 0.2s ease;
 }
