@@ -168,7 +168,13 @@
     box-shadow: 0px 4px 40px 0px #0000001A;
     font-size: style.$body_font_size;
     font-weight: style.$body_font_weight;
+    .navList,
+    .language {
+      transition: opacity 0s ease 0s;
+    }
   }
+
+
 
   .closeBtn {
     display: none;

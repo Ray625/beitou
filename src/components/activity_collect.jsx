@@ -8,11 +8,12 @@ const Collect = () => {
   }
 
   return (
-    <section className={styles.container} id='collect'>
+    <section className={styles.container} >
       <div className={styles.wrapper}>
         <ImgTitle
           title='集章之旅'
           img='/title/title_4.png'
+          id='collect'
         />
         <TitleGroup
           title='五大打卡景點'

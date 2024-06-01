@@ -8,7 +8,7 @@ const CollectSocail = () => {
   }
   
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles.wrapper}>
         <TitleGroup
           title='集章社群抽獎'
@@ -24,7 +24,7 @@ const CollectSocail = () => {
           onClick={handleClick}
         />
       </div>
-    </div>
+    </section>
   )
 }
 

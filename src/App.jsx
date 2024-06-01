@@ -9,6 +9,8 @@ import Activity from './components/activity_main';
 import Apply from './components/activity_apply';
 import Collect from './components/activity_collect';
 import CollectSocail from './components/activity_collect_social';
+import Store from './components/activity_store';
+import Lottery from './components/activity_store_lottery';
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
       <Apply />
       <Collect />
       <CollectSocail />
+      <Store />
+      <Lottery />
     </div>
   );
 }

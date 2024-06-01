@@ -4,7 +4,7 @@
 
 /* 跳轉section時，上方預留之高度 */
 :root {
-  scroll-padding-top: 35px;
+  scroll-padding-top: 80px;
 }
 
 html {

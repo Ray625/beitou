@@ -9,12 +9,13 @@ const Apply = () => {
   }
 
   return (
-    <section className={styles.container} id='apply'>
+    <section className={styles.container} >
       <div className={styles.bg}></div>
       <div className={styles.wrapper}>
         <ImgTitle
           title='活動報名'
           img='/title/title_3.png'
+          id='apply'
         />
         <div className={styles.cardGroup}>
           <div className={styles.card}>

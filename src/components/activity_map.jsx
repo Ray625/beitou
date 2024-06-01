@@ -11,15 +11,15 @@ const Map = () => {
           title='活動地圖'
         />
         <div className={styles.map}>
-          地圖
+          <img src="/event/map.png" alt="地圖" className={styles.mapImg} />
         </div>
         <TitleGroup
           imgLeft='/svg/icon_calendar.svg'
           imgRight='/svg/icon_calendar.svg'
           title='活動行事曆'
         />
-        <div className={styles.calendar}>
-          行事曆
+        <div className={styles.schedule}>
+          <img src="/event/schedule.png" alt="地圖" className={styles.scheduleImg} />
         </div>
       </div>
     </section>

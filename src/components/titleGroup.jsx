@@ -10,9 +10,9 @@ const TitleGroup = ({ imgLeft, imgRight, title }) => {
   )
 }
 
-const ImgTitle = ({ title, img }) => {
+const ImgTitle = ({ title, img, id}) => {
   return (
-    <div className={styles.imgTitleGroup} style={{ backgroundImage: `url(${img})`}}>
+    <div className={styles.imgTitleGroup} style={{ backgroundImage: `url(${img})`}} id={id ? id : ''}>
       <h2 className={styles.imgTitle}>{title}</h2>
     </div>
   )
