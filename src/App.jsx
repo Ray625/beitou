@@ -11,6 +11,7 @@ import Collect from './components/activity_collect';
 import CollectSocail from './components/activity_collect_social';
 import Store from './components/activity_store';
 import Lottery from './components/activity_store_lottery';
+import Traffic from './components/traffic';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
       <CollectSocail />
       <Store />
       <Lottery />
+      <Traffic />
     </div>
   );
 }
