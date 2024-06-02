@@ -76,6 +76,7 @@ const Traffic = () => {
           onClick={handleClick}
         />
       </div>
+      <div className={styles.footer}></div>
     </section>
   )
 }

@@ -12,6 +12,7 @@ import CollectSocail from './components/activity_collect_social';
 import Store from './components/activity_store';
 import Lottery from './components/activity_store_lottery';
 import Traffic from './components/traffic';
+import QA from './components/Q&A';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
       <Store />
       <Lottery />
       <Traffic />
+      <QA />
     </div>
   );
 }

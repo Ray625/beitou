@@ -1,0 +1,110 @@
+@use '/src/styles/style.scss';
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  padding-top: 80px;
+  padding-bottom: 68px;
+  background-color: style.$middle_green;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    width: 235px;
+    height: 676px;
+    background-image: url('../../public/bg/bg_10_item_1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    right: 16%;
+    width: 140px;
+    height: 688px;
+    background-image: url('../../public/bg/bg_10_item_2.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: style.$wrapper_width;
+}
+
+.qaWrapper {
+  width: fit-content;
+  height: fit-content;
+  padding: 0px 36px;
+  border-radius: 16px;
+  background-color: white;
+}
+
+.qaGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  width: 880px;
+  height: 500px;
+  padding: 56px 50px;
+  border-radius: 16px;
+  background-color: white;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+  &::-webkit-scrollbar-button {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-track-piece {
+    background: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background: #CDC9C6;
+  }
+  &::-webkit-scrollbar-track {
+    box-shadow: transparent;
+    margin: 20px;
+  }
+}
+
+.qa {
+  width: 700px;
+}
+
+.question {
+  margin-bottom: 16px;
+  font-size: style.$font_size;
+  font-weight: style.$title_font_weight;
+  line-height: 28px;
+  color: style.$light_green;
+}
+
+.answer {
+  font-size: style.$body_font_size;
+  font-weight: style.$body_font_weight;
+  color: style.$font_black;
+}
