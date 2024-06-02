@@ -13,6 +13,7 @@ import Store from './components/activity_store';
 import Lottery from './components/activity_store_lottery';
 import Traffic from './components/traffic';
 import QA from './components/Q&A';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
       <Lottery />
       <Traffic />
       <QA />
+      <Footer />
     </div>
   );
 }
