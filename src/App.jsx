@@ -32,7 +32,7 @@ function App() {
       <Map />
       <Attraction />
       <Landscape />
-      <Activity
+      {/* <Activity
         activity={activity}
         setActivity={handleClick}
       />
@@ -43,7 +43,7 @@ function App() {
       <Lottery />
       <Traffic />
       <QA />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
