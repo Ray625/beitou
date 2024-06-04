@@ -1,4 +1,5 @@
 import './App.css';
+import { useState } from 'react';
 import KeyVisionBanner from './components/kv';
 import Header from './components/header';
 import Info from './components/activity_Info';
@@ -16,15 +17,25 @@ import QA from './components/Q&A';
 import Footer from './components/footer';
 
 function App() {
+  const [activity, setActivity] = useState(1)
+
+  // Info頁可透過點擊連結至Activity頁，並改變顯示tab
+  const handleClick = (num) => {
+    setActivity(num)
+  }
+
   return (
     <div className="App">
-      <KeyVisionBanner />
       <Header />
-      <Info />
+      <KeyVisionBanner />
+      <Info setActivity={setActivity} />
       <Map />
       <Attraction />
       <Landscape />
-      <Activity />
+      <Activity
+        activity={activity}
+        setActivity={handleClick}
+      />
       <Apply />
       <Collect />
       <CollectSocail />

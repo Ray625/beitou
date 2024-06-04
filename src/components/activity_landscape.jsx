@@ -2,20 +2,20 @@ import styles from '../styles/activity_landscape.module.scss';
 import { TitleGroup } from './titleGroup';
 
 const cardList = [{
-  title: '星空祝福',
-  location: '北投公園',
+  title: '浪漫月球',
+  location: '北投公園＆七星公園',
   img: '/attraction/image_6.png'
 },{
-  title: '奇幻森林',
+  title: '星空祝福',
   location: '北投公園',
   img: '/attraction/image_7.png'
 },{
-  title: '魔法小精靈',
+  title: '奇幻森林',
   location: '北投公園',
   img: '/attraction/image_8.png'
 },{
-  title: '浪漫月球',
-  location: '北投公園＆七星公園',
+  title: '魔法小精靈',
+  location: '北投公園',
   img: '/attraction/image_9.png'
 },{
   title: '點點螢火蟲',
@@ -49,8 +49,8 @@ const Landscape = () => {
         imgRight='svg/icon_star_right.svg'
       />
         <div className={styles.cardList}>
-          {cardList.map(card => {
-            return <Card props={card} />
+          {cardList.map((card, index) => {
+            return <Card props={card} key={index}/>
           })}
         </div>
       </div>

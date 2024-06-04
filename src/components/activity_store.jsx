@@ -4,7 +4,7 @@ import { LinkBtn } from './button';
 
 const Store = () => {
   const handleClick = () => {
-    window.open('https://www.google.com/maps/d/u/0/viewer?mid=1lXch4l0Uu1sCIqkw2O70UE-f5l7ImJzJ&ll=25.056422600000005%2C121.50993679999999&z=16', '_blank');
+    window.open('https://user234859.pse.is/5zwnfy', '_blank');
   }
 
   return (
@@ -12,7 +12,7 @@ const Store = () => {
       <div className={styles.bg}></div>
       <div className={styles.wrapper}>
         <ImgTitle
-          title='特約店家'
+          title='特約商店'
           img='/title/title_5.png'
           id='store'
         />
@@ -23,7 +23,7 @@ const Store = () => {
         />
         <div className={styles.describe}>串連百家特約店家響應活動，特別推出的活動期間專案優惠！詳細店家優惠資訊請至線上特約店家地圖或至官方FB粉絲專頁查詢～</div>
         <div className={styles.mapWrapper}>
-          <iframe src="https://www.google.com/maps/d/embed?mid=17YMZGIAvu2E1HQuevsYgQVF-XUp6WhI&ehbc=2E312F&noprof=1" className={styles.map}></iframe>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1EeiFxZZvKwfa5wnt7iBPt0tJh6JmlwY&ehbc=2E312F" className={styles.map}></iframe>
         </div>
         <LinkBtn
           title='線上特約店家地圖'

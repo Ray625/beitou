@@ -38,7 +38,7 @@ const Header = () => {
     setNavOpen(true)
     }
 
-    if (device === 'mobile') {
+    if (device === 'mobile' || device === 'tablet') {
       setNavOpen(false)
     }
   },[device])
@@ -63,7 +63,7 @@ const Header = () => {
         <ul className={styles.navList}>
           {list.map((item) => {
             return (
-              <li className={styles.navItem}>
+              <li className={styles.navItem} key={item.id}>
               <a href={`#${item.id}`} className={styles.link}>{item.title}</a>
             </li>
             )

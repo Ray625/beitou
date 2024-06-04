@@ -4,8 +4,12 @@ import { LinkBtn } from './button';
 
 const Apply = () => {
   // 修改連結即可
-  const handleClick = () => {
-    window.open('https://www.netflix.com/browse', '_blank');
+  const handleClickLeft = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLScHfO-4_q_OtpgaUQdcjVSL8OUIuKP1Y0AjiDrOZDeiwK11aQ/viewform', '_blank');
+  }
+
+  const handleClickRight = () => {
+    window.open('https://forms.gle/XZD7x8LJ3w2XEDWEA', '_blank');
   }
 
   return (
@@ -38,11 +42,11 @@ const Apply = () => {
             <LinkBtn
               title='前往報名'
               color='#6E2148'
-              onClick={()=>alert('onClick left')}
+              onClick={handleClickLeft}
             />
           </div>
           <div className={styles.card}>
-            <img src="/event/event_3.png" alt="北投小旅行" className={styles.img} />
+            <img src="/event/event_4.png" alt="夏日好聲音歌唱比賽" className={styles.img} />
             <div className={styles.infoGroup}>
               <div className={styles.info}>
                 <object data='/svg/icon_event_day.svg' className={styles.icon}> </object>
@@ -61,7 +65,7 @@ const Apply = () => {
             <LinkBtn
               title='前往報名'
               color='#6E2148'
-              onClick={handleClick}
+              onClick={handleClickRight}
             />
           </div>
         </div>

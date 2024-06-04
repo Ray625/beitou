@@ -4,7 +4,7 @@ import { TitleGroup } from './titleGroup';
 const cardList = [{
   num: '/number/icon_1.png',
   alt: '1',
-  title: '北投公園-噴水池',
+  title: '北投公園(噴水池)',
   img: '/attraction/image_1.png',
   subtitle: '夏日魔法～溫泉魔法師降臨',
   subtitleColor: '#F4AA1C',
@@ -22,30 +22,30 @@ const cardList = [{
 },{
   num: '/number/icon_3.png',
   alt: '3',
-  title: '北投公園-荷花池',
+  title: '七星公園(北投車站前)',
   img: '/attraction/image_3.png',
-  subtitle: '夏日魔法～團團圓圓',
-  subtitleColor: '#FF7628',
-  describe: '以日式油傘作為設計，油傘代表團圓圓滿意涵。白天有油傘成牆的美感，夜晚透過背投光表現更吸睛',
+  subtitle: '夏日魔法～幸福來鈴',
+  subtitleColor: '#804495',
+  describe: '以日式風鈴為設計概念，讓遊客通過廊道驅除厄運、聽著風鈴聲感受夏日幸福的到來，左右兩側可以掛上繪馬祈福',
   gridRow: '5/9'
 
 },{
   num: '/number/icon_4.png',
   alt: '4',
-  title: '北投公園走道(北投圖書館對面)',
+  title: '北投公園(荷花池)',
   img: '/attraction/image_4.png',
-  subtitle: '夏日魔法～煽來好幸運',
-  subtitleColor: '#E9545D',
-  describe: '團扇性徵招來好運。扇子上可以印上合作商家的Logo，為合作店家招來好生意，中間扇子可以轉動',
+  subtitle: '夏日魔法～團團圓圓',
+  subtitleColor: '#FF7628',
+  describe: '以日式油傘作為設計，油傘代表團圓圓滿意涵。白天有油傘成牆的美感，夜晚透過背投光表現更吸睛',
   gridRow: '6/10'
 },{
   num: '/number/icon_5.png',
   alt: '5',
-  title: '七星公園-北投車站前',
+  title: '北投公園走道(北投圖書館對面)',
   img: '/attraction/image_5.png',
-  subtitle: '夏日魔法～幸福來鈴',
-  subtitleColor: '#804495',
-  describe: '以日式風鈴為設計概念，讓遊客通過廊道驅除厄運、聽著風鈴聲感受夏日幸福的到來，左右兩側可以掛上繪馬祈福',
+  subtitle: '夏日魔法～煽來好幸運',
+  subtitleColor: '#E9545D',
+  describe: '團扇性徵招來好運。扇子上可以印上合作商家的Logo，為合作店家招來好生意，中間扇子可以轉動',
   gridRow: '9/13'
 
 }
@@ -80,8 +80,8 @@ const Attraction = () => {
           title='五大打卡景點'
         />
         <div className={styles.attractionGroup}>
-          {cardList.map((card) => {
-            return <Card props={card}/>
+          {cardList.map(card => {
+            return <Card props={card} key={card.alt}/>
           })}
         </div>
       </div>

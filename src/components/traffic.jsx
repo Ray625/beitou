@@ -56,15 +56,15 @@ const Traffic = () => {
               <ul>
                 <li className={styles.trafficItem}>
                   <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" className={styles.link}>捷運新北投站停車場</a>
-                  <div className={styles.point}>車位數25</div>
+                  <div className={styles.point}>車位數 25</div>
                 </li>
                 <li className={styles.trafficItem}>
                   <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" className={styles.link}>大業立體停車場</a>
-                  <div className={styles.point}>車位數124</div>
+                  <div className={styles.point}>車位數 124</div>
                 </li>
                 <li className={styles.trafficItem}>
                   <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" className={styles.link}>七星公園地下停車場</a>
-                  <div className={styles.point}>車位數328</div>
+                  <div className={styles.point}>車位數 328</div>
                 </li>
               </ul>
             </div>

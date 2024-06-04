@@ -18,6 +18,9 @@
   position: fixed;
   background-image: url('../../public/svg/hamburger.svg');
   box-shadow: 4px 4px 20px 0px #0000001A;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .header {
@@ -101,6 +104,9 @@
   text-decoration: none;
   color: white;
   font-weight: style.$body_font_weight;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .hr {
@@ -146,7 +152,7 @@
   }
 }
 
-@media screen and (min-width: 1450px) {
+@media screen and (min-width: 1440px) {
   .hamburger {
     display: none;
   }
@@ -190,9 +196,13 @@
   .navList {
     flex-direction: row;
     align-items: center;
-    gap: 36px;
+    gap: 32px;
     list-style: none;
     margin: 0 60px;
+  }
+
+  .link:hover {
+    opacity: 0.7;
   }
 
   .hr {

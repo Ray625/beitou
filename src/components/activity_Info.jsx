@@ -1,7 +1,13 @@
 import styles from '../styles/activity_info.module.scss';
 import { ImgTitle } from './titleGroup';
 
-const Info = () => {
+const eventList = [1,2,3,4,5]
+
+const Info = ({ setActivity }) => {
+  const handleClick = (num) => {
+    setActivity(num)
+  }
+
   return (
     <section className={styles.container} >
       <div className={styles.wrapper}>
@@ -22,7 +28,11 @@ const Info = () => {
           </div>
         </div>
         <div className={styles.eventInfo}>
-          <img src="/highlight/image_fivehighlight.png" alt="events" className={styles.infoImage} />
+          {eventList.map(item => {
+            return (
+              <a href='#activity' className={styles.info} onClick={() =>  handleClick(item)} key={item}></a>
+            )
+          })}
         </div>
       </div>
     </section>

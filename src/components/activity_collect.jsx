@@ -4,7 +4,7 @@ import { LinkBtn } from './button';
 
 const Collect = () => {
   const handleClick = () => {
-    window.open('https://www.netflix.com/browse', '_blank')
+    window.open('https://user234859.pse.is/5zwlqd', '_blank')
   }
 
   return (
