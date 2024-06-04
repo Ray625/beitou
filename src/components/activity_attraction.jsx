@@ -38,10 +38,10 @@ const cardList = [{
   subtitleColor: '#FF7628',
   describe: '以日式油傘作為設計，油傘代表團圓圓滿意涵。白天有油傘成牆的美感，夜晚透過背投光表現更吸睛',
   gridRow: '6/10'
-},{
-  num: '/number/icon_5.png',
-  alt: '5',
-  title: '北投公園走道(北投圖書館對面)',
+  }, {
+    num: '/number/icon_5.png',
+    alt: '5',
+  title: `北投公園(圖書館對面)`,
   img: '/attraction/image_5.png',
   subtitle: '夏日魔法～煽來好幸運',
   subtitleColor: '#E9545D',

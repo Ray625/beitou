@@ -7,7 +7,7 @@
   align-items: center;
   width: 100%;
   height: fit-content;
-  padding-top: 60px;
+  padding-top: 0;
   padding-bottom: 60px;
   background-color: style.$dark_green;
   &::before {
@@ -15,7 +15,7 @@
     position: absolute;
     width: 100%;
     height: 20vw;
-    top: 60px;
+    top: 0;
     left: 0;
     background-image: url(../../public/bg/bg_1_item_1_m.png);
     background-repeat: no-repeat;
@@ -118,19 +118,21 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 18vw;
-    top: 40px;
-    left: 0;
-    background-image: url(../../public/bg/bg_1_item_1_m.png);
-    background-repeat: no-repeat;
-    background-size: 110%;
-    background-position: center left 10%;
+  .container {
+    padding-top: 60px;
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 18vw;
+      top: 40px;
+      left: 0;
+      background-image: url(../../public/bg/bg_1_item_1_m.png);
+      background-repeat: no-repeat;
+      background-size: 110%;
+      background-position: center left 10%;
+    }
   }
-
   .wrapper {
     width: style.$wrapper_width_tablet;
   }

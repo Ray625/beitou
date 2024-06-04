@@ -15,7 +15,7 @@ const list = [
   {title: '集章之旅',
    id: 'collect',
   },
-  {title: '特約店家',
+  {title: '特約商店',
    id: 'store',
   },
   {title: '交通指引',
