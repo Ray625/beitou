@@ -4,7 +4,7 @@ import { LinkBtn } from './button';
 
 const CollectSocail = () => {
   const handleClick = () => {
-    window.open('https://www.facebook.com/taipeihotsprings', '_blank')
+    window.open('https://user234859.pse.is/5xzb5f', '_blank')
   }
   
   return (

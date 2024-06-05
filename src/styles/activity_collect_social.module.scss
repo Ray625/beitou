@@ -32,9 +32,9 @@
 }
 
 .describe {
-  width: 55%;
+  width: 90%;
   margin-top: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 24px;
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
   line-height: 32px;
@@ -42,7 +42,7 @@
 }
 
 .point {
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
   line-height: 28px;
@@ -51,7 +51,41 @@
 }
 
 .img {
-  width: 58vw;
+  width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    width: style.$wrapper_width_tablet;
+  }
+
+  .describe {
+    width: 100%;
+    line-height: 32px;
+  }
+}
+
+
+@media screen and (min-width: 991px) {
+  .wrapper {
+    width: style.$wrapper_width;
+  }
+
+  .describe {
+    width: 55%;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .point {
+    margin-bottom: 64px;
+  }
+
+  .img {
+    width: 58vw;
+    height: auto;
+    margin-bottom: 40px;
+  }
 }

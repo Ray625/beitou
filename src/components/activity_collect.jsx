@@ -4,7 +4,7 @@ import { LinkBtn } from './button';
 
 const Collect = () => {
   const handleClick = () => {
-    window.open('https://user234859.pse.is/5zwlqd', '_blank')
+    window.open('https://line.me/R/ti/p/@309wtsim?from=page&accountId=309wtsim', '_blank')
   }
 
   return (

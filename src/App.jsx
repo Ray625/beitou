@@ -37,13 +37,13 @@ function App() {
         setActivity={handleClick}
       />
       <Apply />
-      {/* <Collect />
+      <Collect />
       <CollectSocail />
       <Store />
       <Lottery />
       <Traffic />
       <QA />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
