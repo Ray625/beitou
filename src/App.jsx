@@ -32,11 +32,11 @@ function App() {
       <Map />
       <Attraction />
       <Landscape />
-      {/* <Activity
+      <Activity
         activity={activity}
         setActivity={handleClick}
       />
-      <Apply />
+      {/* <Apply />
       <Collect />
       <CollectSocail />
       <Store />

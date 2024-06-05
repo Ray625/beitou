@@ -1,8 +1,11 @@
 import styles from '../styles/activity_main.module.scss';
 import { useState } from 'react';
 import { ImgTitle } from './titleGroup';
+import useRWD from '../hooks/useRWD';
 
 const Activity = ({ activity, setActivity }) => {
+  const device = useRWD()
+
 
   return (
     <section className={styles.container} >
@@ -24,7 +27,8 @@ const Activity = ({ activity, setActivity }) => {
           <div className={styles.activityBody}>
             <div className={styles.titleGroup}>
               <object data='/svg/icon_note.svg' className={styles.titleicon}> </object>
-              <h2 className={styles.title}>復刻酒家菜・音樂同歡唱</h2>
+              {device === 'mobile' && <h2 className={styles.title}>復刻酒家菜<br />音樂同歡唱</h2>}
+              {device !== 'mobile' && <h2 className={styles.title}>復刻酒家菜・音樂同歡唱</h2>}
               <object data='/svg/icon_note.svg' className={styles.titleicon}> </object>
             </div>
             <div className={styles.infoGroup}>
@@ -44,45 +48,47 @@ const Activity = ({ activity, setActivity }) => {
             <div className={styles.describe}>
               邀請北投溫泉飯店及酒家菜業者一起共相盛舉「北投夏日魔法節」現場販售美味酒家菜，還有限量銅板價台鐵酒家菜便當讓民眾品嚐，並邀請專業歌手演出經典那卡西歌曲，讓民眾享受酒家菜一邊聆聽那卡西動人旋律。
             </div>
-            <div className={styles.cardList}>
-              <div className={styles.card}>
-                <div className={styles.cardTitle}>
-                  那卡西與酒家菜<br/>經典重現
+            <div className={styles.mobileCard}>
+              <div className={styles.cardList}>
+                <div className={styles.card}>
+                  <div className={styles.cardTitle}>
+                    那卡西與酒家菜<br/>經典重現
+                  </div>
+                  <div className={styles.hr}></div>
+                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                  <div className={styles.cardIcon}>
+                    <img src="/icon/tab_2-1.png" alt="icon" className={styles.iconImg} />
+                  </div>
                 </div>
-                <div className={styles.hr}></div>
-                <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                <div className={styles.cardIcon}>
-                  <img src="/icon/tab_2-1.png" alt="icon" className={styles.iconImg} />
+                <div className={styles.card}>
+                  <div className={styles.cardTitle}>
+                    那卡西與酒家菜<br/>經典重現
+                  </div>
+                  <div className={styles.hr}></div>
+                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                  <div className={styles.cardIcon}>
+                    <img src="/icon/tab_2-2.png" alt="icon" className={styles.iconImg} />
+                  </div>
                 </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardTitle}>
-                  那卡西與酒家菜<br/>經典重現
+                <div className={styles.card}>
+                  <div className={styles.cardTitle}>
+                    那卡西與酒家菜<br/>經典重現
+                  </div>
+                  <div className={styles.hr}></div>
+                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                  <div className={styles.cardIcon}>
+                    <img src="/icon/tab_2-3.png" alt="icon" className={styles.iconImg} />
+                  </div>
                 </div>
-                <div className={styles.hr}></div>
-                <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                <div className={styles.cardIcon}>
-                  <img src="/icon/tab_2-2.png" alt="icon" className={styles.iconImg} />
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardTitle}>
-                  那卡西與酒家菜<br/>經典重現
-                </div>
-                <div className={styles.hr}></div>
-                <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                <div className={styles.cardIcon}>
-                  <img src="/icon/tab_2-3.png" alt="icon" className={styles.iconImg} />
-                </div>
-              </div>
-              <div className={styles.card}>
-                <div className={styles.cardTitle}>
-                  那卡西與酒家菜<br/>經典重現
-                </div>
-                <div className={styles.hr}></div>
-                <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                <div className={styles.cardIcon}>
-                  <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                <div className={styles.card}>
+                  <div className={styles.cardTitle}>
+                    那卡西與酒家菜<br/>經典重現
+                  </div>
+                  <div className={styles.hr}></div>
+                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                  <div className={styles.cardIcon}>
+                    <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                  </div>
                 </div>
               </div>
             </div>
