@@ -38,7 +38,7 @@ const Header = () => {
     setNavOpen(true)
     }
 
-    if (device === 'mobile' || device === 'tablet') {
+    if (device === 'mobile' || device === 'tablet' || device === 'laptop') {
       setNavOpen(false)
     }
   },[device])

@@ -36,8 +36,8 @@ function App() {
         activity={activity}
         setActivity={handleClick}
       />
-      {/* <Apply />
-      <Collect />
+      <Apply />
+      {/* <Collect />
       <CollectSocail />
       <Store />
       <Lottery />

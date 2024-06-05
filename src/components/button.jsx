@@ -1,8 +1,17 @@
 import styles from '../styles/button.module.scss';
 import { useState } from 'react';
+import useRWD from '../hooks/useRWD';
 
 const LinkBtn = ({ title, color, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const device = useRWD()
+
+  const onMouseEnter = () => {
+    if (device === 'PC' || device === 'laptop') {
+      setIsHovered(true)
+    }
+    return
+  }
 
   return (
     <button style={{
@@ -10,7 +19,7 @@ const LinkBtn = ({ title, color, onClick }) => {
       borderColor: color,
       color: isHovered ? color : 'white'
     }}
-      onMouseEnter={() => setIsHovered(true)}
+      onMouseEnter={onMouseEnter}
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
       className={styles.linkBtn} >

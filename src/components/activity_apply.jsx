@@ -27,7 +27,7 @@ const Apply = () => {
             <div className={styles.infoGroup}>
               <div className={styles.info}>
                 <object data='/svg/icon_event_day.svg' className={styles.icon}> </object>
-                7/5(五)
+                7/6(六) ~ 7/7(日)
               </div>
               <div className={styles.info}>
                 <object data='/svg/icon_event_time.svg' className={styles.icon}> </object>
