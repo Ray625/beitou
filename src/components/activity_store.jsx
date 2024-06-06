@@ -23,7 +23,7 @@ const Store = () => {
         />
         <div className={styles.describe}>串連百家特約店家響應活動，特別推出的活動期間專案優惠！詳細店家優惠資訊請至線上特約店家地圖或至官方FB粉絲專頁查詢～</div>
         <div className={styles.mapWrapper}>
-          <iframe src="https://www.google.com/maps/d/embed?mid=1EeiFxZZvKwfa5wnt7iBPt0tJh6JmlwY&ehbc=2E312F" className={styles.map}></iframe>
+          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EeiFxZZvKwfa5wnt7iBPt0tJh6JmlwY&ehbc=2E312F&ll=25.13319859043615, 121.50141742600563&z=12&output=embed&noprof=1" width="640" height="480" className={styles.map}></iframe>
         </div>
         <LinkBtn
           title='線上特約店家地圖'

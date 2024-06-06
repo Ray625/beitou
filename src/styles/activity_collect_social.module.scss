@@ -8,7 +8,7 @@
   width: 100%;
   height: fit-content;
   padding-top: 180px;
-  padding-bottom: 34px;
+  padding-bottom: 60px;
   background-color: style.$middle_green;
   &::before {
     content: '';
@@ -33,7 +33,6 @@
 
 .describe {
   width: 90%;
-  margin-top: 8px;
   margin-bottom: 24px;
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
@@ -69,6 +68,10 @@
 
 
 @media screen and (min-width: 991px) {
+  .container {
+    padding-bottom: 34px;
+  }
+
   .wrapper {
     width: style.$wrapper_width;
   }
