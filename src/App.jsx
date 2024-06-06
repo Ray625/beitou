@@ -41,9 +41,9 @@ function App() {
       <CollectSocail />
       <Store />
       <Lottery />
-      {/* <Traffic />
+      <Traffic />
       <QA />
-      <Footer /> */}
+      <Footer />
     </div>
   );
 }
