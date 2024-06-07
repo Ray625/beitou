@@ -45,7 +45,7 @@ const Landscape = () => {
       <div className={styles.wrapper}>
       <TitleGroup
         imgLeft='svg/icon_star_left.svg'
-        title='周邊地景'
+        title='環境光地景'
         imgRight='svg/icon_star_right.svg'
       />
         <div className={styles.cardList}>

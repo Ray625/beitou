@@ -7,7 +7,7 @@ const cardList = [{
   title: '北投公園(噴水池)',
   img: '/attraction/image_1.png',
   subtitle: '夏日魔法～溫泉魔法師降臨',
-  subtitleColor: '#F4AA1C',
+  subtitleColor: '#109D91',
   describe: '來自七星山的魔法師在這個夏日在北投變出許多魔法，邀請大家這個夏日一起來北投遊玩',
   gridRow: '1/4'
 },{

@@ -1,11 +1,59 @@
 import styles from '../styles/activity_main.module.scss';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ImgTitle } from './titleGroup';
 import useRWD from '../hooks/useRWD';
 
 const Activity = ({ activity, setActivity }) => {
   const device = useRWD()
+  const [leftBtnDisable, setleftBtnDisable] = useState(true)
+  const [rightBtnDisable, setRightBtnDisable] = useState(false)
+  const cardRef = useRef(null)
 
+  const checkIfscrolledToEnd = () => {
+    if (cardRef.current) {
+      const { scrollWidth, clientWidth, scrollLeft } = cardRef.current
+      if (scrollLeft + clientWidth >= scrollWidth) {
+        setRightBtnDisable(true)
+      }
+      if (scrollLeft === 0) {
+        setleftBtnDisable(true)
+      }
+      if (scrollLeft > 0 && scrollLeft + clientWidth < scrollWidth) {
+        setRightBtnDisable(false)
+        setleftBtnDisable(false)
+      }
+    }
+  }
+
+  useEffect(() => {
+    if (cardRef.current) {
+      cardRef.current.addEventListener('scroll', checkIfscrolledToEnd)
+    }
+
+    return () => {
+      if (cardRef.current) {
+        cardRef.current.removeEventListener('scroll', checkIfscrolledToEnd);
+      }
+    };
+  },[])
+
+  const handleMoveRight = () => {
+    if (cardRef.current) {
+      cardRef.current.scrollBy({
+        left: 264,
+        behavior: 'smooth',
+      });
+    }
+  }
+
+  const handleMoveLeft = () => {
+    if (cardRef.current) {
+      cardRef.current.scrollBy({
+        left: -264,
+        behavior: 'smooth',
+      });
+    }
+  }
 
   return (
     <section className={styles.container} >
@@ -48,49 +96,63 @@ const Activity = ({ activity, setActivity }) => {
             <div className={styles.describe}>
               邀請北投溫泉飯店及酒家菜業者一起共相盛舉「北投夏日魔法節」現場販售美味酒家菜，還有限量銅板價台鐵酒家菜便當讓民眾品嚐，並邀請專業歌手演出經典那卡西歌曲，讓民眾享受酒家菜一邊聆聽那卡西動人旋律。
             </div>
-            <div className={styles.mobileCard}>
-              <div className={styles.cardList}>
-                <div className={styles.card}>
-                  <div className={styles.cardTitle}>
-                    那卡西與酒家菜<br/>經典重現
+            <div className={styles.cardContainer}>
+              <button onClick={handleMoveLeft} className={`${styles.btnLeft} ${leftBtnDisable ? styles.disable : '' }`}></button>
+              <div className={styles.cardWrapper} ref={cardRef}>
+                <div className={styles.cardList} >
+                  <div className={styles.card}>
+                    <div className={styles.cardTitle}>
+                      那卡西與酒家菜<br/>經典重現
+                    </div>
+                    <div className={styles.hr}></div>
+                    <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                    <div className={styles.cardIcon}>
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                    </div>
                   </div>
-                  <div className={styles.hr}></div>
-                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                  <div className={styles.cardIcon}>
-                    <img src="/icon/tab_2-1.png" alt="icon" className={styles.iconImg} />
+                  <div className={styles.card}>
+                    <div className={styles.cardTitle}>
+                      那卡西與酒家菜<br/>經典重現
+                    </div>
+                    <div className={styles.hr}></div>
+                    <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                    <div className={styles.cardIcon}>
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                    </div>
                   </div>
-                </div>
-                <div className={styles.card}>
-                  <div className={styles.cardTitle}>
-                    那卡西與酒家菜<br/>經典重現
+                  <div className={styles.card}>
+                    <div className={styles.cardTitle}>
+                      那卡西與酒家菜<br/>經典重現
+                    </div>
+                    <div className={styles.hr}></div>
+                    <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                    <div className={styles.cardIcon}>
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                    </div>
                   </div>
-                  <div className={styles.hr}></div>
-                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                  <div className={styles.cardIcon}>
-                    <img src="/icon/tab_2-2.png" alt="icon" className={styles.iconImg} />
+                  <div className={styles.card}>
+                    <div className={styles.cardTitle}>
+                      那卡西與酒家菜<br/>經典重現
+                    </div>
+                    <div className={styles.hr}></div>
+                    <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                    <div className={styles.cardIcon}>
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                    </div>
                   </div>
-                </div>
-                <div className={styles.card}>
-                  <div className={styles.cardTitle}>
-                    那卡西與酒家菜<br/>經典重現
-                  </div>
-                  <div className={styles.hr}></div>
-                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                  <div className={styles.cardIcon}>
-                    <img src="/icon/tab_2-3.png" alt="icon" className={styles.iconImg} />
-                  </div>
-                </div>
-                <div className={styles.card}>
-                  <div className={styles.cardTitle}>
-                    那卡西與酒家菜<br/>經典重現
-                  </div>
-                  <div className={styles.hr}></div>
-                  <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
-                  <div className={styles.cardIcon}>
-                    <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                  <div className={styles.card}>
+                    <div className={styles.cardTitle}>
+                      那卡西與酒家菜<br/>經典重現
+                    </div>
+                    <div className={styles.hr}></div>
+                    <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
+                    <div className={styles.cardIcon}>
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                    </div>
                   </div>
                 </div>
               </div>
+              <button onClick={handleMoveRight} className={`${styles.btnRight} ${rightBtnDisable ? styles.disable : ''}`}></button>
             </div>
           </div>
         </div>
