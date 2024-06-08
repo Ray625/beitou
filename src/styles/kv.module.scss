@@ -32,6 +32,8 @@
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
+  opacity: 0;
+  animation: fadein 1.5s forwards 0.5s;
   &::after {
     content: '';
     position: absolute;
@@ -43,6 +45,8 @@
     background-position: top center;
     background-size: contain;
     background-repeat: no-repeat;
+    opacity: 0;
+    animation: fadein 1s forwards 0.8s;
   }
 }
 
@@ -58,16 +62,7 @@
   background-repeat: no-repeat;
   mix-blend-mode: overlay;
   opacity: 0;
-  animation: fadein 2s forwards 1s;
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  animation: fadein 2s forwards 1.5s;
 }
 
 .grass {
@@ -110,6 +105,15 @@
 
 .cloudRight {
   display: none;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 768px) {
