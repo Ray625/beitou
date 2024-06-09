@@ -29,7 +29,7 @@ const list = [
   }]
 
 const Header = () => {
-  const [navOpen, setNavOpen] = useState(true)
+  const [navOpen, setNavOpen] = useState(false)
 
   const device = useRWD()
 

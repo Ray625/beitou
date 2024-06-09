@@ -34,3 +34,23 @@
   cursor: pointer;
   border-radius: 4px;
 }
+
+@media screen and (min-width: 768px) {
+  .thumbnail {
+    border-radius: 12px;
+  }
+
+  .zoomInImg {
+    border-radius: 12px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .thumbnail {      
+    border-radius: 20px;
+  }
+
+  .zoomInImg {
+    border-radius: 20px;
+  }
+}

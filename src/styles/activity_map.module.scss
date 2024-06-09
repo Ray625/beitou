@@ -43,22 +43,10 @@
   margin-bottom: 52px;
 }
 
-.mapImg {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-
 .schedule {
   width: 100%;
   height: fit-content;
   margin-bottom: 88px;
-}
-
-.scheduleImg {
-  max-width: 100%;
-  height: auto;
-  border-radius: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -74,20 +62,12 @@
     margin-bottom: 88px;
   }
 
-  .mapImg {
-    border-radius: 12px;
-  }
-
   .schedule {
     margin-bottom: 88px;
   }
-
-  .scheduleImg {
-    border-radius: 12px;
-  }
 }
 
-@media screen and (min-wdith: 991px) {
+@media screen and (min-width: 991px) {
   .container {
     padding-top: 15vh;
   }
@@ -101,20 +81,8 @@
     height: fit-content;
   }
 
-  .mapImg {
-    width: 1074px;
-    height: auto;
-    border-radius: 20px;
-  }
-
   .schedule {
     width: 1074px;
     height: fit-content;
-  }
-
-  .scheduleImg {
-    width: 1074px;
-    height: auto;
-    border-radius: 20px;
   }
 }
