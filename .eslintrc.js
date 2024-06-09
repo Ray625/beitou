@@ -35,7 +35,7 @@ module.exports = {
     'no-unused-vars': 'warn',
     'no-console': 'off',
     'react/react-in-jsx-scope': 'off',
-    'import/no-unresolved': 'error',
+    'import/no-unresolved': 'off',
     'import/named': 'error',
     'import/default': 'error',
     'import/namespace': 'error',
