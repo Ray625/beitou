@@ -1,20 +1,20 @@
 import './App.css';
 import { useState } from 'react';
-import KeyVisionBanner from './components/kv';
-import Header from './components/header';
-import Info from './components/activity_Info';
-import Map from './components/activity_map';
-import Attraction from './components/activity_attraction';
-import Landscape from './components/activity_landscape';
-import Activity from './components/activity_main';
-import Apply from './components/activity_apply';
-import Collect from './components/activity_collect';
-import CollectSocail from './components/activity_collect_social';
-import Store from './components/activity_store';
-import Lottery from './components/activity_store_lottery';
-import Traffic from './components/traffic';
-import QA from './components/Q&A';
-import Footer from './components/footer';
+import KeyVisionBanner from './components/Kv/kv';
+import Header from './components/Header/header'
+import Info from './components/ActivityInfo/activity_Info';
+import Map from './components/ActivityInfo/activity_map';
+import Attraction from './components/ActivityInfo/activity_attraction';
+import Landscape from './components/ActivityInfo/activity_landscape';
+import Activity from './components/ActivityMain/activity_main';
+import Apply from './components/ActivityApply/activity_apply';
+import Collect from './components/ActivityCollection/activity_collect';
+import CollectSocail from './components/ActivityCollection/activity_collect_social';
+import Store from './components/ActivityStore/activity_store';
+import Lottery from './components/ActivityStore/activity_store_lottery';
+import Traffic from './components/Traffic/traffic';
+import QA from './components/Q&A/Q&A';
+import Footer from './components/Footer/footer';
 
 function App() {
   const [activity, setActivity] = useState(1)
