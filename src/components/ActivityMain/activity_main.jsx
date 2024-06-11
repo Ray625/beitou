@@ -1,14 +1,16 @@
 import styles from './activity_main.module.scss';
 import { useState, useEffect, useRef } from 'react';
 import { ImgTitle } from '../Ui/titleGroup';
-import useRWD from '../../hooks/useRWD';
+import { useDevice } from '../../contexts/DeviceContext';
 
+// 透過父層傳入的state及setState改變畫面上方tab及下方body內容，body內容還沒確定，所以只有先做上方tab及下方card scroll功能，等內容確定後一樣會依照父層state改變顯示畫面
 const Activity = ({ activity, setActivity }) => {
-  const device = useRWD()
+  const device = useDevice()
   const [leftBtnDisable, setleftBtnDisable] = useState(true)
   const [rightBtnDisable, setRightBtnDisable] = useState(false)
   const cardRef = useRef(null)
 
+  // 畫面下方會有5格card超出畫面，做了用按鈕左右滾動的功能，透過checkIfScrolledToEnd偵測是否已滾動至底部，並改變左右按鈕樣式，此功能只有在PC會顯示，小螢幕則直接滑動
   const checkIfscrolledToEnd = () => {
     if (cardRef.current) {
       const { scrollWidth, clientWidth, scrollLeft } = cardRef.current
@@ -38,6 +40,7 @@ const Activity = ({ activity, setActivity }) => {
     };
   },[])
 
+  // 點擊按鈕讓cardWapper左右scroll一個卡片width+gap的距離
   const handleMoveRight = () => {
     if (cardRef.current) {
       cardRef.current.scrollBy({

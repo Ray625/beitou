@@ -1,6 +1,7 @@
 import styles from './activity_store_lottery.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 
+// 獎項內容還沒確定，做了排版
 const Lottery = () => {
   return (
     <section className={styles.container}>

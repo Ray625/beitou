@@ -10,6 +10,7 @@ const TitleGroup = ({ imgLeft, imgRight, title }) => {
   )
 }
 
+// 設定id讓header按鍵跳轉，有在/src/index.css中設定scroll-padding-top預留上方header位置
 const ImgTitle = ({ title, img, id}) => {
   return (
     <div className={styles.imgTitleGroup} style={{ backgroundImage: `url(${img})`}} id={id ? id : ''}>

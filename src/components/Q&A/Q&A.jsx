@@ -1,6 +1,7 @@
 import styles from './Q&A.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 
+// 常見問題資料要等業主整理，先排了版型
 const QA = () => {
   return (
     <section className={styles.container}>

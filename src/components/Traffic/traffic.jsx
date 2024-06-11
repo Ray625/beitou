@@ -2,6 +2,7 @@ import styles from './traffic.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 
+// 畫面用trafficList array.map()產生，最後一個自行開車的card，因內容不同就直接寫html。與設計師討論在平板上顯示時讓card都呈現一樣高度
 const trafficList = [{
   title: '捷運',
   img: '/svg/icon_go_MRT.svg',

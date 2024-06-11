@@ -1,11 +1,13 @@
 import styles from './button.module.scss';
 import { useState } from 'react';
-import useRWD from '../../hooks/useRWD';
+import { useDevice } from '../../contexts/DeviceContext';
 
+// 外部連結的按鈕，因為每個按鈕hover的顏色不同，想透過js傳入hover的顏色，但原本用object導入svg又無法改動svg顏色，最後直接把svg寫在html中，並設定stroke="currentColor"，並用state做出hover的效果
 const LinkBtn = ({ title, color, onClick }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const device = useRWD()
+  const device = useDevice()
 
+  // 只在大螢幕加上hover效果
   const onMouseEnter = () => {
     if (device === 'PC' || device === 'laptop') {
       setIsHovered(true)

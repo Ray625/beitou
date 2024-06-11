@@ -1,6 +1,7 @@
 import styles from './activity_attraction.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 
+// 畫面用cardList array.map()產生，用grid做左右差距一格的效果，在小螢幕時改為flex直式排版
 const cardList = [{
   num: '/number/icon_1.png',
   alt: '1',

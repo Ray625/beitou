@@ -1,23 +1,25 @@
 import styles from './activity_info.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 
+// 畫面下方5個圖片用eventList array.map()產生，透過num設定點擊後跳轉至main section，並改變上方tab，由父層的state控制顯示的tab(第1、2、3、4、5個)，並且設定連結a href="#id"，使畫面跳轉至main section
 const eventList = [{
-  num: 1,
-  name: '北投酒家菜宴席活動'
-}, {
-  num: 2,
-  name: '復刻酒家菜，音樂同歡唱'
+    num: 1,
+    name: '北投酒家菜宴席活動'
   }, {
-  num: 3,
+    num: 2,
+    name: '復刻酒家菜，音樂同歡唱'
+  }, {
+    num: 3,
     name: '親子冒險島'
   }, {
-  num: 4,
+    num: 4,
     name: '親子魔法樂園'
   }, {
-  num: 5,
+    num: 5,
     name: '夏日好聲音派對'
   }]
 
+// props接受父層傳入的setActivity，藉此改變父層state
 const Info = ({ setActivity }) => {
   const handleClick = (num) => {
     setActivity(num)

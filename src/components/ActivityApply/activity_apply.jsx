@@ -2,6 +2,7 @@ import styles from './activity_apply.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 
+// 活動內容還沒確定，先做了版型及設定外部連結
 const Apply = () => {
   const handleClickLeft = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLScHfO-4_q_OtpgaUQdcjVSL8OUIuKP1Y0AjiDrOZDeiwK11aQ/viewform', '_blank');

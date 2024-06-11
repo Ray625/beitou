@@ -19,7 +19,7 @@ import Footer from './components/Footer/footer';
 function App() {
   const [activity, setActivity] = useState(1)
 
-  // Info頁可透過點擊連結至Activity頁，並改變顯示tab
+  // Info頁可透過點擊連結至Activity頁，並改變上方tab為所選活動
   const handleClick = (num) => {
     setActivity(num)
   }

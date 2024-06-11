@@ -16,11 +16,13 @@ const ImageModal = ({ src, alt, onClose }) => {
     </div>
   )
 }
-  
+
+// changeZindex由父層傳入的function，可以改變父層container的z-index，讓畫面不會被header蓋住
 const ZoomInImg = ({ src, alt, changeZindex }) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
-    const handleOpen = () => {
+  // overflow='hidden'讓圖片被放大時，後方畫面無法滾動
+  const handleOpen = () => {
     setIsModalOpen(true)
     document.body.style.overflow='hidden'
     changeZindex(200)
@@ -32,6 +34,7 @@ const ZoomInImg = ({ src, alt, changeZindex }) => {
     changeZindex(0)
   }
 
+  // eslint建議加上鍵盤操作提升無障礙使用
   const handleKeyDown = (event) => {
     if (event.key === 'Enter' || event.key === ' ') {
       handleOpen();

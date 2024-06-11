@@ -1,6 +1,9 @@
-import { useState, useEffect } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
-const useRWD = () => {
+// 透過Context讓compenet共用目前螢幕寬度資訊
+const DeviceContext = createContext();
+
+export const DeviceProvider = ({ children }) => {
   const [device, setDevice] = useState('mobile');
 
   const handleRWD = () => {
@@ -22,9 +25,15 @@ const useRWD = () => {
     return (()=> {
       window.removeEventListener('resize', handleRWD)
     })
-  },[])
-
-  return device;
+  }, [])
+  
+  return (
+    <DeviceContext.Provider value={device}>
+      {children}
+    </DeviceContext.Provider>
+  )
 }
 
-export default useRWD;
+export const useDevice = () => {
+  return useContext(DeviceContext)
+}

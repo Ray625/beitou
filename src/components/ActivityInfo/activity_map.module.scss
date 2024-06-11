@@ -76,6 +76,9 @@
     width: style.$wrapper_width;
   }
 
+}
+
+@media screen and (min-width: 1440px) {
   .map {
     width: 1074px;
     height: fit-content;

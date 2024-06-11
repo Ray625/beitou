@@ -1,5 +1,6 @@
 import styles from './kv.module.scss';
 
+// 將kv分成圖層並使用background-img設定
 const KeyVisionBanner = () => {
   return (
     <div className={styles.container}>

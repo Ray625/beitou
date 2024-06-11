@@ -1,9 +1,10 @@
 import styles from './footer.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
-import useRWD from '../../hooks/useRWD';
-  
+import { useDevice } from '../../contexts/DeviceContext';
+
+// 下方連結用fb粉絲專頁外掛程式嵌入，沒有特別調數值，只有在小螢幕時透過網址改變顯示的寬度
 const Footer = () => {
-  const device = useRWD()
+  const device = useDevice()
 
   return (
     <section className={styles.container}>

@@ -2,6 +2,7 @@ import styles from './activity_collect.module.scss';
 import { ImgTitle, TitleGroup } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 
+// 獎項內容還沒確定，做了排版跟設定外部連結
 const Collect = () => {
   const handleClick = () => {
     window.open('https://line.me/R/ti/p/@309wtsim?from=page&accountId=309wtsim', '_blank')

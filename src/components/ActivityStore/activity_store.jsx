@@ -2,6 +2,7 @@ import styles from './activity_store.module.scss';
 import { TitleGroup, ImgTitle } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 
+// 畫面下方地圖用google我的地圖嵌入，但遇到問題是如果使用google map的app打開，會無法正確地顯示內容的資訊(商家名稱、優惠內容等..)，所以下方的外部連結是設定為google map的清單版本
 const Store = () => {
   const handleClick = () => {
     window.open('https://user234859.pse.is/5zwnfy', '_blank');

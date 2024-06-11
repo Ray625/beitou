@@ -1,6 +1,7 @@
 import styles from './activity_landscape.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 
+// 畫面用cardList array.map()產生
 const cardList = [{
   title: '浪漫月球',
   location: '北投公園＆七星公園',
