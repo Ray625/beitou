@@ -75,15 +75,22 @@ const Header = () => {
     alert('click fixed btn')
   }
 
+  const handleScrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <>
       <button className={styles.hamburger} onClick={handleOpenHamburger}></button>
       <nav className={navOpen ? styles.header : `${styles.header} ${styles.close}`}> 
         <button className={styles.closeBtn} onClick={handleCloseHamburger}></button>
-        <div className={styles.logoGroup}>
+        <button className={styles.logoGroup} onClick={handleScrollToTop}>
           <h1 className={styles.title}>北投夏日魔法節</h1>
           <img src="/svg/header_logo.svg" alt="logo" className={styles.logo} />
-        </div>
+        </button>
         <ul className={styles.navList}>
           {list.map((item) => {
             return (
