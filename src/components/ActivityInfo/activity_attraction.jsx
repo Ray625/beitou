@@ -9,7 +9,7 @@ const cardList = [{
   img: '/attraction/image_1.png',
   subtitle: '夏日魔法～溫泉魔法師降臨',
   subtitleColor: '#109D91',
-  describe: '來自七星山的魔法師在這個夏日在北投變出許多魔法，邀請大家這個夏日一起來北投遊玩',
+  describe: '來自七星山的魔法師在這個夏日在北投變出許多魔法，邀請大家這個夏日一起來北投遊玩。',
   gridRow: '1/4'
 },{
   num: '/number/icon_2.png',
@@ -18,7 +18,7 @@ const cardList = [{
   img: '/attraction/image_2.png',
   subtitle: '夏日魔法～幸福溫泉',
   subtitleColor: '#3585FF',
-  describe: '北投溫泉充滿神奇魔法，能療癒你的身心靈',
+  describe: '以木製拉門背景和水流動的層次，來演繹北投經典特色溫泉。北投溫泉充滿神奇魔法，能療癒前來民眾的身心靈。',
   gridRow: '2/5'
 },{
   num: '/number/icon_3.png',
@@ -27,7 +27,7 @@ const cardList = [{
   img: '/attraction/image_3.png',
   subtitle: '夏日魔法～幸福來鈴',
   subtitleColor: '#804495',
-  describe: '以日式風鈴為設計概念，讓遊客通過廊道驅除厄運、聽著風鈴聲感受夏日幸福的到來，左右兩側可以掛上繪馬祈福',
+  describe: '以日式風鈴為設計概念，讓遊客通過廊道驅除厄運、聽著風鈴聲感受幸福的到來，左右兩側可以掛上繪馬祈福。',
   gridRow: '5/9'
 
 },{
@@ -37,7 +37,7 @@ const cardList = [{
   img: '/attraction/image_4.png',
   subtitle: '夏日魔法～團團圓圓',
   subtitleColor: '#FF7628',
-  describe: '以日式油傘作為設計，油傘代表團圓圓滿意涵。白天有油傘成牆的美感，夜晚透過背投光表現更吸睛',
+  describe: '以日式油傘作為設計，油傘代表團圓圓滿意涵。白天有油傘成牆的美感，夜晚透過背投光表現更吸睛。',
   gridRow: '6/10'
   }, {
     num: '/number/icon_5.png',
@@ -46,7 +46,7 @@ const cardList = [{
   img: '/attraction/image_5.png',
   subtitle: '夏日魔法～煽來好幸運',
   subtitleColor: '#E9545D',
-  describe: '團扇性徵招來好運。扇子上可以印上合作商家的Logo，為合作店家招來好生意，中間扇子可以轉動',
+  describe: '團扇象徵招來好運。有為合作店家招來好運的隱含寓意，中間扇子可以轉動，以製造互動性。',
   gridRow: '9/13'
 
 }
