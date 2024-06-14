@@ -25,7 +25,6 @@ const Card = ({ color, props }) => {
 const ScrollCardList = ({ list, color }) => {
   const [leftBtnDisable, setleftBtnDisable] = useState(true)
   const [rightBtnDisable, setRightBtnDisable] = useState(false)
-  const [animationFrameId, setAnimationFrameId] = useState(null);
   const cardRef = useRef(null)
 
   // 畫面下方會有5格card超出畫面，做了用按鈕左右滾動的功能，透過checkIfScrolledToEnd偵測是否已滾動至底部，並改變左右按鈕樣式，此功能只有在PC會顯示，小螢幕則直接滑動
@@ -58,31 +57,24 @@ const ScrollCardList = ({ list, color }) => {
     };
   },[])
 
-  // 按壓移動方式
-
-  const handleMove = (direction) => {
+  // 點擊按鈕讓cardWapper左右scroll一個卡片width+gap的距離
+  const handleMoveRight = () => {
     if (cardRef.current) {
       cardRef.current.scrollBy({
-        left: direction * 18, // Adjust this value to control scroll speed
+        left: 264,
+        behavior: 'smooth',
       });
     }
-  };
+  }
 
-  const startMove = (direction) => {
-    const move = () => {
-      handleMove(direction);
-      const id = requestAnimationFrame(move);
-      setAnimationFrameId(id);
-    };
-    move();
-  };
-
-  const stopMove = () => {
-    if (animationFrameId) {
-      cancelAnimationFrame(animationFrameId);
-      setAnimationFrameId(null);
+  const handleMoveLeft = () => {
+    if (cardRef.current) {
+      cardRef.current.scrollBy({
+        left: -264,
+        behavior: 'smooth',
+      });
     }
-  };
+  }
 
   return (
     <>
@@ -99,13 +91,7 @@ const ScrollCardList = ({ list, color }) => {
     )}
     { list.length > 4 && (
       <div className={styles.cardContainer}>
-          <button
-            onMouseDown={() => startMove(-1)}
-            onMouseUp={stopMove}
-            onMouseLeave={stopMove}
-            onTouchStart={() => startMove(-1)}
-            onTouchEnd={stopMove}
-            className={`${styles.btnLeft} ${leftBtnDisable ? styles.disable : ''}`}></button>
+        <button onClick={handleMoveLeft} className={`${styles.btnLeft} ${leftBtnDisable ? styles.disable : '' }`}></button>
         <div className={styles.cardWrapper} ref={cardRef}>
           <div className={styles.cardList} >
             {list.map(card => {
@@ -113,13 +99,7 @@ const ScrollCardList = ({ list, color }) => {
             })}
           </div>
         </div>
-          <button
-            onMouseDown={() => startMove(1)}
-            onMouseUp={stopMove}
-            onMouseLeave={stopMove}
-            onTouchStart={() => startMove(1)} 
-            onTouchEnd={stopMove}     
-            className={`${styles.btnRight} ${rightBtnDisable ? styles.disable : ''}`}></button>
+        <button onClick={handleMoveRight} className={`${styles.btnRight} ${rightBtnDisable ? styles.disable : ''}`}></button>
       </div>
     )}
   </>
