@@ -91,14 +91,36 @@
   border-bottom: 3px solid #3585FF;
 }
 
+.bodyContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+}
+
 .activityBody {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: style.$light_green;
   width: 100%;
   padding-bottom: 280px;
+  opacity: 1;
+}
+
+.dNone {
+  width: 0;
+  height: 0;
+  opacity: 0;
+  margin: 0;
+  padding: 0;
+  div {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .titleGroup {
@@ -106,12 +128,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 12px;
   margin-bottom: 16px;
   padding: 8px 20px;
   width: fit-content;
   border-radius: 12px;
-  background: #109D911A;
 }
 
 .title {
@@ -134,7 +156,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #006060;
+  // color: #ABABAB;
   font-size: style.$font_size_mobile;
   font-weight: style.$title_font_weight;
   line-height: 32px;
@@ -158,12 +180,12 @@
 }
 
 .cardContainer {
+  position: absolute;
+  bottom: -44px;
   width: 100%;
 }
 
 .cardWrapper {
-  position: absolute;
-  bottom: -44px;
   width: 100%;
   padding-bottom: 44px;
   overflow: scroll visible;
@@ -199,7 +221,6 @@
   width: 58px;
   height: 2px;
   margin-bottom: 20px;
-  background-color: style.$light_green;
 }
 
 .cardBody {
@@ -215,7 +236,7 @@
   justify-content: center;
   align-items: center;
   bottom: 0;
-  left: 50%;
+  left: 80%;
   width: 88px;
   height: 88px;
   border-radius: 50%;
@@ -321,7 +342,6 @@
   }
 
   .describe {
-    width: 65%;
     margin-bottom: 40px;
     font-size: style.$font_size;
     line-height: 32px;
@@ -336,8 +356,6 @@
   }
 
   .cardWrapper {
-    position: relative;
-    bottom: unset;
     width: 80%;
     padding-bottom: 44px;
     overflow: scroll;
