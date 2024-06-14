@@ -48,7 +48,7 @@ const ZoomInImg = ({ src, alt, changeZindex }) => {
       <div
         role="button" tabIndex={0} onClick={handleOpen} onKeyDown={handleKeyDown} className={styles.thumbnailWrapper}
         >
-          <img src={src} alt={alt} className={styles.thumbnail} />
+          <img src={src} alt={alt} className={styles.thumbnail} loading='lazy'/>
         </div>
       {isModalOpen && <ImageModal src={src} alt={alt} onClose={handleClose} />}
     </>

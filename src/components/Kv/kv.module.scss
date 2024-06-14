@@ -15,7 +15,6 @@
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-image: url('../../../public/img/KV_img/mobile/KV_3_bg_m.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; 
@@ -28,27 +27,26 @@
   width: 100%;
   height: 40%;
   min-height: 180px;
-  background-image: url('../../../public/img/KV_img/mobile/KV_1_title_m.png');
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.subtitle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
-  animation: fadein 1.5s forwards 0.5s;
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('../../../public/img/KV_img/mobile/KV_2_subtitle_m.png');
-    background-position: top center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    opacity: 0;
-    animation: fadein 1s forwards 0.8s;
   }
-}
+  
+.subFadein {
+  animation: fadein 1s forwards 0.5s;
+  }
 
 .decorate {
   position: absolute;
@@ -56,14 +54,16 @@
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-image: url('../../../public/img/KV_img/mobile/KV_4_sky_m.png');
   background-position: top center;
   background-size: contain;
   background-repeat: no-repeat;
   mix-blend-mode: overlay;
   opacity: 0;
-  animation: fadein 2s forwards 1.5s;
-}
+  }
+  
+.decorateFadein {
+  animation: fadein 2s forwards 0.8s;
+  }
 
 .grass {
   position: absolute;
@@ -83,7 +83,6 @@
   z-index: 4;
   width: 100%;
   height: 50%;
-  background-image: url('../../../public/img/KV_img/mobile/KV_6_item_m.png');
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -125,9 +124,6 @@
     padding-bottom: 40px;
   }
 
-  .moonBg {
-    background-image: url('../../../public/img/KV_img/PC/KV_3_bg.jpg');
-  }
 
   .title {
     position: relative;
@@ -135,21 +131,14 @@
     width: 70%;
     height: 50%;
     margin: 0 auto;
-    background-image: url('../../../public/img/KV_img/PC/KV_1_title.png');
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../../../public/img/KV_img/PC/KV_2_subtitle.png');
-    }
   }
+
 
   .decorate {
     position: absolute;
     top: 32vh;
     width: 100%;
     height: 42%;
-    background-image: url('../../../public/img/KV_img/PC/KV_4_sky.png');
     background-size: cover;
   }
 
@@ -164,7 +153,6 @@
     width: 1840px;
     max-width: 80%;
     height: 45vh;
-    background-image: url('../../../public/img/KV_img/PC/KV_6_item.png');
   }
 
   .cloudLeft {
@@ -210,13 +198,6 @@
     width: 50%;
     height: 50%;
     margin: 0 auto;
-    background-image: url('../../../public/img/KV_img/PC/KV_1_title.png');
-
-    &::after {
-      content: '';
-      position: absolute;
-      background-image: url('../../../public/img/KV_img/PC/KV_2_subtitle.png');
-    }
   }
 
   .decorate {
@@ -224,7 +205,6 @@
     top: 100px;
     width: 100%;
     height: 80%;
-    background-image: url('../../../public/img/KV_img/PC/KV_4_sky.png');
     background-size: contain;
   }
 }

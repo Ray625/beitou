@@ -57,13 +57,13 @@ const Card = ({ props }) => {
 
   return (
     <div className={styles.attractionCard} style={{gridRow}}>
-      <img src={num} alt={alt} className={styles.num} />
+      <img src={num} alt={alt} className={styles.num} loading='lazy'/>
       <div className={styles.titleGroup}>
         <object data="/svg/icon_attraction_pin.svg" className={styles.icon}> </object>
         <h3 className={styles.title}>{title}</h3>
       </div>
       <div className={styles.cardBody}>
-        <img src={img} alt={title} className={styles.cardImg} />
+        <img src={img} alt={title} className={styles.cardImg} loading='lazy'/>
         <div className={styles.subtitle} style={{ color: subtitleColor }}>{subtitle}</div>
         <p className={styles.describe}>{describe}</p>
       </div>
