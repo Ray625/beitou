@@ -15,14 +15,10 @@ const cardList = [{
   location: '北投公園',
   img: '/attraction/image_8.png'
 },{
-  title: '魔法小精靈',
-  location: '北投公園',
-  img: '/attraction/image_9.png'
-},{
   title: '點點螢火蟲',
   location: '地熱谷入口',
   img: '/attraction/image_10.png'
-  },]
+  }]
 
 const Card = ({ props }) => {
   const { title, location, img } = props
