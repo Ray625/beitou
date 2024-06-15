@@ -68,14 +68,14 @@
 
 
 .title {
-  font-size: style.$H3_font_size;
-  font-weight: style.$title_font_weight;
+  font-size: style.$font_size;
+  font-weight: style.$body_font_weight;
   line-height: 32px;
 }
 
 .subtitle {
   font-size: style.$font_size;
-  font-weight: style.$body_font_weight;
+  font-weight: style.$title_font_weight;
   line-height: 32px;
 }
 
@@ -159,7 +159,7 @@
   .prizeGroup {
     flex-flow: row wrap;
     justify-content: center;
-    gap: 80px;
+    gap: 44px;
     margin-bottom: 72px;
     background-image: none;
   }

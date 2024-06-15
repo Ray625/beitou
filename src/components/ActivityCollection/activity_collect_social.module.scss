@@ -49,10 +49,49 @@
   opacity: 0.6;
 }
 
-.img {
-  width: 100%;
+.prizeGroup {
+  display: flex;
+  flex-flow: column;
+  gap: 40px;
+  margin-bottom: 72px;
+  background-image: url('../../../public/bg/bg_6_item_1_m.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat space;
+}
+
+.prize {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.prizeImg {
+  width: 72%;
   height: auto;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
+}
+
+
+.title {
+  font-size: style.$font_size;
+  font-weight: style.$body_font_weight;
+  line-height: 32px;
+}
+
+.subtitle {
+  font-size: style.$font_size;
+  font-weight: style.$title_font_weight;
+  line-height: 32px;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: style.$note_font_size;
+  font-weight: style.$body_font_weight;
+  text-align: center;
+  line-height: 18px;
+  opacity: 0.6;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,6 +103,12 @@
     width: 100%;
     line-height: 32px;
   }
+
+  .prizeImg {
+    width: 60%;
+    height: auto;
+    margin-bottom: 24px;
+  }
 }
 
 
@@ -73,7 +118,33 @@
   }
 
   .wrapper {
+    position: relative;
     width: style.$wrapper_width;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 8vw;
+        height: 8vw;
+        background-image: url('../../../public/bg/bg_7_item_3.png');
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+      }
+    
+      &::before {
+        content: '';
+        position: absolute;
+        top: 22%;
+        right: 0;
+        width: 5vw;
+        height: 5vw;
+        background-image: url('../../../public/bg/bg_7_item_4.png');
+        background-size: contain;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+      }
   }
 
   .describe {
@@ -86,9 +157,45 @@
     margin-bottom: 64px;
   }
 
-  .img {
-    width: 58vw;
-    height: auto;
-    margin-bottom: 40px;
+  .prizeGroup {
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 44px;
+    margin-bottom: 72px;
+    background-image: none;
+  }
+
+  .prizeImg {
+    width: auto;
+    height: 200px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .wrapper {
+    &::after {
+      top: 20%;
+      left: 10%;
+      width: 6vw;
+      height: 6vw;
+    }
+
+    &::before {
+      top: 24%;
+      right: 10%;
+      width: 4vw;
+      height: 4vw;
+    }
+  }
+
+  .prizeGroup {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 52px;
+    column-gap: 44px;
+    margin-bottom: 72px;
+    background-image: none;
   }
 }

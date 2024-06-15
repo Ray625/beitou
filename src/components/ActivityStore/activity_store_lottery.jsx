@@ -1,6 +1,54 @@
 import styles from './activity_store_lottery.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 
+const prizeList = [{
+  img: '/prize/prize_store_1.png',
+  title: 'iPhone 15 Pro',
+  subtitle: '128GB',
+  note: '乙台・1名・市價 NT$36,900'
+},{
+  img: '/prize/prize_store_2.png',
+  title: '北投水美溫泉會館',
+  subtitle: '雅風雙床房住宿券',
+  note: '乙張・5名・市價 NT$11,000'
+},{
+  img: '/prize/prize_store_3.png',
+  title: '享溫泉',
+  subtitle: '大眾風呂泡湯券',
+  note: '乙張・20名・市價 NT$1,300',
+},{
+  img: '/prize/prize_store_4.png',
+  title: '水都溫泉會館',
+  subtitle: '露天大眾池泡湯券',
+  note: '乙張・5名・市價 NT$800',
+},{
+  img: '/prize/prize_store_5.png',
+  title: '泉都溫泉會館',
+  subtitle: '住宿抵用券500元',
+  note: '乙張・5名・市價 NT$500',
+},{
+  img: '/prize/prize_store_6.png',
+  title: '北投溫泉博物館',
+  subtitle: '泡湯小童碗',
+  note: '乙個・15名・市價 NT$350',
+}]
+
+const Prize = ({props}) => {
+  const {img, title, subtitle, note, note2} = props
+
+  return (
+    <div className={styles.prize}>
+      <img src={img} alt={title} className={styles.prizeImg} loading='lazy'/>
+      <div className={styles.title}>{title}</div>
+      <div className={styles.subtitle}>{subtitle}</div>
+      <div className={styles.note}>
+        {note}
+        {note2 && <><br />{note2}</>}
+      </div>
+    </div>
+  )
+}
+
 // 獎項內容還沒確定，做了排版
 const Lottery = () => {
   return (
@@ -13,35 +61,8 @@ const Lottery = () => {
           imgRight='/svg/icon_celebrate_right.svg'
         />
         <div className={styles.describe}>活動期間於特約店家消費滿500元以上(可累計)，憑消費收據或發票即可於活動服務處領取抽獎券，登記獲得抽限量贈品機會！</div>
-        <div className={styles.awardsGroup}>
-          <div className={styles.award}>
-            <img src="/prize/prize_4.png" alt="首獎" className={styles.awardImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Iphone 15 Pro</div>
-            <div className={styles.subtitle}>128GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$44,900</div>
-          </div>
-          <div className={styles.award}>
-            <img src="/prize/prize_4.png" alt="首獎" className={styles.awardImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Iphone 15 Pro</div>
-            <div className={styles.subtitle}>128GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$44,900</div>
-          </div>
-          <div className={styles.award}>
-            <img src="/prize/prize_4.png" alt="首獎" className={styles.awardImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Iphone 15 Pro</div>
-            <div className={styles.subtitle}>128GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$44,900</div>
-          </div>
-          <div className={styles.award}>
-            <img src="/prize/prize_4.png" alt="首獎" className={styles.awardImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Iphone 15 Pro</div>
-            <div className={styles.subtitle}>128GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$44,900</div>
-          </div>
+        <div className={styles.prizeGroup}>
+          {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
         </div>
       </div>
     </section>
