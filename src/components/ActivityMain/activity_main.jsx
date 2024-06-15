@@ -166,7 +166,7 @@ const Activity = ({ activity, setActivity }) => {
             <button className={`${styles.tab} ${styles.hover5} ${activity === 5 ? styles.activity5 : ''}`} onClick={()=>setActivity(5)}>夏日好聲音派對</button>
           </div>
           <div className={styles.bodyContainer}>
-            {activityList.map(item => <ActivityBody activity={activity} props={ item } key={activity.num}/> )}
+            {activityList.map(item => <ActivityBody activity={activity} props={ item } key={item.num}/> )}
           </div>
         </div>
       </div>

@@ -66,7 +66,7 @@ const CollectSocail = () => {
         <div className={styles.describe}>在 2024/7/28 前，於「2024北投夏日魔法節」LINE官方帳號內集滿5點電子戳章，並將電子戳章截圖上傳至溫泉協會粉絲團，即可參加社群抽獎，獎項包括北投旅宿業者提供的住宿和泡湯券！</div>
         <div className={styles.point}>詳情請點選下方的溫泉協會粉絲團連結</div>
         <div className={styles.prizeGroup}>
-          {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
+          {prizeList.map((prize, index) => <Prize props={prize} key={index} />)}
         </div>
         <LinkBtn
           title='溫泉協會粉絲團'

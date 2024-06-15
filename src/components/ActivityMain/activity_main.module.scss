@@ -109,6 +109,9 @@
 }
 
 .dNone {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 0;
   height: 0;
   opacity: 0;
@@ -237,16 +240,16 @@
   align-items: center;
   bottom: 0;
   left: 50%;
-  width: 88px;
-  height: 88px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: style.$light_green;
   transform: translate(-50%, 50%);
 }
 
 .iconImg {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
 }
 
 .btnLeft,

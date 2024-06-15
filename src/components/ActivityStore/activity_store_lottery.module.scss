@@ -227,14 +227,14 @@
   .wrapper {
     &::after {
       top: 32%;
-      left: 4%;
+      left: 0;
       width: 10vw;
       height: 14vw;
     }
 
     &::before {
       top: 48%;
-      right: 4%;
+      right: 0;
       width: 8vw;
       height: 15vw;
     }
