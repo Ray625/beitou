@@ -2,6 +2,45 @@ import styles from './activity_collect.module.scss';
 import { ImgTitle, TitleGroup } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 
+const prizeList = [{
+  img: '/prize/prize_LINE_1.png',
+  title: 'Samsung Galaxy S24',
+  subtitle: '256GB',
+  note: '乙台・1名・市價 NT$27,900'
+},{
+  img: '/prize/prize_LINE_2.png',
+  title: '水都溫泉會館',
+  subtitle: '露天大眾池泡湯券',
+  note: '乙張・5名・市價 NT$800'
+},{
+  img: '/prize/prize_LINE_3.png',
+  title: '北投水美溫泉會館',
+  subtitle: '迎賓小菜',
+  note: '乙份・100名・市價 NT$200',
+  note2: '(至餐飲部用餐消費即贈送)'
+},{
+  img: '/prize/prize_LINE_4.png',
+  title: '北投夏日魔法節',
+  subtitle: '環保提袋',
+  note: '乙個・220名',
+},]
+
+const Prize = ({props}) => {
+  const {img, title, subtitle, note, note2} = props
+
+  return (
+    <div className={styles.prize}>
+      <img src={img} alt={title} className={styles.prizeImg} loading='lazy'/>
+      <div className={styles.title}>{title}</div>
+      <div className={styles.subtitle}>{subtitle}</div>
+      <div className={styles.note}>
+        {note}
+        {note2 && <><br />{note2}</>}
+      </div>
+    </div>
+  )
+}
+
 // 獎項內容還沒確定，做了排版跟設定外部連結
 const Collect = () => {
   const handleClick = () => {
@@ -27,27 +66,7 @@ const Collect = () => {
           <img src="/event/image_step.png" alt="集章規則" className={styles.img} loading='lazy'/>
         </div>
         <div className={styles.prizeGroup}>
-          <div className={styles.prize}>
-            <img src="/prize/prize_1.png" alt="首獎" className={styles.prizeImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Samsung Galaxy S24</div>
-            <div className={styles.subtitle}>256GB｜12GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$43,900</div>
-          </div>
-          <div className={styles.prize}>
-            <img src="/prize/prize_1.png" alt="首獎" className={styles.prizeImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Samsung Galaxy S24</div>
-            <div className={styles.subtitle}>256GB｜12GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$43,900</div>
-          </div>
-          <div className={styles.prize}>
-            <img src="/prize/prize_1.png" alt="首獎" className={styles.prizeImg} loading='lazy'/>
-            <div className={styles.tag}>首獎</div>
-            <div className={styles.title}>Samsung Galaxy S24</div>
-            <div className={styles.subtitle}>256GB｜12GB</div>
-            <div className={styles.note}>乙台・1名・市價 NT$43,900</div>
-          </div>
+          {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
         </div>
         <LinkBtn
           title='開啟集章卡'
