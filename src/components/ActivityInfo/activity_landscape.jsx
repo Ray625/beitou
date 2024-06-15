@@ -17,7 +17,7 @@ const cardList = [{
 },{
   title: '點點螢火蟲',
   location: '地熱谷入口',
-  img: '/attraction/image_10.png'
+  img: '/attraction/image_9.png'
   }]
 
 const Card = ({ props }) => {

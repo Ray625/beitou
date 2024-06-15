@@ -201,9 +201,13 @@
     gap: 30px;
   }
 
+  .card {
+    width: fit-content;
+  }
+
   .img {
-    width: 466px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     border-radius: 12px;
     margin-bottom: 24px;
   }
@@ -213,7 +217,7 @@
   }
   
   .describe {
-    width: 466px;
+    width: 100%;
     margin-bottom: 24px;
     font-size: style.$body_font_size;
     text-align: center;
