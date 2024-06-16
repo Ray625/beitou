@@ -33,14 +33,20 @@ const Info = ({ setActivity }) => {
           img='/title/title_1.png'
           id='info'
         />
-        <div className={styles.describe}>2024北投夏日魔法節以酒家菜與那卡西為活動主軸，我們計劃以「復刻北投百年歷史酒家菜，高朋滿座同歡唱」作為活動大亮點，吸引遊客夏日遊北投品嚐美食與旅遊，冬季來北投泡湯，吸引遊客們在不同季節造訪北投！</div>
+        <div className={styles.describe}>為了形塑北投亮點特色，推廣北投商圈，將於113年7月的四個週末舉辦主題推廣活動，結合地方組織與商圈力量，串聯在地商家，呈現精彩盛會。
+          <br />
+          <br />
+          活動期間設置五大亮點打卡裝置，並規劃以酒家菜與那卡西為主軸的行銷活動，復刻北投百年美食，吸引遊客夏季來北投品嚐美食，冬季來泡湯，串聯北投在地特約商店，感受北投魅力。
+          <br />
+          <br />
+          無論夏季美食之旅或冬季溫泉之行，北投將帶給您難忘體驗，一起在北投，探索這片充滿驚喜的地方！</div>
         <div className={styles.infoGroup}>
           <div className={styles.time}>
-            <object data="/svg/icon_info_time.svg" className={styles.icon}> </object>
+            <img src="/svg/icon_info_time.svg" alt="icon" className={styles.icon}/>
             時間 : 7/5(五) ~ 7/28(日)
           </div>
           <div className={styles.location}>
-            <object data="/svg/icon_info_pin.svg" className={styles.icon}> </object>
+            <img src="/svg/icon_info_pin.svg" alt="icon" className={styles.icon}/>
             地點 : 北投公園＆七星公園＆地熱谷
           </div>
         </div>

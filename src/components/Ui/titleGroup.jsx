@@ -3,9 +3,9 @@ import styles from './titleGroup.module.scss';
 const TitleGroup = ({ imgLeft, imgRight, title }) => {
   return (
     <div className={styles.titleGroup}>
-      <object data={imgLeft} className={styles.icon}> </object>
+      <img src={imgLeft} alt="icon" className={styles.icon} />
       <h2 className={styles.title}>{title}</h2>
-      <object data={imgRight} className={styles.icon}> </object>
+      <img src={imgRight} alt="icon" className={styles.icon} />
     </div>
   )
 }

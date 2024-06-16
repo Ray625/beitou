@@ -4,8 +4,8 @@ import { LinkBtn } from '../Ui/button';
 
 const prizeList = [{
   img: '/prize/prize_LINE_1.png',
-  title: 'Samsung Galaxy S24',
-  subtitle: '256GB',
+  title: 'Samsung',
+  subtitle: 'Galaxy S24 256GB',
   note: '乙台・1名・市價 NT$27,900'
 },{
   img: '/prize/prize_LINE_2.png',
@@ -22,7 +22,7 @@ const prizeList = [{
   img: '/prize/prize_LINE_4.png',
   title: '北投夏日魔法節',
   subtitle: '環保提袋',
-  note: '乙個・220名',
+  note: '乙個・432名',
 },]
 
 const Prize = ({props}) => {
@@ -41,7 +41,6 @@ const Prize = ({props}) => {
   )
 }
 
-// 獎項內容還沒確定，做了排版跟設定外部連結
 const Collect = () => {
   const handleClick = () => {
     window.open('https://line.me/R/ti/p/@309wtsim?from=page&accountId=309wtsim', '_blank')

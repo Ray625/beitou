@@ -113,7 +113,7 @@ const ActivityBody = ({ activity, props }) => {
   return (
     <div className={`${styles.activityBody} ${num !== activity ? styles.dNone : ''}  `} style={{color: color}}>
       <div className={styles.titleGroup} style={{ background: `${color}1A` }}>
-        <object data={icon} className={styles.titleicon}> </object>
+        <img src={icon} alt="icon" className={styles.titleIcon}/>
         {device === 'mobile' && <h2 className={styles.title}>
           {title}
           {subtitle && <><br />{subtitle}</>}
@@ -122,19 +122,19 @@ const ActivityBody = ({ activity, props }) => {
           {title}
           {subtitle && <>・{subtitle}</>}
         </h2>}
-        <object data={icon} className={styles.titleicon}> </object>
+        <img src={icon} alt="icon" className={styles.titleIcon}/>
       </div>
       <div className={styles.infoGroup}>
         <div className={styles.info}>
-          <object data='/svg/icon_activity_day.svg' className={styles.icon}> </object>
+          <div className={styles.iconDay} style={{backgroundColor: color}}></div>
           {date}
         </div>
         <div className={styles.info}>
-          <object data='/svg/icon_activity_time.svg' className={styles.icon}> </object>
+          <div className={styles.iconTime} style={{backgroundColor: color}}></div>
           {time}
         </div>
         <div className={styles.info}>
-          <object data='/svg/icon_activity_pin.svg' className={styles.icon}> </object>
+          <div className={styles.iconLocation} style={{backgroundColor: color}}></div>
           {location}
         </div>
       </div>

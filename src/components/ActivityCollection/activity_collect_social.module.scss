@@ -7,8 +7,8 @@
   align-items: center;
   width: 100%;
   height: fit-content;
-  padding-top: 180px;
-  padding-bottom: 60px;
+  padding-top: 100px;
+  padding-bottom: 80px;
   background-color: style.$middle_green;
   &::before {
     content: '';
@@ -52,8 +52,8 @@
 .prizeGroup {
   display: flex;
   flex-flow: column;
-  gap: 40px;
-  margin-bottom: 72px;
+  gap: 52px;
+  margin-bottom: 40px;
   background-image: url('../../../public/bg/bg_6_item_1_m.png');
   background-size: contain;
   background-position: center;
@@ -95,6 +95,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    padding-top: 140px;
+  }
+
   .wrapper {
     width: style.$wrapper_width_tablet;
   }
@@ -148,7 +152,7 @@
   }
 
   .describe {
-    width: 55%;
+    width: 60%;
     line-height: 32px;
     margin-bottom: 12px;
   }
@@ -195,7 +199,18 @@
     grid-template-rows: 1fr 1fr;
     row-gap: 52px;
     column-gap: 44px;
-    margin-bottom: 72px;
     background-image: none;
+  }
+
+  .prize {
+    display: flex;
+    justify-content: flex-end;
+    width: 240px;
+  }
+
+  .prizeImg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 24px;
   }
 }

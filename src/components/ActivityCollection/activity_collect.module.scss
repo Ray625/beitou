@@ -46,8 +46,8 @@
 .prizeGroup {
   display: flex;
   flex-flow: column;
-  gap: 40px;
-  margin-bottom: 72px;
+  gap: 52px;
+  margin-bottom: 40px;
   background-image: url('../../../public/bg/bg_6_item_1_m.png');
   background-size: contain;
   background-position: center;
@@ -58,6 +58,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.prize:nth-last-of-type(1) {
+  .title{
+    font-weight: style.$body_font_weight;
+  }
 }
 
 .prizeImg {
@@ -112,7 +118,7 @@
   }
 
   .describe {
-    width: 55%;
+    width: 60%;
     line-height: 32px;
     margin-bottom: 12px;
   }
@@ -164,9 +170,15 @@
     background-image: none;
   }
 
+  .prize {
+    display: flex;
+    justify-content: flex-end;
+    width: 240px;
+  }
+
   .prizeImg {
-    width: auto;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin-bottom: 24px;
   }
 }

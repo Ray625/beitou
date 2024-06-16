@@ -23,7 +23,7 @@ const TrafficCard = ({ props }) => {
   return (
     <div className={styles.traffic}>
       <div className={styles.titleGroup}>
-        <object data={img} className={styles.titleIcon}> </object>
+        <img src={img} alt="icon" className={styles.titleIcon} />
         <div className={styles.title}>{title}</div>
       </div>
       <p className={styles.trafficBody}>{describe}</p>
@@ -45,12 +45,12 @@ const Traffic = () => {
           img='/title/title_6.png'
           id='traffic'
         />
-        <div className={styles.describe}>活動期間於特約店家消費滿500元以上(可累計)，憑消費收據或發票即可於活動服務處領取抽獎券，登記獲得抽限量贈品機會！</div>
+        <div className={styles.describe}>區內公車線眾多，其中經過榮民總醫院的公車即有10線以上，交通便利；另有小型公車6、7、9、14等路線通駛山區道路。請多多搭乘大眾交通工具前往～</div>
         <div className={styles.trafficGroup}>
           {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.title} />)}
           <div className={styles.traffic}>
             <div className={styles.titleGroup}>
-              <object data='/svg/icon_go_car.svg' className={styles.titleIcon}> </object>
+              <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} />
               <div className={styles.title}>自行開車</div>
             </div>
             <div className={styles.trafficBody}>

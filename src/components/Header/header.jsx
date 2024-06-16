@@ -31,9 +31,8 @@ const list = [
 
 // 固定畫面右下方下載電子手冊按鈕，透過useDevice偵測螢幕大小控制，只在螢幕width:1440px以上(navbar展開時)顯示
 const FixedBtn = () => {
-  // 正確檔案尚未發布
   const handleDownload = () => {
-    alert('click fixed btn')
+    window.open('https://drive.google.com/file/d/1tB1neJM_QuU8TrDaL5BQ70CbEQR7nvQW/view?usp=drive_link', '_blank');
   }
 
   return (
@@ -41,7 +40,7 @@ const FixedBtn = () => {
       活動
       <br />
       電子手冊
-      <object data='/svg/icon_download.svg' className={styles.icon}> </object>
+      <img src="/svg/icon_download.svg" alt="icon" className={styles.icon} />
     </button>
   )
 }
@@ -72,7 +71,7 @@ const Header = () => {
   }
 
   const handleDownload = () => {
-    alert('click fixed btn')
+    window.open('https://drive.google.com/file/d/1tB1neJM_QuU8TrDaL5BQ70CbEQR7nvQW/view?usp=drive_link', '_blank');
   }
 
   const handleScrollToTop = () => {
@@ -103,7 +102,7 @@ const Header = () => {
         <hr className={styles.hr} />
         <button className={styles.downloadBtn} onClick={handleDownload}>
           活動電子手冊下載
-          <object data="/svg/download_btn.svg" aria-label="downlowd" className={styles.downloadIcon}> </object>
+          <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} />
         </button>
         <div className={styles.language}>
           <button className={`${styles.languageBtn} ${styles.active}`}>繁體中文</button>

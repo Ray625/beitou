@@ -48,7 +48,7 @@
   .hr,
   .downloadBtn,
   .language {
-    transition: opacity 0.5s ease 0.2s;
+    transition: opacity 0s ease 0.2s;
   }
 }
 
@@ -154,11 +154,17 @@
   border: 1px solid transparent;
   border-radius: 4px;
   background-color: transparent;
+  font-size: style.$font_size_mobile;
   &.active {
     border: 1px solid #E8D7E2;
+    &:hover {
+      cursor: default;
+      color: #E8D7E2;
+    }
   }
   &:hover {
     cursor: pointer;
+    color: #fff;
   }
 }
 

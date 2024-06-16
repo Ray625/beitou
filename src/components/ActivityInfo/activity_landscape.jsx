@@ -8,7 +8,7 @@ const cardList = [{
   img: '/attraction/image_6.png'
 },{
   title: '星空祝福',
-  location: '北投公園',
+  location: '北投公園 (涼亭＆走道)',
   img: '/attraction/image_7.png'
 },{
   title: '奇幻森林',
@@ -28,7 +28,7 @@ const Card = ({ props }) => {
       <img src={img} alt={location} className={styles.img} loading='lazy'/>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.location}>
-        <object data="/svg/icon_attraction_pin.svg" className={styles.icon}> </object>
+        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}/>
         {location}
       </div>
     </div>

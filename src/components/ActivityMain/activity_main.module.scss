@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 28px;
 }
 
@@ -159,21 +159,42 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #ABABAB;
+  color: #494949;
   font-size: style.$font_size_mobile;
   font-weight: style.$title_font_weight;
   line-height: 32px;
 }
 
-.icon {
+%icon {
   width: 24px;
-  height: 28px;
+  height: 24px;
   margin-right: 8px;
-  padding-top: 4px;
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+}
+
+.iconDay,
+.iconTime,
+.iconLocation {
+  @extend %icon
+}
+
+.iconDay {
+  background-image: url('../../../public/svg/icon_activity_day.svg');
+}
+
+.iconTime {
+  background-image: url('../../../public/svg/icon_activity_time.svg');
+}
+
+.iconLocation {
+  background-image: url('../../../public/svg/icon_activity_pin.svg');
 }
 
 .describe {
-  width: 90%;
+  width: 100%;
   margin-bottom: 16px;
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
@@ -269,6 +290,10 @@
     margin-bottom: 20px;
   }
 
+  .describe {
+    width: 90%;
+  }
+
   .activityList {
     flex-flow: row wrap;
     align-items: flex-start;
@@ -336,6 +361,7 @@
     margin-bottom: 28px;
   }
 
+
   .title {
     font-size: style.$H2_font_size;
   }
@@ -392,6 +418,7 @@
     background-image: url('../../../public/svg/icon_arrow_whitebg.svg');
     background-blend-mode: screen;
     &:hover {
+      cursor: default;
       opacity: 1;
     }
   }
