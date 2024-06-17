@@ -111,7 +111,7 @@ const Activity = ({ activity, setActivity }) => {
                     <div className={styles.hr}></div>
                     <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
                     <div className={styles.cardIcon}>
-                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} loading='lazy'/>
                     </div>
                   </div>
                   <div className={styles.card}>
@@ -121,7 +121,7 @@ const Activity = ({ activity, setActivity }) => {
                     <div className={styles.hr}></div>
                     <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
                     <div className={styles.cardIcon}>
-                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} loading='lazy'/>
                     </div>
                   </div>
                   <div className={styles.card}>
@@ -131,7 +131,7 @@ const Activity = ({ activity, setActivity }) => {
                     <div className={styles.hr}></div>
                     <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
                     <div className={styles.cardIcon}>
-                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} loading='lazy'/>
                     </div>
                   </div>
                   <div className={styles.card}>
@@ -141,7 +141,7 @@ const Activity = ({ activity, setActivity }) => {
                     <div className={styles.hr}></div>
                     <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
                     <div className={styles.cardIcon}>
-                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} loading='lazy'/>
                     </div>
                   </div>
                   <div className={styles.card}>
@@ -151,7 +151,7 @@ const Activity = ({ activity, setActivity }) => {
                     <div className={styles.hr}></div>
                     <div className={styles.cardBody}>邀請那卡西表演歌手現場駐唱，重新北投酒家菜經典氛圍</div>
                     <div className={styles.cardIcon}>
-                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} />
+                      <img src="/icon/tab_2-4.png" alt="icon" className={styles.iconImg} loading='lazy'/>
                     </div>
                   </div>
                 </div>

@@ -29,7 +29,7 @@ const Card = ({ props }) => {
   
   return (
     <div className={styles.card}>
-      <img src={img} alt={location} className={styles.img} />
+      <img src={img} alt={location} className={styles.img} loading='lazy'/>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.location}>
         <object data="/svg/icon_attraction_pin.svg" className={styles.icon}> </object>

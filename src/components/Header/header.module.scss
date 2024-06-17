@@ -194,6 +194,7 @@
 .icon {
   width: 18px;
   height: 18px;
+  pointer-events: none;
   transition: transform 0.1s ease-in;
 }
 

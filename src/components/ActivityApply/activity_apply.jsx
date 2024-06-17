@@ -23,7 +23,7 @@ const Apply = () => {
         />
         <div className={styles.cardGroup}>
           <div className={styles.card}>
-            <img src="/event/event_3.png" alt="北投小旅行" className={styles.img} />
+            <img src="/event/event_3.png" alt="北投小旅行" className={styles.img} loading='lazy'/>
             <div className={styles.infoGroup}>
               <div className={styles.info}>
                 <object data='/svg/icon_event_day.svg' className={styles.icon}> </object>
@@ -46,7 +46,7 @@ const Apply = () => {
             />
           </div>
           <div className={styles.card}>
-            <img src="/event/event_4.png" alt="夏日好聲音歌唱比賽" className={styles.img} />
+            <img src="/event/event_4.png" alt="夏日好聲音歌唱比賽" className={styles.img} loading='lazy'/>
             <div className={styles.infoGroup}>
               <div className={styles.info}>
                 <object data='/svg/icon_event_day.svg' className={styles.icon}> </object>

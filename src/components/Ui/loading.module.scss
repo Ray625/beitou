@@ -1,0 +1,46 @@
+@use '/src/styles/style.scss';
+
+.container {
+  position: fixed;
+  z-index: 200;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(180deg, #6F4A8B, #BD78A2, #E9B2B3, #E9CE8C);
+}
+
+.item {
+  position: relative;
+  width: 120px;
+  height: 80px;
+  background-color: transparent;
+  mask-image: url('../../../public/svg/icon_loading.svg');
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.colorFull {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  animation: grow 1.5s infinite ;
+}
+
+@keyframes grow {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100%;
+  }
+}
+
