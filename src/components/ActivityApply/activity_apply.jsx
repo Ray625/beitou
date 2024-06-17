@@ -26,15 +26,15 @@ const Apply = () => {
             <img src="/event/event_3.png" alt="北投小旅行" className={styles.img} loading='lazy'/>
             <div className={styles.infoGroup}>
               <div className={styles.info}>
-                <img src="/svg/icon_event_day.svg" alt="icon" className={styles.icon}/>
+                <img src="/svg/icon_event_day.svg" alt="icon" className={styles.icon} loading='lazy'/>
                 7/7(日)~7/21(日)
               </div>
               <div className={styles.info}>
-                <img src="/svg/icon_event_time.svg" alt="icon" className={styles.icon}/>
+                <img src="/svg/icon_event_time.svg" alt="icon" className={styles.icon} loading='lazy'/>
                 15:00-18:30
               </div>
               <div className={styles.info}>
-                <img src="/svg/icon_event_pin.svg" alt="icon" className={styles.icon}/>
+                <img src="/svg/icon_event_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
                 七星公園服務台
               </div>
             </div>
@@ -49,15 +49,15 @@ const Apply = () => {
             <img src="/event/event_4.png" alt="夏日好聲音歌唱比賽" className={styles.img} loading='lazy'/>
             <div className={styles.infoGroup}>
               <div className={styles.info}>
-                <img src="/svg/icon_event_day.svg" alt="icon" className={styles.icon}/>
+                <img src="/svg/icon_event_day.svg" alt="icon" className={styles.icon} loading='lazy'/>
                 7/27(六)~7/28(日)
               </div>
               <div className={styles.info}>
-                <img src="/svg/icon_event_time.svg" alt="icon" className={styles.icon}/>
+                <img src="/svg/icon_event_time.svg" alt="icon" className={styles.icon} loading='lazy'/>
                 17:30-20:30
               </div>
               <div className={styles.info}>
-                <img src="/svg/icon_event_pin.svg" alt="icon" className={styles.icon}/>
+                <img src="/svg/icon_event_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
                 七星公園舞台區
               </div>
             </div>

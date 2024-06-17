@@ -113,7 +113,7 @@ const ActivityBody = ({ activity, props }) => {
   return (
     <div className={`${styles.activityBody} ${num !== activity ? styles.dNone : ''}  `} style={{color: color}}>
       <div className={styles.titleGroup} style={{ background: `${color}1A` }}>
-        <img src={icon} alt="icon" className={styles.titleIcon}/>
+        <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
         {device === 'mobile' && <h2 className={styles.title}>
           {title}
           {subtitle && <><br />{subtitle}</>}
@@ -122,7 +122,7 @@ const ActivityBody = ({ activity, props }) => {
           {title}
           {subtitle && <>・{subtitle}</>}
         </h2>}
-        <img src={icon} alt="icon" className={styles.titleIcon}/>
+        <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
       </div>
       <div className={styles.infoGroup}>
         <div className={styles.info}>

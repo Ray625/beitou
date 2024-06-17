@@ -59,7 +59,7 @@ const Card = ({ props }) => {
     <div className={styles.attractionCard} style={{gridRow}}>
       <img src={num} alt={alt} className={styles.num} loading='lazy'/>
       <div className={styles.titleGroup}>
-        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} />
+        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  loading='lazy'/>
         <h3 className={styles.title}>{title}</h3>
       </div>
       <div className={styles.cardBody}>

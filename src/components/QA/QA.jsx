@@ -1,4 +1,4 @@
-import styles from './Q&A.module.scss';
+import styles from './QA.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 
 // 常見問題資料要等業主整理，先排了版型

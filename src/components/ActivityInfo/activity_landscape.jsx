@@ -28,7 +28,7 @@ const Card = ({ props }) => {
       <img src={img} alt={location} className={styles.img} loading='lazy'/>
       <h3 className={styles.title}>{title}</h3>
       <div className={styles.location}>
-        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}/>
+        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
         {location}
       </div>
     </div>

@@ -42,11 +42,11 @@ const Info = ({ setActivity }) => {
           無論夏季美食之旅或冬季溫泉之行，北投將帶給您難忘體驗，一起在北投，探索這片充滿驚喜的地方！</div>
         <div className={styles.infoGroup}>
           <div className={styles.time}>
-            <img src="/svg/icon_info_time.svg" alt="icon" className={styles.icon}/>
+            <img src="/svg/icon_info_time.svg" alt="icon" className={styles.icon} loading='lazy'/>
             時間 : 7/5(五) ~ 7/28(日)
           </div>
           <div className={styles.location}>
-            <img src="/svg/icon_info_pin.svg" alt="icon" className={styles.icon}/>
+            <img src="/svg/icon_info_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
             地點 : 北投公園＆七星公園＆地熱谷
           </div>
         </div>

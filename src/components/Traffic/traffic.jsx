@@ -23,7 +23,7 @@ const TrafficCard = ({ props }) => {
   return (
     <div className={styles.traffic}>
       <div className={styles.titleGroup}>
-        <img src={img} alt="icon" className={styles.titleIcon} />
+        <img src={img} alt="icon" className={styles.titleIcon} loading='lazy'/>
         <div className={styles.title}>{title}</div>
       </div>
       <p className={styles.trafficBody}>{describe}</p>
@@ -50,7 +50,7 @@ const Traffic = () => {
           {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.title} />)}
           <div className={styles.traffic}>
             <div className={styles.titleGroup}>
-              <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} />
+              <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} loading='lazy'/>
               <div className={styles.title}>自行開車</div>
             </div>
             <div className={styles.trafficBody}>

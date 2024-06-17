@@ -40,7 +40,7 @@ const FixedBtn = () => {
       活動
       <br />
       電子手冊
-      <img src="/svg/icon_download.svg" alt="icon" className={styles.icon} />
+      <img src="/svg/icon_download.svg" alt="icon" className={styles.icon} loading='lazy' />
     </button>
   )
 }
@@ -88,7 +88,7 @@ const Header = () => {
         <button className={styles.closeBtn} onClick={handleCloseHamburger}></button>
         <button className={styles.logoGroup} onClick={handleScrollToTop}>
           <h1 className={styles.title}>北投夏日魔法節</h1>
-          <img src="/svg/header_logo.svg" alt="logo" className={styles.logo} />
+          <img src="/svg/header_logo.svg" alt="logo" className={styles.logo} loading='lazy'/>
         </button>
         <ul className={styles.navList}>
           {list.map((item) => {
@@ -102,7 +102,7 @@ const Header = () => {
         <hr className={styles.hr} />
         <button className={styles.downloadBtn} onClick={handleDownload}>
           活動電子手冊下載
-          <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} />
+          <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} loading='lazy'/>
         </button>
         <div className={styles.language}>
           <button className={`${styles.languageBtn} ${styles.active}`}>繁體中文</button>
