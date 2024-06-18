@@ -109,7 +109,7 @@ const ScrollCardList = ({ list, color }) => {
 const ActivityBody = ({ activity, props }) => {
   const device = useDevice()
   const {num, color, title, subtitle, icon, date, time, location, describe, cardList } = props
-  
+
   return (
     <div className={`${styles.activityBody} ${num !== activity ? styles.dNone : ''}  `} style={{color: color}}>
       <div className={styles.titleGroup} style={{ background: `${color}1A` }}>
@@ -143,11 +143,11 @@ const ActivityBody = ({ activity, props }) => {
       </div>
       <ScrollCardList list={cardList} color={color}/>
     </div>
-  )  
+  )
 }
 
 const Activity = ({ activity, setActivity }) => {
-  
+
   return (
     <section className={styles.container} >
       <div className={styles.bg}></div>

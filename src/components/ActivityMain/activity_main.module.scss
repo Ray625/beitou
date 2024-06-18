@@ -196,7 +196,8 @@
   font-weight: style.$body_font_weight;
   line-height: 28px;
   color: style.$font_black;
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .cardContainer {

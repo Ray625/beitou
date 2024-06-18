@@ -37,7 +37,8 @@
   width: 90%;
   margin-bottom: 24px;
   color: white;
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
   line-height: 28px;
@@ -141,7 +142,6 @@
   .describe {
     margin-bottom: 40px;
     color: white;
-    text-align: center;
     font-size: style.$font_size;
     font-weight: style.$body_font_weight;
     line-height: 32px;
@@ -210,7 +210,6 @@
     width: 60%;
     margin-bottom: 40px;
     color: white;
-    text-align: center;
     font-size: style.$font_size;
     font-weight: style.$body_font_weight;
     line-height: 32px;

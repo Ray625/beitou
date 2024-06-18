@@ -62,12 +62,13 @@ const Lottery = () => {
         />
         <div className={styles.describe}>於2024/7/5-2024/7/28期間，至特約商店當日單筆消費滿NT$300(無法跨店兌換)即可獲得抽獎券乙張，消費滿NT$600即可獲得抽獎券兩張，以此類推。
           <br />
-          <br />          
+          <br />
           消費者將抽獎券投入特約商店的活動抽獎箱中，即可參與消費滿額抽活動。
         </div>
         <div className={styles.point}>※注意事項<br/>
           1. 抽獎券請填寫真實姓名與本人手機，如聯繫不到得獎人，主辦單位概不負責<br />
-          2. 使用溫泉或住宿等票卷之消費不適用消費滿額抽之活動。<br />
+          2. 使用溫泉或住宿等票卷之消費不適用消費滿額抽之活動<br />
+          3. 抽獎券須蓋上店家店章作為佐證，否則無效
         </div>
         <div className={styles.prizeGroup}>
           {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}

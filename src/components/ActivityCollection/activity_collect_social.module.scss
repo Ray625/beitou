@@ -37,7 +37,8 @@
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
   line-height: 32px;
-  text-align: center;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .point {
