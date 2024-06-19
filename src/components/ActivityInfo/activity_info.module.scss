@@ -20,14 +20,7 @@
 }
 
 .describe {
-  width: 90%;
-  margin-bottom: 24px;
   color: white;
-  font-size: style.$body_font_size;
-  font-weight: style.$body_font_weight;
-  line-height: 28px;
-  text-align: justify;
-  text-align-last: center;
 }
 
 .infoGroup {
@@ -124,10 +117,6 @@
 
   .describe {
     margin-bottom: 40px;
-    color: white;
-    font-size: style.$font_size;
-    font-weight: style.$body_font_weight;
-    line-height: 32px;
   }
 
   .infoGroup > div {
@@ -184,19 +173,6 @@
     }
   }
 
-  .wrapper {
-    width: style.$wrapper_width;
-  }
-
-  .describe {
-    width: 80%;
-    margin-bottom: 40px;
-    color: white;
-    font-size: style.$font_size;
-    font-weight: style.$body_font_weight;
-    line-height: 32px;
-  }
-
   .infoGroup {
     flex-direction: row;
     margin-bottom: 60px;
@@ -229,11 +205,5 @@
   .info:hover {
     cursor: pointer;
     transform: scale(110%, 110%);
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .describe {
-    width: 60%;
   }
 }

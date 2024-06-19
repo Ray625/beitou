@@ -1,6 +1,7 @@
 import styles from './activity_info.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 import { Container, Wrapper } from '../Ui/container';
+import { Describe } from '../Ui/describe';
 
 // 畫面下方5個圖片用eventList array.map()產生，透過num設定點擊後跳轉至main section，並改變上方tab，由父層的state控制顯示的tab(第1、2、3、4、5個)，並且設定連結a href="#id"，使畫面跳轉至main section
 const eventList = [{
@@ -34,13 +35,12 @@ const Info = ({ setActivity }) => {
           img='/title/title_1.png'
           id='info'
         />
-        <div className={styles.describe}>為了形塑北投亮點特色，推廣北投商圈，將於113年7月的四個週末舉辦主題推廣活動，結合地方組織與商圈力量，串聯在地商家，呈現精彩盛會。
-          <br />
-          <br />
-          活動期間設置五大亮點打卡裝置，並規劃以酒家菜與那卡西為主軸的行銷活動，復刻北投百年美食，吸引遊客夏季來北投品嚐美食，冬季來泡湯，串聯北投在地特約商店，感受北投魅力。
-          <br />
-          <br />
-          無論夏季美食之旅或冬季溫泉之行，北投將帶給您難忘體驗，一起在北投，探索這片充滿驚喜的地方！</div>
+        <Describe
+          describe='為了形塑北投亮點特色，推廣北投商圈，將於113年7月的四個週末舉辦主題推廣活動，結合地方組織與商圈力量，串聯在地商家，呈現精彩盛會。'
+          describe2='活動期間設置五大亮點打卡裝置，並規劃以酒家菜與那卡西為主軸的行銷活動，復刻北投百年美食，吸引遊客夏季來北投品嚐美食，冬季來泡湯，串聯北投在地特約商店，感受北投魅力。'
+          describe3='無論夏季美食之旅或冬季溫泉之行，北投將帶給您難忘體驗，一起在北投，探索這片充滿驚喜的地方！'
+          className={styles.describe}
+        />
         <div className={styles.infoGroup}>
           <div className={styles.time}>
             <img src="/svg/icon_info_time.svg" alt="icon" className={styles.icon} loading='lazy'/>

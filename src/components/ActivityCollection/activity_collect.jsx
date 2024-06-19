@@ -2,6 +2,7 @@ import styles from './activity_collect.module.scss';
 import { ImgTitle, TitleGroup } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 import { Container, Wrapper } from '../Ui/container';
+import { Describe } from '../Ui/describe';
 
 const prizeList = [{
   img: '/prize/prize_LINE_1.png',
@@ -62,7 +63,9 @@ const Collect = () => {
           imgLeft='/svg/icon_photo.svg'
           imgRight='/svg/icon_photo.svg'
           />
-        <div className={styles.describe}>活動期間，參加「2024北投夏日魔法節」，在五大裝置藝術打卡景點現場掃描QR Code，加入「2024北投夏日魔法節LINE官方帳號」，開始集章之旅，集滿3點可獲得一次扭蛋抽獎機會，集滿5點可再玩一次扭蛋抽獎！</div>
+        <Describe
+          describe='活動期間，參加「2024北投夏日魔法節」，在五大裝置藝術打卡景點現場掃描QR Code，加入「2024北投夏日魔法節LINE官方帳號」，開始集章之旅，集滿3點可獲得一次扭蛋抽獎機會，集滿5點可再玩一次扭蛋抽獎！'
+        />
         <div className={styles.point}>數量有限，抽完為止</div>
         <div className={styles.rule}>
           <img src="/event/image_step.png" alt="集章規則" className={styles.img} loading='lazy'/>

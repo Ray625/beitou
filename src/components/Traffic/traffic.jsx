@@ -2,6 +2,7 @@ import styles from './traffic.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 import { Container, Wrapper } from '../Ui/container';
+import { Describe } from '../Ui/describe';
 
 // 畫面用trafficList array.map()產生，最後一個自行開車的card，因內容不同就直接寫html。與設計師討論在平板上顯示時讓card都呈現一樣高度
 const trafficList = [{
@@ -46,8 +47,8 @@ const Traffic = () => {
           title='交通指引'
           img='/title/title_6.png'
           id='traffic'
-          />
-        <div className={styles.describe}>區內公車線眾多，其中經過榮民總醫院的公車即有10線以上，交通便利；另有小型公車6、7、9、14等路線通駛山區道路。請多多搭乘大眾交通工具前往～</div>
+        />
+        <Describe describe='區內公車線眾多，其中經過榮民總醫院的公車即有10線以上，交通便利；另有小型公車6、7、9、14等路線通駛山區道路。請多多搭乘大眾交通工具前往～'/>
         <div className={styles.trafficGroup}>
           {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.title} />)}
           <div className={styles.traffic}>

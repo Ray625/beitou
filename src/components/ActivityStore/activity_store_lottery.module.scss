@@ -56,16 +56,6 @@
   color: white;
 }
 
-.describe {
-  width: 90%;
-  margin-bottom: 28px;
-  font-size: style.$font_size;
-  font-weight: style.$body_font_weight;
-  line-height: 32px;
-  text-align: justify;
-  text-align-last: center;
-}
-
 .point {
   margin-bottom: 24px;
   font-size: style.$body_font_size;
@@ -203,12 +193,6 @@
       background-position: bottom center;
       background-repeat: no-repeat;
     }
-  }
-
-  .describe {
-    width: 60%;
-    margin-top: 8px;
-    margin-bottom: 40px;
   }
 
   .point {

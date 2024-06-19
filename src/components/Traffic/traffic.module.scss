@@ -29,19 +29,8 @@
   }
 }
 
-
 .wrapper {
   color: white;
-}
-
-.describe {
-  width: 90%;
-  margin-bottom: 28px;
-  font-size: style.$font_size;
-  font-weight: style.$body_font_weight;
-  line-height: 32px;
-  text-align: justify;
-  text-align-last: center;
 }
 
 .trafficGroup {
@@ -130,12 +119,6 @@
 }
 
 @media screen and (min-width: 991px) {
-  .describe {
-    width: 60%;
-    margin-top: 8px;
-    margin-bottom: 40px;
-  }
-
   .trafficGroup {
     display: flex;
     flex-flow: row wrap;

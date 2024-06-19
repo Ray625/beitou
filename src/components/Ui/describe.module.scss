@@ -1,0 +1,33 @@
+@use '/src/styles/style.scss';
+
+.describe {
+  width: 90%;
+  margin-bottom: 24px;
+  font-size: style.$body_font_size;
+  font-weight: style.$body_font_weight;
+  line-height: 28px;
+  text-align: justify;
+  text-align-last: center;
+}
+
+@media screen and (min-width: 768px) {
+  .describe {
+    width: 100%;
+    font-size: style.$font_size;
+    line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .describe {
+    width: 80%;
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .describe {
+    width: 60%;
+  }
+}

@@ -2,6 +2,7 @@ import styles from './activity_collect_social.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
 import { Container, Wrapper } from '../Ui/container';
+import { Describe } from '../Ui/describe';
 
 const prizeList = [{
   img: '/prize/prize_FB_1.png',
@@ -26,7 +27,7 @@ const prizeList = [{
 },{
   img: '/prize/prize_FB_5.png',
   title: '牧牧moomoo-北投光明店',
-  subtitle: '四葉十勝鮮乳(1000ml)',
+  subtitle: '四葉十勝鮮乳 一公升',
   note: '乙瓶・1名・市價 NT$220',
 },{
   img: '/prize/prize_FB_6.png',
@@ -63,8 +64,10 @@ const CollectSocail = () => {
           title='集章社群抽獎'
           imgLeft='/svg/icon_thumb.svg'
           imgRight='/svg/icon_thumb.svg'
-          />
-        <div className={styles.describe}>在 2024/7/28 前，於「2024北投夏日魔法節」LINE官方帳號內集滿5點電子戳章，並將電子戳章截圖上傳至溫泉協會粉絲團，即可參加社群抽獎，獎項包括北投旅宿業者提供的住宿和泡湯券！</div>
+        />
+        <Describe
+          describe='在 2024/7/28 前，於「2024北投夏日魔法節」LINE官方帳號內集滿5點電子戳章，並將電子戳章截圖上傳至溫泉協會粉絲團，即可參加社群抽獎，獎項包括北投旅宿業者提供的住宿和泡湯券！'
+        />
         <div className={styles.point}>詳情請點選下方的溫泉協會粉絲團連結</div>
         <div className={styles.prizeGroup}>
           {prizeList.map((prize, index) => <Prize props={prize} key={index} />)}

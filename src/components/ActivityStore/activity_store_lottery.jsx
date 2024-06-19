@@ -1,6 +1,7 @@
 import styles from './activity_store_lottery.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 import { Container, Wrapper } from '../Ui/container';
+import { Describe } from '../Ui/describe';
 
 const prizeList = [{
   img: '/prize/prize_store_1.png',
@@ -59,12 +60,10 @@ const Lottery = () => {
           title='消費滿額抽'
           imgLeft='/svg/icon_celebrate_left.svg'
           imgRight='/svg/icon_celebrate_right.svg'
-          />
-        <div className={styles.describe}>於2024/7/5-2024/7/28期間，至特約商店當日單筆消費滿NT$300(無法跨店兌換)即可獲得抽獎券乙張，消費滿NT$600即可獲得抽獎券兩張，以此類推。
-          <br />
-          <br />
-          消費者將抽獎券投入特約商店的活動抽獎箱中，即可參與消費滿額抽活動。
-        </div>
+        />
+        <Describe describe='於2024/7/5-2024/7/28期間，至活動特約店家當日單筆消費滿NT$300即可獲得抽獎券乙張、滿NT$600貳張(以此類推)，當日單筆金額最高上限為5張。'
+        describe2='消費者將抽獎券投入特約商店的活動抽獎箱中，即可參與消費滿額抽活動。'
+        />
         <div className={styles.point}>※注意事項<br/>
           1. 抽獎券請填寫真實姓名與本人手機，如聯繫不到得獎人，主辦單位概不負責<br />
           2. 使用溫泉或住宿等票卷之消費不適用消費滿額抽之活動<br />
