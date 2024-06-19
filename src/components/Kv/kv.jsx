@@ -2,6 +2,7 @@ import styles from './kv.module.scss';
 import Loading from '../Ui/loading';
 import { useState, useEffect } from 'react';
 import { useDevice } from '../../contexts/DeviceContext';
+import { Container } from '../Ui/container';
 
 // 將檔案較大及設有動畫的圖片預先載入
 const images = [
@@ -56,16 +57,16 @@ const KeyVisionBanner = () => {
 
   // 圖片載入後依照尺寸放入對應的背景、loading page消失後再套用class播放動畫
   return (
-    <div className={styles.container}>
+    <Container className={styles.container}>
       {isLoading && <Loading />}
       {device === 'mobile' && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[0]})` }}></div>}
       {device !== 'mobile' && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[5]})` }}></div>}
-      {device === 'mobile' && 
+      {device === 'mobile' &&
         <div className={styles.title} style={{ backgroundImage: `url(${loadedImages[1]})` }}>
           <div className={`${styles.subtitle} ${!isLoading ? styles.subFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[2]})` }}></div>
         </div>
       }
-      {device !== 'mobile' && 
+      {device !== 'mobile' &&
         <div className={styles.title} style={{ backgroundImage: `url(${loadedImages[6]})` }}>
           <div className={`${styles.subtitle} ${!isLoading ? styles.subFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[7]})` }}></div>
         </div>
@@ -76,8 +77,8 @@ const KeyVisionBanner = () => {
       {device === 'mobile' && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[4]})` }}></div>}
       {device !== 'mobile' && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[9]})` }}></div>}
       <div className={styles.cloudLeft}></div>
-      <div className={styles.cloudRight}></div> 
-    </div>
+      <div className={styles.cloudRight}></div>
+    </Container>
   )
 }
 

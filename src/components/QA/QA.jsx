@@ -1,17 +1,18 @@
 import styles from './QA.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
 
 // 常見問題資料要等業主整理，先排了版型
 const QA = () => {
   return (
-    <section className={styles.container}>
+    <Container className={styles.container}>
       <div className={styles.bg}></div>
-      <div className={styles.wrapper}>
+      <Wrapper>
         <ImgTitle
           title='常見問題'
           img='/title/title_7.png'
           id='qa'
-        />
+          />
         <div className={styles.qaWrapper}>
           <div className={styles.qaGroup}>
             <div className={styles.qa}>
@@ -36,8 +37,8 @@ const QA = () => {
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Container>
   )
 }
 

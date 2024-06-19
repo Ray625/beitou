@@ -1,5 +1,6 @@
 import styles from './activity_info.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
 
 // 畫面下方5個圖片用eventList array.map()產生，透過num設定點擊後跳轉至main section，並改變上方tab，由父層的state控制顯示的tab(第1、2、3、4、5個)，並且設定連結a href="#id"，使畫面跳轉至main section
 const eventList = [{
@@ -26,8 +27,8 @@ const Info = ({ setActivity }) => {
   }
 
   return (
-    <section className={styles.container} >
-      <div className={styles.wrapper}>
+    <Container className={styles.container}>
+      <Wrapper>
         <ImgTitle
           title='活動資訊'
           img='/title/title_1.png'
@@ -57,8 +58,8 @@ const Info = ({ setActivity }) => {
             )
           })}
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Container>
   )
 }
 

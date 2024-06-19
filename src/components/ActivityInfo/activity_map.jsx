@@ -2,6 +2,7 @@ import styles from './activity_map.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 import { useDevice } from '../../contexts/DeviceContext';
 import { useRef } from 'react';
+import { Container, Wrapper } from '../Ui/container';
 // 點擊圖片放大的功能寫在Ui/zoomInImg中
 import ZoomInImg from '../Ui/zoomInImg';
 
@@ -10,13 +11,15 @@ const Map = () => {
   const device = useDevice()
 
   // 因為想要製作點及地圖可以放大的功能，要讓section的z-index大過header，才不會被header蓋住，故此用ref儲存container節點，並透過點擊時改變其z-index
-  const changeZindex = (num) => {
-    containerRef.current.style.zIndex = num
+   const changeZindex = (num) => {
+    if (containerRef.current) {
+      containerRef.current.changeZindex(num);
+    }
   }
 
   return (
-    <section className={styles.container} ref={containerRef}>
-      <div className={styles.wrapper}>
+    <Container className={styles.container} ref={containerRef}>
+      <Wrapper>
         <TitleGroup
           imgLeft='/svg/icon_map.svg'
           imgRight='/svg/icon_map.svg'
@@ -46,8 +49,8 @@ const Map = () => {
             changeZindex={changeZindex}
           />
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Container>
   )
 }
 

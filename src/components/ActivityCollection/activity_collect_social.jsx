@@ -1,6 +1,7 @@
 import styles from './activity_collect_social.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
+import { Container, Wrapper } from '../Ui/container';
 
 const prizeList = [{
   img: '/prize/prize_FB_1.png',
@@ -25,7 +26,7 @@ const prizeList = [{
 },{
   img: '/prize/prize_FB_5.png',
   title: '牧牧moomoo-北投光明店',
-  subtitle: '四葉十勝鮮乳一公升',
+  subtitle: '四葉十勝鮮乳(1000ml)',
   note: '乙瓶・1名・市價 NT$220',
 },{
   img: '/prize/prize_FB_6.png',
@@ -54,15 +55,15 @@ const CollectSocail = () => {
   const handleClick = () => {
     window.open('https://user234859.pse.is/5xzb5f', '_blank')
   }
-  
+
   return (
-    <section className={styles.container}>
-      <div className={styles.wrapper}>
+    <Container className={styles.container}>
+      <Wrapper className={styles.wrapper}>
         <TitleGroup
           title='集章社群抽獎'
           imgLeft='/svg/icon_thumb.svg'
           imgRight='/svg/icon_thumb.svg'
-        />
+          />
         <div className={styles.describe}>在 2024/7/28 前，於「2024北投夏日魔法節」LINE官方帳號內集滿5點電子戳章，並將電子戳章截圖上傳至溫泉協會粉絲團，即可參加社群抽獎，獎項包括北投旅宿業者提供的住宿和泡湯券！</div>
         <div className={styles.point}>詳情請點選下方的溫泉協會粉絲團連結</div>
         <div className={styles.prizeGroup}>
@@ -72,9 +73,9 @@ const CollectSocail = () => {
           title='溫泉協會粉絲團'
           color='#6E2148'
           onClick={handleClick}
-        />
-      </div>
-    </section>
+          />
+      </Wrapper>
+    </Container>
   )
 }
 

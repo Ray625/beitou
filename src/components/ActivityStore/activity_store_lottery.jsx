@@ -1,5 +1,6 @@
 import styles from './activity_store_lottery.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
 
 const prizeList = [{
   img: '/prize/prize_store_1.png',
@@ -49,17 +50,16 @@ const Prize = ({props}) => {
   )
 }
 
-// 獎項內容還沒確定，做了排版
 const Lottery = () => {
   return (
-    <section className={styles.container}>
+    <Container className={styles.container}>
       <div className={styles.bg}></div>
-      <div className={styles.wrapper}>
+      <Wrapper className={styles.wrapper}>
         <TitleGroup
           title='消費滿額抽'
           imgLeft='/svg/icon_celebrate_left.svg'
           imgRight='/svg/icon_celebrate_right.svg'
-        />
+          />
         <div className={styles.describe}>於2024/7/5-2024/7/28期間，至特約商店當日單筆消費滿NT$300(無法跨店兌換)即可獲得抽獎券乙張，消費滿NT$600即可獲得抽獎券兩張，以此類推。
           <br />
           <br />
@@ -73,8 +73,8 @@ const Lottery = () => {
         <div className={styles.prizeGroup}>
           {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Container>
   )
 }
 

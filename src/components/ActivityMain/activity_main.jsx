@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ImgTitle } from '../Ui/titleGroup';
 import { useDevice } from '../../contexts/DeviceContext';
 import { activityList } from './activity_main_info';
+import { Container, Wrapper } from '../Ui/container';
 
 const Card = ({ color, props }) => {
   const {title, subtitle, body, icon} = props
@@ -149,14 +150,14 @@ const ActivityBody = ({ activity, props }) => {
 const Activity = ({ activity, setActivity }) => {
 
   return (
-    <section className={styles.container} >
+    <Container className={styles.container}>
       <div className={styles.bg}></div>
-      <div className={styles.wrapper}>
+      <Wrapper>
         <ImgTitle
           title='主題活動'
           img='/title/title_2.png'
           id='activity'
-        />
+          />
         <div className={styles.activity}>
           <div className={styles.activityList}>
             <button className={`${styles.tab} ${styles.hover1} ${activity === 1 ? styles.activity1 : ''}`} onClick={()=>setActivity(1)}>北投酒家菜・宴席活動</button>
@@ -169,8 +170,8 @@ const Activity = ({ activity, setActivity }) => {
             {activityList.map(item => <ActivityBody activity={activity} props={ item } key={item.num}/> )}
           </div>
         </div>
-      </div>
-    </section>
+      </Wrapper>
+    </Container>
   )
 }
 

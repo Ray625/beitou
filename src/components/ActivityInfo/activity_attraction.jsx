@@ -1,5 +1,6 @@
 import styles from './activity_attraction.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
 
 // 畫面用cardList array.map()產生，用grid做左右差距一格的效果，在小螢幕時改為flex直式排版
 const cardList = [{
@@ -53,7 +54,7 @@ const cardList = [{
 ]
 
 const Card = ({ props }) => {
-  const { gridRow, num, alt, title, img, subtitle, subtitleColor, describe } = props 
+  const { gridRow, num, alt, title, img, subtitle, subtitleColor, describe } = props
 
   return (
     <div className={styles.attractionCard} style={{gridRow}}>
@@ -68,26 +69,26 @@ const Card = ({ props }) => {
         <p className={styles.describe}>{describe}</p>
       </div>
     </div>
-  )  
+  )
 }
 
 const Attraction = () => {
   return (
-    <section className={styles.container}>
-      <div className={styles.wrapper}>
+    <Container className={styles.container}>
+      <Wrapper>
         <TitleGroup
           imgLeft='svg/icon_camera.svg'
           imgRight='svg/icon_camera.svg'
           title='五大打卡景點'
-        />
+          />
         <div className={styles.attractionGroup}>
           {cardList.map(card => {
             return <Card props={card} key={card.alt}/>
           })}
         </div>
-      </div>
+      </Wrapper>
       <div className={styles.footer}></div>
-    </section>
+    </Container>
   )
 }
 

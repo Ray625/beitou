@@ -1,5 +1,6 @@
 import styles from './activity_landscape.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
 
 // 畫面用cardList array.map()產生
 const cardList = [{
@@ -22,7 +23,7 @@ const cardList = [{
 
 const Card = ({ props }) => {
   const { title, location, img } = props
-  
+
   return (
     <div className={styles.card}>
       <img src={img} alt={location} className={styles.img} loading='lazy'/>
@@ -32,27 +33,27 @@ const Card = ({ props }) => {
         {location}
       </div>
     </div>
-  )
+    )
   }
 
 const Landscape = () => {
   return (
-    <section className={styles.container}>
+    <Container className={styles.container}>
       <div className={styles.bg}></div>
-      <div className={styles.wrapper}>
-      <TitleGroup
+      <Wrapper>
+        <TitleGroup
         imgLeft='svg/icon_star_left.svg'
         title='環境光地景'
         imgRight='svg/icon_star_right.svg'
-      />
+        />
         <div className={styles.cardList}>
           {cardList.map((card, index) => {
             return <Card props={card} key={index}/>
           })}
         </div>
-      </div>
+      </Wrapper>
       <div className={styles.footer}></div>
-    </section>
+    </Container>
   )
 }
 

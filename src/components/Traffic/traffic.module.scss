@@ -1,20 +1,14 @@
 @use '/src/styles/style.scss';
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: fit-content;
   padding-top: 80px;
   padding-bottom: 60px;
-  overflow: hidden;
   background: linear-gradient(180deg, #9687BB 0%, #E8B1B2 100%);
   &::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -2px;
     width: 100%;
     height: 6vw;
     background-image: url('../../../public/svg/bg_10.svg');
@@ -26,21 +20,17 @@
     content: '';
     position: absolute;
     top: 0;
-    width: 110%;
+    width: 100%;
     height: 13vw;
     background-image: url('../../../public/bg/bg_4_item_2_m.png');
-    background-size: cover;
+    background-size: 110%;
     background-repeat: no-repeat;
     background-position: top center;
   }
 }
 
+
 .wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: style.$wrapper_width_mobile;
   color: white;
 }
 
@@ -111,7 +101,7 @@
 
 .footer {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   width: 100%;
   height: 5vw;
   background-image: url('../../../public/svg/bg_11.svg');
@@ -123,10 +113,6 @@
 @media screen and (min-width: 768px) {
   .container {
     padding-bottom: 80px;
-  }
-
-  .wrapper {
-    width: style.$wrapper_width_tablet;
   }
 
   .trafficGroup {
@@ -144,10 +130,6 @@
 }
 
 @media screen and (min-width: 991px) {
-  .wrapper {
-    width: style.$wrapper_width;
-  }
-
   .describe {
     width: 60%;
     margin-top: 8px;
@@ -208,13 +190,9 @@
   .trafficGroup {
     align-items: flex-start;
   }
-  
+
   .traffic {
     width: 250px;
     height: fit-content;
-  }
-
-  .footer {
-    bottom: -20px;
   }
 }
