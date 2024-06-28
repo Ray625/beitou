@@ -59,23 +59,23 @@ const KeyVisionBanner = () => {
   return (
     <Container className={styles.container}>
       {isLoading && <Loading />}
-      {device === 'mobile' && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[0]})` }}></div>}
-      {device !== 'mobile' && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[5]})` }}></div>}
-      {device === 'mobile' &&
+      {device === 0 && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[0]})` }}></div>}
+      {device !== 0 && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[5]})` }}></div>}
+      {device === 0 &&
         <div className={styles.title} style={{ backgroundImage: `url(${loadedImages[1]})` }}>
           <div className={`${styles.subtitle} ${!isLoading ? styles.subFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[2]})` }}></div>
         </div>
       }
-      {device !== 'mobile' &&
+      {device !== 0 &&
         <div className={styles.title} style={{ backgroundImage: `url(${loadedImages[6]})` }}>
           <div className={`${styles.subtitle} ${!isLoading ? styles.subFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[7]})` }}></div>
         </div>
       }
-      {device === 'mobile' && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[3]})` }}></div>}
-      {device !== 'mobile' && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[8]})` }}></div>}
+      {device === 0 && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[3]})` }}></div>}
+      {device !== 0 && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[8]})` }}></div>}
       <div className={styles.grass}></div>
-      {device === 'mobile' && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[4]})` }}></div>}
-      {device !== 'mobile' && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[9]})` }}></div>}
+      {device === 0 && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[4]})` }}></div>}
+      {device !== 0 && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[9]})` }}></div>}
       <div className={styles.cloudLeft}></div>
       <div className={styles.cloudRight}></div>
     </Container>

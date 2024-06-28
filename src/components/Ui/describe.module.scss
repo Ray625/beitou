@@ -6,8 +6,17 @@
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
   line-height: 28px;
+  color: white;
+}
+
+.textAlignJustify {
   text-align: justify;
   text-align-last: center;
+}
+
+.describeEn {
+  text-align: start;
+  text-align-last: start;
 }
 
 @media screen and (min-width: 768px) {

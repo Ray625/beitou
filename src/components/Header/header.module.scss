@@ -42,7 +42,7 @@
   font-size: style.$font_size;
   color: white;
   transition: width 0.5s ease;
-  
+
   .closeBtn,
   .navList,
   .hr,
@@ -99,19 +99,32 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
   margin: 0;
   padding: 0;
+  width: 100%;
   list-style: none;
 }
 
+.navItem {
+  width: 100%;
+  user-select: none;
+}
+
 .link {
+  display: block;
+  width: 100%;
+  height: 48px;
   text-decoration: none;
   color: white;
   font-weight: style.$body_font_weight;
+  text-align: center;
   &:hover {
     opacity: 0.7;
   }
+}
+
+.navItem:nth-last-of-type(1) > .link {
+  margin-bottom: -24px;
 }
 
 .hr {
@@ -132,6 +145,7 @@
   padding: 0;
   border: none;
   color: white;
+  text-align: start;
 }
 
 
@@ -252,11 +266,25 @@
   }
 
   .navList {
+    width: auto;
     flex-direction: row;
     align-items: center;
     gap: 32px;
     list-style: none;
     margin: 0 60px;
+  }
+
+  .navItem:nth-last-of-type(1)>.link {
+    margin-bottom: 0;
+  }
+
+  .navItem {
+    width: fit-content;
+  }
+
+  .link {
+    width: fit-content;
+    height: auto;
   }
 
   .link:hover {
@@ -273,5 +301,7 @@
 
   .language {
     margin: 0;
+    padding: 0;
+    min-width: 172px;
   }
 }

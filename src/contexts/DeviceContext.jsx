@@ -7,26 +7,33 @@ export const DeviceProvider = ({ children }) => {
   const [device, setDevice] = useState('mobile');
 
   const handleRWD = () => {
+    const device = {
+      mobile: 0,
+      tablet: 1,
+      laptop: 2,
+      PC: 3,
+    }
+
     if (window.innerWidth >= 1440) {
-      setDevice('PC')
+      setDevice(device.PC)
     } else if (1440 > window.innerWidth && window.innerWidth >= 991) {
-      setDevice('laptop')
+      setDevice(device.laptop)
     } else if (991 > window.innerWidth && window.innerWidth >= 768) {
-      setDevice('tablet')
-    } else { 
-      setDevice('mobile')
+      setDevice(device.tablet)
+    } else {
+      setDevice(device.mobile)
     }
   }
 
   useEffect(()=> {
     window.addEventListener('resize', handleRWD)
     handleRWD()
-    
+
     return (()=> {
       window.removeEventListener('resize', handleRWD)
     })
   }, [])
-  
+
   return (
     <DeviceContext.Provider value={device}>
       {children}

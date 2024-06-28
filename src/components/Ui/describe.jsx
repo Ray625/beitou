@@ -1,8 +1,12 @@
 import styles from './describe.module.scss';
+import { useLocation } from 'react-router-dom';
 
 const Describe = ({ describe, describe2, describe3, className }) => {
+  const location = useLocation()
+  const pathname = location.pathname
+
   return (
-      <div className={`${styles.describe} ${className ? className : ''}`}>
+      <div className={`${styles.describe} ${className ? className : styles.textAlignJustify} ${pathname === '/en' && styles.describeEn}`}>
         {describe}
         {describe2 &&
           <>

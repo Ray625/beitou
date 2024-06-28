@@ -1,40 +1,57 @@
 import styles from './QA.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 import { Container, Wrapper } from '../Ui/container';
+import { useTranslation } from 'react-i18next';
+
+const qaList = [{
+  qKey: 'qa.question1',
+  aKey: 'qa.answer1'
+}, {
+  qKey: 'qa.question2',
+  aKey: 'qa.answer2'
+  }, {
+  qKey: 'qa.question3',
+  aKey: 'qa.answer3'
+  }, {
+  qKey: 'qa.question4',
+  aKey: 'qa.answer4'
+  }, {
+  qKey: 'qa.question5',
+  aKey: 'qa.answer5'
+  }]
+
+const QACard = ({props}) => {
+  const { qKey, aKey } = props
+  const { t } = useTranslation()
+
+  return (
+      <div className={styles.qa}>
+        <div className={styles.question}>{t(qKey)}</div>
+        <div className={styles.answer}>{t(aKey)}</div>
+      </div>
+    )
+  }
 
 // 常見問題資料要等業主整理，先排了版型
 const QA = () => {
+  const { t } = useTranslation()
+
   return (
     <Container className={styles.container}>
       <div className={styles.bg}></div>
       <Wrapper>
         <ImgTitle
-          title='常見問題'
+          title={t('qa.title')}
           img='/title/title_7.png'
           id='qa'
           />
         <div className={styles.qaWrapper}>
           <div className={styles.qaGroup}>
-            <div className={styles.qa}>
-              <div className={styles.question}>Q1.「2024北投夏日魔法節」的活動時間與地點？</div>
-              <div className={styles.answer}>2024北投夏日魔法節為自7/5(五)起到7/28(日)為期一個月的活動；活動區域涵蓋捷運新北投捷運站周邊，含：新北投捷運站廣場、七星街、(七星、七虎、北投三大公園)、地熱谷。</div>
-            </div>
-            <div className={styles.qa}>
-              <div className={styles.question}>Q1.「2024北投夏日魔法節」的活動時間與地點？</div>
-              <div className={styles.answer}>2024北投夏日魔法節為自7/5(五)起到7/28(日)為期一個月的活動；活動區域涵蓋捷運新北投捷運站周邊，含：新北投捷運站廣場、七星街、(七星、七虎、北投三大公園)、地熱谷。</div>
-            </div>
-            <div className={styles.qa}>
-              <div className={styles.question}>Q1.「2024北投夏日魔法節」的活動時間與地點？</div>
-              <div className={styles.answer}>2024北投夏日魔法節為自7/5(五)起到7/28(日)為期一個月的活動；活動區域涵蓋捷運新北投捷運站周邊，含：新北投捷運站廣場、七星街、(七星、七虎、北投三大公園)、地熱谷。</div>
-            </div>
-            <div className={styles.qa}>
-              <div className={styles.question}>Q1.「2024北投夏日魔法節」的活動時間與地點？</div>
-              <div className={styles.answer}>2024北投夏日魔法節為自7/5(五)起到7/28(日)為期一個月的活動；活動區域涵蓋捷運新北投捷運站周邊，含：新北投捷運站廣場、七星街、(七星、七虎、北投三大公園)、地熱谷。</div>
-            </div>
-            <div className={styles.qa}>
-              <div className={styles.question}>Q1.「2024北投夏日魔法節」的活動時間與地點？</div>
-              <div className={styles.answer}>2024北投夏日魔法節為自7/5(五)起到7/28(日)為期一個月的活動；活動區域涵蓋捷運新北投捷運站周邊，含：新北投捷運站廣場、七星街、(七星、七虎、北投三大公園)、地熱谷。</div>
-            </div>
+            {qaList.map((qa, index) => {
+              return (
+                <QACard props={qa} key={index} />
+              )
+            })}
           </div>
         </div>
       </Wrapper>

@@ -82,6 +82,12 @@
   align-items: center;
 }
 
+.imgWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .prize:nth-of-type(1) {
   .title {
     font-weight: style.$title_font_weight;
@@ -102,12 +108,18 @@
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
   line-height: 32px;
+  text-align: center;
 }
 
 .subtitle {
   font-size: style.$font_size;
   font-weight: style.$title_font_weight;
   line-height: 32px;
+  text-align: center;
+}
+
+.linehight28 {
+  line-height: 28px;
 }
 
 .note {
@@ -207,10 +219,23 @@
     background-image: none;
   }
 
+  .prize {
+    display: flex;
+    justify-content: flex-start;
+    width: 240px;
+  }
+
   .prizeImg {
-    width: auto;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin-bottom: 24px;
+  }
+
+  .imgWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 250px;
   }
 }
 
@@ -239,17 +264,5 @@
     column-gap: 54px;
     margin-bottom: 72px;
     background-image: none;
-  }
-
-  .prize {
-    display: flex;
-    justify-content: flex-end;
-    width: 240px;
-  }
-
-  .prizeImg {
-    width: 100%;
-    height: auto;
-    margin-bottom: 24px;
   }
 }

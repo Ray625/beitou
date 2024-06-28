@@ -66,12 +66,18 @@
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
   line-height: 32px;
+  text-align: center;
 }
 
 .subtitle {
   font-size: style.$font_size;
   font-weight: style.$title_font_weight;
   line-height: 32px;
+  text-align: center;
+}
+
+.linehight28 {
+  line-height: 28px;
 }
 
 .note {

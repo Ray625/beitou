@@ -107,6 +107,11 @@
   line-height: 28px;
 }
 
+.describeEn {
+  text-align: center;
+  text-align-last: center;
+}
+
 @media screen and (min-width: 768px) {
   .bg {
     &::after {
@@ -141,8 +146,15 @@
     margin-bottom: 12px;
   }
 
+  .infoGroupEn {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 4px 20px;
+    margin-bottom: 12px;
+  }
+
   .img {
-    max-width: 520px;
     height: auto;
     border-radius: 8px;
     margin-bottom: 16px;
@@ -150,7 +162,6 @@
 
   .describe {
     width: 100%;
-    max-width: 520px;
   }
 }
 
@@ -187,6 +198,7 @@
 
   .card {
     width: fit-content;
+    max-width: 625px;
   }
 
   .img {

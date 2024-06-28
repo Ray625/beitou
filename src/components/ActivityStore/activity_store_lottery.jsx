@@ -2,72 +2,80 @@ import styles from './activity_store_lottery.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
 import { Container, Wrapper } from '../Ui/container';
 import { Describe } from '../Ui/describe';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 const prizeList = [{
   img: '/prize/prize_store_1.png',
-  title: 'iPhone 15 Pro',
-  subtitle: '128GB',
-  note: '乙台・1名・市價 NT$36,900'
+  titleKey: 'storeLottery.prize.title1',
+  subtitleKey: 'storeLottery.prize.subtitle1',
+  noteKey: 'storeLottery.prize.note1'
 },{
   img: '/prize/prize_store_2.png',
-  title: '北投水美溫泉會館',
-  subtitle: '雅風雙床房住宿券',
-  note: '乙張・5名・市價 NT$11,000'
+  titleKey: 'storeLottery.prize.title2',
+  subtitleKey: 'storeLottery.prize.subtitle2',
+  noteKey: 'storeLottery.prize.note2'
 },{
   img: '/prize/prize_store_3.png',
-  title: '享溫泉',
-  subtitle: '大眾風呂泡湯券',
-  note: '乙張・20名・市價 NT$1,300',
+  titleKey: 'storeLottery.prize.title3',
+  subtitleKey: 'storeLottery.prize.subtitle3',
+  noteKey: 'storeLottery.prize.note3'
 },{
   img: '/prize/prize_store_4.png',
-  title: '水都溫泉會館',
-  subtitle: '露天大眾池泡湯券',
-  note: '乙張・5名・市價 NT$800',
+  titleKey: 'storeLottery.prize.title4',
+  subtitleKey: 'storeLottery.prize.subtitle4',
+  noteKey: 'storeLottery.prize.note4'
 },{
   img: '/prize/prize_store_5.png',
-  title: '泉都溫泉會館',
-  subtitle: '住宿抵用券500元',
-  note: '乙張・5名・市價 NT$500',
+  titleKey: 'storeLottery.prize.title5',
+  subtitleKey: 'storeLottery.prize.subtitle5',
+  noteKey: 'storeLottery.prize.note5'
 },{
   img: '/prize/prize_store_6.png',
-  title: '北投溫泉博物館',
-  subtitle: '泡湯小童碗',
-  note: '乙個・15名・市價 NT$350',
+  titleKey: 'storeLottery.prize.title6',
+  subtitleKey: 'storeLottery.prize.subtitle6',
+  noteKey: 'storeLottery.prize.note6'
 }]
 
 const Prize = ({props}) => {
-  const {img, title, subtitle, note, note2} = props
+  const { img, titleKey, subtitleKey, noteKey } = props
+  const { t } = useTranslation()
+  const location = useLocation()
+  const pathname = location.pathname
 
   return (
     <div className={styles.prize}>
-      <img src={img} alt={title} className={styles.prizeImg} loading='lazy'/>
-      <div className={styles.title}>{title}</div>
-      <div className={styles.subtitle}>{subtitle}</div>
+      <div className={styles.imgWrapper}>
+        <img src={img} alt={t(titleKey)} className={styles.prizeImg} loading='lazy'/>
+      </div>
+      <div className={`${styles.title} ${pathname === '/en' && styles.linehight28}`}>{t(titleKey)}</div>
+      <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>
       <div className={styles.note}>
-        {note}
-        {note2 && <><br />{note2}</>}
+        {t(noteKey)}
       </div>
     </div>
   )
 }
 
 const Lottery = () => {
+  const { t } = useTranslation()
+
   return (
     <Container className={styles.container}>
       <div className={styles.bg}></div>
       <Wrapper className={styles.wrapper}>
         <TitleGroup
-          title='消費滿額抽'
+          title={t("storeLottery.title")}
           imgLeft='/svg/icon_celebrate_left.svg'
           imgRight='/svg/icon_celebrate_right.svg'
         />
-        <Describe describe='於2024/7/5-2024/7/28期間，至活動特約店家當日單筆消費滿NT$300即可獲得抽獎券乙張、滿NT$600貳張(以此類推)，當日單筆金額最高上限為5張。'
-        describe2='消費者將抽獎券投入特約商店的活動抽獎箱中，即可參與消費滿額抽活動。'
+        <Describe describe={t('storeLottery.describe')}
+        describe2={t('storeLottery.describe2')}
         />
-        <div className={styles.point}>※注意事項<br/>
-          1. 抽獎券請填寫真實姓名與本人手機，如聯繫不到得獎人，主辦單位概不負責<br />
-          2. 使用溫泉或住宿等票卷之消費不適用消費滿額抽之活動<br />
-          3. 抽獎券須蓋上店家店章作為佐證，否則無效
+        <div className={styles.point}>{t('storeLottery.point')}<br/>
+          {t('storeLottery.point1')}<br />
+          {t('storeLottery.point2')}<br />
+          {t('storeLottery.point3')}
         </div>
         <div className={styles.prizeGroup}>
           {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
