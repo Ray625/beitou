@@ -42,6 +42,8 @@ const list = [
 // 固定畫面右下方下載電子手冊按鈕，透過useDevice偵測螢幕大小控制，只在螢幕width:1440px以上(navbar展開時)顯示
 const FixedBtn = () => {
   const { t } = useTranslation()
+  const location = useLocation()
+  const pathname = location.pathname
 
   const handleDownload = () => {
     const pdfUrl = '/activity book.pdf';
@@ -49,7 +51,7 @@ const FixedBtn = () => {
   }
 
   return (
-    <button className={styles.fixedBtn} onClick={handleDownload}>
+    <button className={`${styles.fixedBtn} ${pathname === '/en' && styles.smallFont}`} onClick={handleDownload}>
       {t("header.downloadBtnText1")}
       <br />
       {t("header.downloadBtnText2")}
