@@ -1,11 +1,6 @@
 @use '/src/styles/style.scss';
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: fit-content;
   padding-bottom: 100px;
   background-color: style.$light_green;

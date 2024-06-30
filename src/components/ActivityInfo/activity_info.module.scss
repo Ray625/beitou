@@ -1,11 +1,6 @@
 @use '/src/styles/style.scss';
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: fit-content;
   padding-top: 0;
   padding-bottom: 60px;
@@ -24,23 +19,9 @@
   }
 }
 
-.wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: style.$wrapper_width_mobile;
-}
-
 .describe {
-  width: 90%;
-  margin-bottom: 24px;
-  color: white;
-  text-align: center;
-  font-size: style.$body_font_size;
-  font-weight: style.$body_font_weight;
-  line-height: 28px;
+  text-align: justify;
+  text-align-last: center;
 }
 
 .infoGroup {
@@ -98,26 +79,6 @@
   color: transparent;
 }
 
-.info:nth-of-type(1) {
-  background-image: url('../../../public/highlight/highlight_1.png');
-}
-
-.info:nth-of-type(2) {
-  background-image: url('../../../public/highlight/highlight_2_m.png');
-}
-
-.info:nth-of-type(3) {
-  background-image: url('../../../public/highlight/highlight_3_m.png');
-}
-
-.info:nth-of-type(4) {
-  background-image: url('../../../public/highlight/highlight_4_m.png');
-}
-
-.info:nth-of-type(5) {
-  background-image: url('../../../public/highlight/highlight_5_m.png');
-}
-
 @media screen and (min-width: 768px) {
   .container {
     padding-top: 60px;
@@ -134,23 +95,15 @@
       background-position: center left 10%;
     }
   }
-  .wrapper {
-    width: style.$wrapper_width_tablet;
-  }
-  
+
   .describe {
     margin-bottom: 40px;
-    color: white;
-    text-align: center;
-    font-size: style.$font_size;
-    font-weight: style.$body_font_weight;
-    line-height: 32px;
   }
 
   .infoGroup > div {
     font-size: style.$font_size;
   }
-  
+
 
   .eventInfo {
     display: flex;
@@ -172,7 +125,6 @@
 
 @media screen and (min-width: 991px) {
   .container {
-    position: relative;
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -202,20 +154,6 @@
     }
   }
 
-  .wrapper {
-    width: style.$wrapper_width;
-  }
-
-  .describe {
-    width: 60%;
-    margin-bottom: 40px;
-    color: white;
-    text-align: center;
-    font-size: style.$font_size;
-    font-weight: style.$body_font_weight;
-    line-height: 32px;
-  }
-
   .infoGroup {
     flex-direction: row;
     margin-bottom: 60px;
@@ -223,22 +161,6 @@
 
   .eventInfo {
     width: 948px;
-  }
-
-  .info:nth-of-type(2) {
-    background-image: url('../../../public/highlight/highlight_2.png');
-  }
-
-  .info:nth-of-type(3) {
-    background-image: url('../../../public/highlight/highlight_3.png');
-  }
-
-  .info:nth-of-type(4) {
-    background-image: url('../../../public/highlight/highlight_4.png');
-  }
-
-  .info:nth-of-type(5) {
-    background-image: url('../../../public/highlight/highlight_5.png');
   }
 
   .info {

@@ -9,7 +9,7 @@ const LinkBtn = ({ title, color, onClick }) => {
 
   // 只在大螢幕加上hover效果
   const onMouseEnter = () => {
-    if (device === 'PC' || device === 'laptop') {
+    if (device === 3 || device === 2) {
       setIsHovered(true)
     }
     return

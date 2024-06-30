@@ -1,11 +1,6 @@
 @use '/src/styles/style.scss';
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: fit-content;
   background-color: style.$middle_green;
   padding-top: 120px;
@@ -13,7 +8,7 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
+    top: -2px;
     width: 100%;
     height: 12vw;
     background-color: style.$dark_green;
@@ -58,21 +53,7 @@
 }
 
 .wrapper {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: style.$wrapper_width_mobile;
   color: white;
-}
-
-.describe {
-  width: 90%;
-  margin-bottom: 28px;
-  font-size: style.$font_size;
-  font-weight: style.$body_font_weight;
-  line-height: 32px;
-  text-align: center;
 }
 
 .point {
@@ -101,6 +82,12 @@
   align-items: center;
 }
 
+.imgWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .prize:nth-of-type(1) {
   .title {
     font-weight: style.$title_font_weight;
@@ -121,12 +108,18 @@
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
   line-height: 32px;
+  text-align: center;
 }
 
 .subtitle {
   font-size: style.$font_size;
   font-weight: style.$title_font_weight;
   line-height: 32px;
+  text-align: center;
+}
+
+.linehight28 {
+  line-height: 28px;
 }
 
 .note {
@@ -160,10 +153,6 @@
     }
   }
 
-  .wrapper {
-    width: style.$wrapper_width_tablet;
-  }
-
   .prizeImg {
     width: 60%;
     height: auto;
@@ -191,8 +180,6 @@
 
   .wrapper {
     position: relative;
-    width: style.$wrapper_width;
-
     &::after {
       content: '';
       position: absolute;
@@ -220,12 +207,6 @@
     }
   }
 
-  .describe {
-    width: 60%;
-    margin-top: 8px;
-    margin-bottom: 40px;
-  }
-
   .point {
     margin-bottom: 64px;
   }
@@ -238,10 +219,23 @@
     background-image: none;
   }
 
+  .prize {
+    display: flex;
+    justify-content: flex-start;
+    width: 240px;
+  }
+
   .prizeImg {
-    width: auto;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin-bottom: 24px;
+  }
+
+  .imgWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 250px;
   }
 }
 
@@ -270,17 +264,5 @@
     column-gap: 54px;
     margin-bottom: 72px;
     background-image: none;
-  }
-
-  .prize {
-    display: flex;
-    justify-content: flex-end;
-    width: 240px;
-  }
-
-  .prizeImg {
-    width: 100%;
-    height: auto;
-    margin-bottom: 24px;
   }
 }
