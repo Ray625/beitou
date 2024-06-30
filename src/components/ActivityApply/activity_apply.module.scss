@@ -113,7 +113,7 @@
 }
 
 .describe {
-  width: 100%;
+  width: 90%;
   margin-bottom: 16px;
   font-size: style.$body_font_size;
   text-align: center;
@@ -166,6 +166,7 @@
   }
 
   .describe {
+    width: 100%;
     max-width: 520px;
   }
 }
@@ -194,6 +195,7 @@
 
   .wrapper {
     width: style.$wrapper_width;
+    min-width: 1200px;
   }
 
   .cardGroup {
@@ -201,19 +203,24 @@
     gap: 30px;
   }
 
+  .card {
+    width: fit-content;
+  }
+
   .img {
-    width: 466px;
-    height: 250px;
+    width: 100%;
+    height: auto;
     border-radius: 12px;
     margin-bottom: 24px;
   }
 
   .info {
     font-size: style.$body_font_size;
+    width: fit-content;
   }
   
   .describe {
-    width: 466px;
+    width: 100%;
     margin-bottom: 24px;
     font-size: style.$body_font_size;
     text-align: center;

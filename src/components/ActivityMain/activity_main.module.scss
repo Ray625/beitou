@@ -44,7 +44,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
   margin-bottom: 28px;
 }
 
@@ -91,14 +91,35 @@
   border-bottom: 3px solid #3585FF;
 }
 
+.bodyContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-grow: 1;
+}
+
 .activityBody {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: style.$light_green;
   width: 100%;
-  padding-bottom: 280px;
+  padding-bottom: 320px;
+  opacity: 1;
+}
+
+.dNone {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  div {
+    height: 0;
+    opacity: 0;
+    // 這邊如果width: 0的話，在切換分頁後原本的scroll card會跑掉，偵測不到正確的位置
+  }
 }
 
 .titleGroup {
@@ -106,12 +127,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  text-align: center;
   gap: 12px;
   margin-bottom: 16px;
   padding: 8px 20px;
   width: fit-content;
   border-radius: 12px;
-  background: #109D911A;
 }
 
 .title {
@@ -134,21 +155,42 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #006060;
+  color: #494949;
   font-size: style.$font_size_mobile;
   font-weight: style.$title_font_weight;
   line-height: 32px;
 }
 
-.icon {
+%icon {
   width: 24px;
-  height: 28px;
+  height: 24px;
   margin-right: 8px;
-  padding-top: 4px;
+  background-size: 24px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+}
+
+.iconDay,
+.iconTime,
+.iconLocation {
+  @extend %icon
+}
+
+.iconDay {
+  background-image: url('../../../public/svg/icon_activity_day.svg');
+}
+
+.iconTime {
+  background-image: url('../../../public/svg/icon_activity_time.svg');
+}
+
+.iconLocation {
+  background-image: url('../../../public/svg/icon_activity_pin.svg');
 }
 
 .describe {
-  width: 90%;
+  width: 100%;
   margin-bottom: 16px;
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
@@ -158,12 +200,12 @@
 }
 
 .cardContainer {
+  position: absolute;
+  bottom: -44px;
   width: 100%;
 }
 
 .cardWrapper {
-  position: absolute;
-  bottom: -44px;
   width: 100%;
   padding-bottom: 44px;
   overflow: scroll visible;
@@ -182,7 +224,7 @@
 .card {
   position: relative;
   width: 250px;
-  height: 280px;
+  height: 320px;
   padding: 24px;
   background-color: #F5F5F5;
   border-radius: 20px;
@@ -199,7 +241,6 @@
   width: 58px;
   height: 2px;
   margin-bottom: 20px;
-  background-color: style.$light_green;
 }
 
 .cardBody {
@@ -216,16 +257,16 @@
   align-items: center;
   bottom: 0;
   left: 50%;
-  width: 88px;
-  height: 88px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   background-color: style.$light_green;
   transform: translate(-50%, 50%);
 }
 
 .iconImg {
-  width: 48px;
-  height: 48px;
+  width: 52px;
+  height: 52px;
 }
 
 .btnLeft,
@@ -243,6 +284,10 @@
     align-items: flex-start;
     gap: 20px;
     margin-bottom: 20px;
+  }
+
+  .describe {
+    width: 90%;
   }
 
   .activityList {
@@ -295,7 +340,7 @@
 
   .activity {
     width: 1074px;
-    height: 716px;
+    height: 756px;
     padding: 44px 16px 16px 16px;
     border-radius: 20px;
   }
@@ -312,6 +357,7 @@
     margin-bottom: 28px;
   }
 
+
   .title {
     font-size: style.$H2_font_size;
   }
@@ -321,7 +367,6 @@
   }
 
   .describe {
-    width: 65%;
     margin-bottom: 40px;
     font-size: style.$font_size;
     line-height: 32px;
@@ -336,8 +381,6 @@
   }
 
   .cardWrapper {
-    position: relative;
-    bottom: unset;
     width: 80%;
     padding-bottom: 44px;
     overflow: scroll;
@@ -350,11 +393,12 @@
     height: 36px;
     border-radius: 4px;
     border: none;
-    background-color: transparent;
-    background-image: url('../../../public/svg/icon_arrow.svg');
+    background-color: #006060;
+    background-image: url('../../../public/svg/icon_arrow_whitebg.svg');
     background-size: 36px;
     background-position: center;
     background-repeat: no-repeat;
+    background-blend-mode: screen;
     &:hover {
       cursor: pointer;
       opacity: 0.8;
@@ -366,8 +410,11 @@
   }
 
   .disable {
-    background-image: url('../../../public/svg/icon_arrow_disable.svg');
+    background-color: #ABABAB;
+    background-image: url('../../../public/svg/icon_arrow_whitebg.svg');
+    background-blend-mode: screen;
     &:hover {
+      cursor: default;
       opacity: 1;
     }
   }

@@ -13,7 +13,7 @@ import CollectSocail from './components/ActivityCollection/activity_collect_soci
 import Store from './components/ActivityStore/activity_store';
 import Lottery from './components/ActivityStore/activity_store_lottery';
 import Traffic from './components/Traffic/traffic';
-import QA from './components/Q&A/Q&A';
+import QA from './components/QA/QA';
 import Footer from './components/Footer/footer';
 
 function App() {

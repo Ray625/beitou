@@ -46,8 +46,8 @@
 .prizeGroup {
   display: flex;
   flex-flow: column;
-  gap: 40px;
-  margin-bottom: 72px;
+  gap: 52px;
+  margin-bottom: 40px;
   background-image: url('../../../public/bg/bg_6_item_1_m.png');
   background-size: contain;
   background-position: center;
@@ -60,31 +60,28 @@
   align-items: center;
 }
 
+.prize:nth-last-of-type(1) {
+  .title{
+    font-weight: style.$body_font_weight;
+  }
+}
+
 .prizeImg {
   width: 72%;
   height: auto;
   margin-bottom: 24px;
 }
 
-.tag {
-  margin-bottom: 12px;
-  padding: 4px 16px;
-  border-radius: 8px;
-  background-color: style.$dark_green;
-  font-size: style.$body_font_size;
-  font-weight: style.$title_font_weight;
-  line-height: 32px;
-}
 
 .title {
-  font-size: style.$H3_font_size;
-  font-weight: style.$title_font_weight;
+  font-size: style.$font_size;
+  font-weight: style.$body_font_weight;
   line-height: 32px;
 }
 
 .subtitle {
   font-size: style.$font_size;
-  font-weight: style.$body_font_weight;
+  font-weight: style.$title_font_weight;
   line-height: 32px;
 }
 
@@ -92,6 +89,8 @@
   margin-top: 12px;
   font-size: style.$note_font_size;
   font-weight: style.$body_font_weight;
+  text-align: center;
+  line-height: 18px;
   opacity: 0.6;
 }
 
@@ -119,7 +118,7 @@
   }
 
   .describe {
-    width: 55%;
+    width: 60%;
     line-height: 32px;
     margin-bottom: 12px;
   }
@@ -166,14 +165,20 @@
   .prizeGroup {
     flex-flow: row wrap;
     justify-content: center;
-    gap: 80px;
+    gap: 44px;
     margin-bottom: 72px;
     background-image: none;
   }
 
+  .prize {
+    display: flex;
+    justify-content: flex-end;
+    width: 240px;
+  }
+
   .prizeImg {
-    width: auto;
-    height: 200px;
+    width: 100%;
+    height: auto;
     margin-bottom: 24px;
   }
 }
