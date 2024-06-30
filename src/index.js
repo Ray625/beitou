@@ -4,6 +4,7 @@ import './index.css';
 import App from './App.jsx';
 import reportWebVitals from './reportWebVitals';
 import 'normalize.css';
+import './i18n.js'
 import { DeviceProvider } from './contexts/DeviceContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

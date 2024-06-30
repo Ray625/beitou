@@ -1,12 +1,7 @@
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  height: 72vh;
+  height: 80vh;
 }
 
 .moonBg {
@@ -17,7 +12,7 @@
   height: 100%;
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
 }
 
 .title {
@@ -43,7 +38,7 @@
   background-repeat: no-repeat;
   opacity: 0;
   }
-  
+
 .subFadein {
   animation: fadein 1s forwards 0.5s;
   }
@@ -60,14 +55,14 @@
   mix-blend-mode: overlay;
   opacity: 0;
   }
-  
+
 .decorateFadein {
   animation: fadein 2s forwards 0.8s;
   }
 
 .grass {
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   z-index: 3;
   width: 100%;
   height: 100%;
@@ -118,7 +113,6 @@
 @media screen and (min-width: 768px) {
   .container {
     justify-content: space-between;
-    width: 100%;
     height: 100vh;
     padding-top: 20vh;
     padding-bottom: 40px;
@@ -185,9 +179,6 @@
 
 @media screen and (min-width: 991px) {
   .container {
-    justify-content: space-between;
-    width: 100%;
-    height: 100vh;
     padding-top: 64px;
     padding-bottom: 40px;
   }

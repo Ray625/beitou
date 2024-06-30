@@ -1,58 +1,63 @@
 import styles from './activity_landscape.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
+import { useTranslation } from 'react-i18next';
 
 // 畫面用cardList array.map()產生
 const cardList = [{
-  title: '浪漫月球',
-  location: '北投公園＆七星公園',
+  titleKey: 'landscape.title1',
+  locationKey: 'landscape.location1',
   img: '/attraction/image_6.png'
 },{
-  title: '星空祝福',
-  location: '北投公園 (涼亭＆走道)',
+  titleKey: 'landscape.title2',
+  locationKey: 'landscape.location2',
   img: '/attraction/image_7.png'
 },{
-  title: '奇幻森林',
-  location: '北投公園',
+  titleKey: 'landscape.title3',
+  locationKey: 'landscape.location3',
   img: '/attraction/image_8.png'
 },{
-  title: '點點螢火蟲',
-  location: '地熱谷入口',
+  titleKey: 'landscape.title4',
+  locationKey: 'landscape.location4',
   img: '/attraction/image_9.png'
   }]
 
 const Card = ({ props }) => {
-  const { title, location, img } = props
-  
+  const { titleKey, locationKey, img } = props
+  const { t } = useTranslation()
+
   return (
     <div className={styles.card}>
       <img src={img} alt={location} className={styles.img} loading='lazy'/>
-      <h3 className={styles.title}>{title}</h3>
+      <h3 className={styles.title}>{t(titleKey)}</h3>
       <div className={styles.location}>
         <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
-        {location}
+        {t(locationKey)}
       </div>
     </div>
-  )
+    )
   }
 
 const Landscape = () => {
+  const { t } = useTranslation()
+
   return (
-    <section className={styles.container}>
+    <Container className={styles.container}>
       <div className={styles.bg}></div>
-      <div className={styles.wrapper}>
-      <TitleGroup
+      <Wrapper>
+        <TitleGroup
         imgLeft='svg/icon_star_left.svg'
-        title='環境光地景'
+        title={t('landscape.title')}
         imgRight='svg/icon_star_right.svg'
-      />
+        />
         <div className={styles.cardList}>
           {cardList.map((card, index) => {
             return <Card props={card} key={index}/>
           })}
         </div>
-      </div>
+      </Wrapper>
       <div className={styles.footer}></div>
-    </section>
+    </Container>
   )
 }
 

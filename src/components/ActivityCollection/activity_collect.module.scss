@@ -1,10 +1,6 @@
 @use '/src/styles/style.scss';
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: fit-content;
   padding-top: 12px;
   padding-bottom: 40px;
@@ -12,20 +8,7 @@
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: style.$wrapper_width_mobile;
   color: white;
-}
-
-.describe {
-  width: 90%;
-  margin-bottom: 24px;
-  font-size: style.$font_size;
-  font-weight: style.$body_font_weight;
-  line-height: 32px;
-  text-align: center;
 }
 
 .point {
@@ -60,6 +43,12 @@
   align-items: center;
 }
 
+.imgWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .prize:nth-last-of-type(1) {
   .title{
     font-weight: style.$body_font_weight;
@@ -77,12 +66,18 @@
   font-size: style.$font_size;
   font-weight: style.$body_font_weight;
   line-height: 32px;
+  text-align: center;
 }
 
 .subtitle {
   font-size: style.$font_size;
   font-weight: style.$title_font_weight;
   line-height: 32px;
+  text-align: center;
+}
+
+.linehight28 {
+  line-height: 28px;
 }
 
 .note {
@@ -95,15 +90,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .wrapper {
-    width: style.$wrapper_width_tablet;
-  }
-
-  .describe {
-    width: 100%;
-    line-height: 32px;
-  }
-
   .prizeImg {
     width: 60%;
     height: auto;
@@ -113,16 +99,6 @@
 
 
 @media screen and (min-width: 991px) {
-  .wrapper {
-    width: style.$wrapper_width;
-  }
-
-  .describe {
-    width: 60%;
-    line-height: 32px;
-    margin-bottom: 12px;
-  }
-
   .point {
     margin-bottom: 64px;
   }
@@ -170,9 +146,16 @@
     background-image: none;
   }
 
+  .imgWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 250px;
+  }
+
   .prize {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     width: 240px;
   }
 

@@ -1,32 +1,16 @@
 @use '/src/styles/style.scss';
 
 .container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
   height: fit-content;
-  padding-top: 0;
   padding-bottom: 120px;
 }
 
 .bg {
   position: absolute;
-  z-index: -1;
-  top: 0;
+  top: -2px;
   width: 100%;
   height: 65%;
   background: linear-gradient(180deg, #02887B 0%, #006060 100%);
-}
-
-.wrapper {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: style.$wrapper_width_mobile;
 }
 
 .cardList {
@@ -82,7 +66,7 @@
   &::after {
     content: '';
     position: absolute;
-    bottom: 40px;
+    bottom: 50px;
     z-index: -1;
     width: 100%;
     height: 12.5vw;
@@ -95,29 +79,18 @@
   &::before {
     content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -2px;
     z-index: -1;
     width: 100%;
-    height: 50px;
-    background-color: #02887B;
+    height: 55px;
+    background-color: style.$middle_green;
   }
 }
-
-@media screen and (min-width: 768px) {
-  .wrapper {
-    width: style.$wrapper_width_tablet;
-  }
-}
-
 
 @media screen and (min-width: 991px) {
   .container {
     padding-top: 80px;
     padding-bottom: 20px;
-  }
-  
-  .wrapper {
-    width: style.$wrapper_width;
   }
 
   .cardList {

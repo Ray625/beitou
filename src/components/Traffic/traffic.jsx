@@ -1,71 +1,83 @@
 import styles from './traffic.module.scss';
 import { ImgTitle } from '../Ui/titleGroup';
 import { LinkBtn } from '../Ui/button';
+import { Container, Wrapper } from '../Ui/container';
+import { Describe } from '../Ui/describe';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 // 畫面用trafficList array.map()產生，最後一個自行開車的card，因內容不同就直接寫html。與設計師討論在平板上顯示時讓card都呈現一樣高度
 const trafficList = [{
-  title: '捷運',
+  titleKey: 'traffic.transportation.title1',
   img: '/svg/icon_go_MRT.svg',
-  describe: '捷運可搭乘淡水信義線至北投站下車，轉搭新北投支線至新北投站下車'
+  describeKey: 'traffic.transportation.describe1'
 },{
-  title: '公車',
+  titleKey: 'traffic.transportation.title2',
   img: '/svg/icon_go_bus.svg',
-  describe: '公車可搭乘216、218區、218直達車、223、266、602、小6、小7南軟通勤北投線 等公車至新北投站、北投公園下車'
+  describeKey: 'traffic.transportation.describe2'
 },{
-  title: '計程車',
+  titleKey: 'traffic.transportation.title3',
   img: '/svg/icon_go_taxi.svg',
-  describe: '往北投方向至大業路底'
+  describeKey: 'traffic.transportation.describe3'
 }]
 
 const TrafficCard = ({ props }) => {
-  const { img, title, describe } = props
+  const { img, titleKey, describeKey } = props
+  const { t } = useTranslation()
+  const location = useLocation()
+  const pathname = location.pathname
 
   return (
     <div className={styles.traffic}>
       <div className={styles.titleGroup}>
         <img src={img} alt="icon" className={styles.titleIcon} loading='lazy'/>
-        <div className={styles.title}>{title}</div>
+        <div className={styles.title}>{t(titleKey)}</div>
       </div>
-      <p className={styles.trafficBody}>{describe}</p>
+      <p className={`${styles.trafficBody} ${pathname === '/en' && styles.textAlignEn}`}>{t(describeKey)}</p>
     </div>
   )
 }
 
 const Traffic = () => {
+  const { t } = useTranslation()
+  const location = useLocation()
+  const pathname = location.pathname
+
   const handleClick = () => {
     window.open('https://maps.app.goo.gl/4itsuXSkKhw5pRnr8', '_blank');
   }
 
   return (
-    <section className={styles.container}>
+    <Container className={styles.container}>
+      <div className={styles.cloud}></div>
       <div className={styles.bg}></div>
-      <div className={styles.wrapper}>
+      <Wrapper className={styles.wrapper}>
         <ImgTitle
-          title='交通指引'
+          title={t('traffic.title')}
           img='/title/title_6.png'
           id='traffic'
         />
-        <div className={styles.describe}>區內公車線眾多，其中經過榮民總醫院的公車即有10線以上，交通便利；另有小型公車6、7、9、14等路線通駛山區道路。請多多搭乘大眾交通工具前往～</div>
+        <Describe describe={t('traffic.describe')}/>
         <div className={styles.trafficGroup}>
           {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.title} />)}
           <div className={styles.traffic}>
             <div className={styles.titleGroup}>
               <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} loading='lazy'/>
-              <div className={styles.title}>自行開車</div>
+              <div className={styles.title}>{t('traffic.transportation.title4')}</div>
             </div>
-            <div className={styles.trafficBody}>
+            <div className={`${styles.trafficBody} ${pathname === '/en' && styles.textAlignEn}`}>
               <ul>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" className={styles.link}>捷運新北投站停車場</a>
-                  <div className={styles.point}>車位數 25</div>
+                  <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" className={styles.link}>{t('traffic.transportation.park1')}</a>
+                  <div className={styles.point}>{t('traffic.transportation.point1')}</div>
                 </li>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" className={styles.link}>大業立體停車場</a>
-                  <div className={styles.point}>車位數 124</div>
+                  <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" className={styles.link}>{t('traffic.transportation.park2')}</a>
+                  <div className={styles.point}>{t('traffic.transportation.point2')}</div>
                 </li>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" className={styles.link}>七星公園地下停車場</a>
-                  <div className={styles.point}>車位數 328</div>
+                  <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" className={styles.link}>{t('traffic.transportation.park3')}</a>
+                  <div className={styles.point}>{t('traffic.transportation.point3')}</div>
                 </li>
               </ul>
             </div>
@@ -75,10 +87,10 @@ const Traffic = () => {
           title='Google Map'
           color='#6E2148'
           onClick={handleClick}
-        />
-      </div>
+          />
+      </Wrapper>
       <div className={styles.footer}></div>
-    </section>
+    </Container>
   )
 }
 

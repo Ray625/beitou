@@ -1,93 +1,111 @@
 import styles from './activity_attraction.module.scss';
 import { TitleGroup } from '../Ui/titleGroup';
+import { Container, Wrapper } from '../Ui/container';
+import { useDevice } from '../../contexts/DeviceContext';
+import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
-// 畫面用cardList array.map()產生，用grid做左右差距一格的效果，在小螢幕時改為flex直式排版
 const cardList = [{
   num: '/number/icon_1.png',
   alt: '1',
-  title: '北投公園 (噴水池)',
+  titleKey: 'attraction.title1',
   img: '/attraction/image_1.png',
-  subtitle: '夏日魔法～溫泉魔法師降臨',
+  subtitleKey: 'attraction.subtitle1',
   subtitleColor: '#109D91',
-  describe: '來自七星山的魔法師在這個夏日在北投變出許多魔法，邀請大家這個夏日一起來北投遊玩',
-  gridRow: '1/4'
+  describeKey: 'attraction.describe1'
 },{
   num: '/number/icon_2.png',
   alt: '2',
-  title: '新北投捷運站出口',
+  titleKey: 'attraction.title2',
   img: '/attraction/image_2.png',
-  subtitle: '夏日魔法～幸福溫泉',
+  subtitleKey: 'attraction.subtitle2',
   subtitleColor: '#3585FF',
-  describe: '以木製拉門背景和水流動的層次，來演繹北投經典特色溫泉。北投溫泉充滿神奇魔法，能療癒前來民眾的身心靈',
-  gridRow: '2/5'
+  describeKey: 'attraction.describe2'
 },{
   num: '/number/icon_3.png',
   alt: '3',
-  title: '七星公園 (北投車站前)',
+  titleKey: 'attraction.title3',
   img: '/attraction/image_3.png',
-  subtitle: '夏日魔法～幸福來鈴',
-  subtitleColor: '#804495',
-  describe: '以日式風鈴為設計概念，讓遊客通過廊道驅除厄運、聽著風鈴聲感受幸福的到來，左右兩側可以掛上繪馬祈福',
-  gridRow: '5/9'
-
+  subtitleKey: 'attraction.subtitle3',
+  subtitleColor: '#A15184',
+  describeKey: 'attraction.describe3'
 },{
   num: '/number/icon_4.png',
   alt: '4',
-  title: '北投公園 (荷花池)',
+  titleKey: 'attraction.title4',
   img: '/attraction/image_4.png',
-  subtitle: '夏日魔法～團團圓圓',
+  subtitleKey: 'attraction.subtitle4',
   subtitleColor: '#FF7628',
-  describe: '以日式油傘作為設計，油傘代表團圓圓滿意涵。白天有油傘成牆的美感，夜晚透過背投光表現更吸睛',
-  gridRow: '6/10'
+  describeKey: 'attraction.describe4'
   }, {
-    num: '/number/icon_5.png',
-    alt: '5',
-  title: `北投公園 (圖書館對面)`,
+  num: '/number/icon_5.png',
+  alt: '5',
+  titleKey: 'attraction.title5',
   img: '/attraction/image_5.png',
-  subtitle: '夏日魔法～煽來好幸運',
+  subtitleKey: 'attraction.subtitle5',
   subtitleColor: '#E9545D',
-  describe: '團扇象徵招來好運。有為合作店家招來好運的隱含寓意，中間扇子可以轉動，以製造互動性',
-  gridRow: '9/13'
-
-}
+  describeKey: 'attraction.describe5'
+  }
 ]
 
 const Card = ({ props }) => {
-  const { gridRow, num, alt, title, img, subtitle, subtitleColor, describe } = props 
+  const { num, alt, titleKey, img, subtitleKey, subtitleColor, describeKey } = props
+  const { t } = useTranslation()
+  const location = useLocation()
+  const pathname = location.pathname
 
   return (
-    <div className={styles.attractionCard} style={{gridRow}}>
+    <div className={styles.attractionCard}>
       <img src={num} alt={alt} className={styles.num} loading='lazy'/>
-      <div className={styles.titleGroup}>
-        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  loading='lazy'/>
-        <h3 className={styles.title}>{title}</h3>
+      <div className={(pathname === '/') ? styles.titleGroup : styles.titleGroupEn}>
+        <h3 className={styles.title}>
+          <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  loading='lazy'/>
+          {t(titleKey)}
+        </h3>
       </div>
       <div className={styles.cardBody}>
-        <img src={img} alt={title} className={styles.cardImg} loading='lazy'/>
-        <div className={styles.subtitle} style={{ color: subtitleColor }}>{subtitle}</div>
-        <p className={styles.describe}>{describe}</p>
+        <img src={img} alt={t(titleKey)} className={styles.cardImg} loading='lazy'/>
+        <div className={styles.subtitle} style={{ color: subtitleColor }}>{t(subtitleKey)}</div>
+        <p className={(pathname === '/') ? styles.describe : styles.describeEn}>{t(describeKey)}</p>
       </div>
     </div>
-  )  
+  )
 }
 
 const Attraction = () => {
+  const device = useDevice()
+  const { t } = useTranslation()
+
   return (
-    <section className={styles.container}>
-      <div className={styles.wrapper}>
+    <Container className={styles.container}>
+      <Wrapper>
         <TitleGroup
           imgLeft='svg/icon_camera.svg'
           imgRight='svg/icon_camera.svg'
-          title='五大打卡景點'
-        />
-        <div className={styles.attractionGroup}>
+          title={t('attraction.title')}
+          />
+        {device !== 3 && <div className={styles.attractionGroup}>
           {cardList.map(card => {
             return <Card props={card} key={card.alt}/>
           })}
-        </div>
-      </div>
+        </div>}
+        {device === 3 && <div className={styles.attractionGroup}>
+          <div className={styles.leftCardGroup}>
+            {cardList.map((card, index) => {
+              if (index % 2 === 0)
+              return <Card props={card} key={card.alt} />
+            })}
+          </div>
+          <div className={styles.rightCardGroup}>
+            {cardList.map((card, index) => {
+              if (index % 2 === 1)
+              return <Card props={card} key={card.alt} />
+            })}
+          </div>
+        </div>}
+      </Wrapper>
       <div className={styles.footer}></div>
-    </section>
+    </Container>
   )
 }
 
