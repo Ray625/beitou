@@ -46,7 +46,7 @@ const FixedBtn = () => {
   const pathname = location.pathname
 
   const handleDownload = () => {
-    const pdfUrl = '/activity book.pdf';
+    const pdfUrl = '/activity_book.pdf';
     window.open(pdfUrl, '_blank');
   }
 
@@ -97,7 +97,7 @@ const Header = () => {
   };
 
   const handleDownload = () => {
-    const pdfUrl = '/activity book.pdf';
+    const pdfUrl = '/activity_book.pdf';
     window.open(pdfUrl, '_blank');
   }
 
