@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 const cardList = [{
+  id: 1,
   imgKey: 'apply.img1',
   altKey: 'apply.alt1',
   dateKey: 'apply.date1',
@@ -15,7 +16,8 @@ const cardList = [{
   onClick: () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLScHfO-4_q_OtpgaUQdcjVSL8OUIuKP1Y0AjiDrOZDeiwK11aQ/viewform', '_blank')
   }
-},{
+}, {
+  id: 2,
   imgKey: 'apply.img2',
   altKey: 'apply.alt2',
   dateKey: 'apply.date2',
@@ -62,7 +64,6 @@ const Card = ({ props }) => {
 
 const Apply = () => {
   const { t } = useTranslation()
-  
 
   return (
     <Container className={styles.container}>
@@ -74,7 +75,7 @@ const Apply = () => {
           id='apply'
           />
         <div className={styles.cardGroup}>
-          {cardList.map((card,index) => <Card props={card} key={index}/>)}
+          {cardList.map(card => <Card props={card} key={card.id}/>)}
         </div>
       </Wrapper>
     </Container>

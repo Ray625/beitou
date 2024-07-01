@@ -6,31 +6,37 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 const prizeList = [{
+  id: 1,
   img: '/prize/prize_store_1.png',
   titleKey: 'storeLottery.prize.title1',
   subtitleKey: 'storeLottery.prize.subtitle1',
   noteKey: 'storeLottery.prize.note1'
-},{
+}, {
+  id: 2,
   img: '/prize/prize_store_2.png',
   titleKey: 'storeLottery.prize.title2',
   subtitleKey: 'storeLottery.prize.subtitle2',
   noteKey: 'storeLottery.prize.note2'
-},{
+  }, {
+  id: 3,
   img: '/prize/prize_store_3.png',
   titleKey: 'storeLottery.prize.title3',
   subtitleKey: 'storeLottery.prize.subtitle3',
   noteKey: 'storeLottery.prize.note3'
-},{
+  }, {
+  id: 4,
   img: '/prize/prize_store_4.png',
   titleKey: 'storeLottery.prize.title4',
   subtitleKey: 'storeLottery.prize.subtitle4',
   noteKey: 'storeLottery.prize.note4'
-},{
+  }, {
+  id: 5,
   img: '/prize/prize_store_5.png',
   titleKey: 'storeLottery.prize.title5',
   subtitleKey: 'storeLottery.prize.subtitle5',
   noteKey: 'storeLottery.prize.note5'
-},{
+  }, {
+  id: 6,
   img: '/prize/prize_store_6.png',
   titleKey: 'storeLottery.prize.title6',
   subtitleKey: 'storeLottery.prize.subtitle6',
@@ -78,7 +84,7 @@ const Lottery = () => {
           {t('storeLottery.point3')}
         </div>
         <div className={styles.prizeGroup}>
-          {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
+          {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}
         </div>
       </Wrapper>
     </Container>

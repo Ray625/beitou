@@ -4,18 +4,23 @@ import { Container, Wrapper } from '../Ui/container';
 import { useTranslation } from 'react-i18next';
 
 const qaList = [{
+  id: 1,
   qKey: 'qa.question1',
   aKey: 'qa.answer1'
 }, {
+  id: 2,
   qKey: 'qa.question2',
   aKey: 'qa.answer2'
   }, {
+  id: 3,
   qKey: 'qa.question3',
   aKey: 'qa.answer3'
   }, {
+  id: 4,
   qKey: 'qa.question4',
   aKey: 'qa.answer4'
   }, {
+  id: 5,
   qKey: 'qa.question5',
   aKey: 'qa.answer5'
   }]
@@ -47,9 +52,9 @@ const QA = () => {
           />
         <div className={styles.qaWrapper}>
           <div className={styles.qaGroup}>
-            {qaList.map((qa, index) => {
+            {qaList.map(qa => {
               return (
-                <QACard props={qa} key={index} />
+                <QACard props={qa} key={qa.id} />
               )
             })}
           </div>

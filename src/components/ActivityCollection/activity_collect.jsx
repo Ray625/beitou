@@ -7,22 +7,26 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 const prizeList = [{
+  id: 1,
   img: '/prize/prize_LINE_1.png',
   titleKey: 'collect.prize.title1',
   subtitleKey: 'collect.prize.subtitle1',
   noteKey: 'collect.prize.note1'
-},{
+}, {
+  id: 2,
   img: '/prize/prize_LINE_2.png',
   titleKey: 'collect.prize.title2',
   subtitleKey: 'collect.prize.subtitle2',
   noteKey: 'collect.prize.note2'
-},{
+  }, {
+  id: 3,
   img: '/prize/prize_LINE_3.png',
   titleKey: 'collect.prize.title3',
   subtitleKey: 'collect.prize.subtitle3',
   noteKey: 'collect.prize.note3',
   note2Key: 'collect.prize.note2nd'
-},{
+  }, {
+  id: 4,
   img: '/prize/prize_LINE_4.png',
   titleKey: 'collect.prize.title4',
   subtitleKey: 'collect.prize.subtitle4',
@@ -78,7 +82,7 @@ const Collect = () => {
           <img src={t('collect.img')} alt={t("collect.alt")} className={styles.img} loading='lazy'/>
         </div>
         <div className={styles.prizeGroup}>
-          {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
+          {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}
         </div>
         <LinkBtn
           title={t("collect.linkBtn")}

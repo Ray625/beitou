@@ -8,14 +8,17 @@ import { useLocation } from 'react-router-dom';
 
 // 畫面用trafficList array.map()產生，最後一個自行開車的card，因內容不同就直接寫html。與設計師討論在平板上顯示時讓card都呈現一樣高度
 const trafficList = [{
+  id: 1,
   titleKey: 'traffic.transportation.title1',
   img: '/svg/icon_go_MRT.svg',
   describeKey: 'traffic.transportation.describe1'
-},{
+}, {
+  id: 2,
   titleKey: 'traffic.transportation.title2',
   img: '/svg/icon_go_bus.svg',
   describeKey: 'traffic.transportation.describe2'
-},{
+  }, {
+  id: 3,
   titleKey: 'traffic.transportation.title3',
   img: '/svg/icon_go_taxi.svg',
   describeKey: 'traffic.transportation.describe3'
@@ -59,7 +62,7 @@ const Traffic = () => {
         />
         <Describe describe={t('traffic.describe')}/>
         <div className={styles.trafficGroup}>
-          {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.title} />)}
+          {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.id} />)}
           <div className={styles.traffic}>
             <div className={styles.titleGroup}>
               <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} loading='lazy'/>

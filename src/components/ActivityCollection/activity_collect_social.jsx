@@ -7,31 +7,37 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 
 const prizeList = [{
+  id: 1,
   img: '/prize/prize_FB_1.png',
   titleKey: 'collectSocial.prize.title1',
   subtitleKey: 'collectSocial.prize.subtitle1',
   noteKey: 'collectSocial.prize.note1'
-},{
+}, {
+  id: 2,
   img: '/prize/prize_FB_2.png',
   titleKey: 'collectSocial.prize.title2',
   subtitleKey: 'collectSocial.prize.subtitle2',
   noteKey: 'collectSocial.prize.note2'
-},{
+  }, {
+  id: 3,
   img: '/prize/prize_FB_3.png',
   titleKey: 'collectSocial.prize.title3',
   subtitleKey: 'collectSocial.prize.subtitle3',
   noteKey: 'collectSocial.prize.note3'
-},{
+  }, {
+  id: 4,
   img: '/prize/prize_FB_4.png',
   titleKey: 'collectSocial.prize.title4',
   subtitleKey: 'collectSocial.prize.subtitle4',
   noteKey: 'collectSocial.prize.note4'
-},{
+  }, {
+  id: 5,
   img: '/prize/prize_FB_5.png',
   titleKey: 'collectSocial.prize.title5',
   subtitleKey: 'collectSocial.prize.subtitle5',
   noteKey: 'collectSocial.prize.note5'
-},{
+  }, {
+  id: 6,
   img: '/prize/prize_FB_6.png',
   titleKey: 'collectSocial.prize.title6',
   subtitleKey: 'collectSocial.prize.subtitle6',
@@ -79,7 +85,7 @@ const CollectSocail = () => {
         />
         <div className={styles.point}>{t('collectSocial.point')}</div>
         <div className={styles.prizeGroup}>
-          {prizeList.map((prize, index) => <Prize props={prize} key={index} />)}
+          {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}
         </div>
         <LinkBtn
           title={t('collectSocial.linkBtn')}
