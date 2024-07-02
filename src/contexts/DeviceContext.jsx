@@ -11,11 +11,11 @@ export const DeviceProvider = ({ children }) => {
       mobile: 0,
       tablet: 1,
       laptop: 2,
-      PC: 3,
+      pc: 3,
     }
 
     if (window.innerWidth >= 1440) {
-      setDevice(device.PC)
+      setDevice(device.pc)
     } else if (1440 > window.innerWidth && window.innerWidth >= 991) {
       setDevice(device.laptop)
     } else if (991 > window.innerWidth && window.innerWidth >= 768) {

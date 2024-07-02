@@ -2,6 +2,7 @@ import styles from './kv.module.scss';
 import Loading from '../Ui/loading';
 import { useState, useEffect } from 'react';
 import { useDevice } from '../../contexts/DeviceContext';
+import { deviceParams } from '../../utils/const';
 import { Container } from '../Ui/container';
 
 // 將檔案較大及設有動畫的圖片預先載入
@@ -59,23 +60,23 @@ const KeyVisionBanner = () => {
   return (
     <Container className={styles.container}>
       {isLoading && <Loading />}
-      {device === 0 && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[0]})` }}></div>}
-      {device !== 0 && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[5]})` }}></div>}
-      {device === 0 &&
+      {device === deviceParams.mobile && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[0]})` }}></div>}
+      {device !== deviceParams.mobile && <div className={styles.moonBg} style={{ backgroundImage: `url(${loadedImages[5]})` }}></div>}
+      {device === deviceParams.mobile &&
         <div className={styles.title} style={{ backgroundImage: `url(${loadedImages[1]})` }}>
           <div className={`${styles.subtitle} ${!isLoading ? styles.subFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[2]})` }}></div>
         </div>
       }
-      {device !== 0 &&
+      {device !== deviceParams.mobile &&
         <div className={styles.title} style={{ backgroundImage: `url(${loadedImages[6]})` }}>
           <div className={`${styles.subtitle} ${!isLoading ? styles.subFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[7]})` }}></div>
         </div>
       }
-      {device === 0 && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[3]})` }}></div>}
-      {device !== 0 && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[8]})` }}></div>}
+      {device === deviceParams.mobile && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[3]})` }}></div>}
+      {device !== deviceParams.mobile && <div className={`${styles.decorate} ${!isLoading ? styles.decorateFadein : '' }`} style={{ backgroundImage: `url(${loadedImages[8]})` }}></div>}
       <div className={styles.grass}></div>
-      {device === 0 && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[4]})` }}></div>}
-      {device !== 0 && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[9]})` }}></div>}
+      {device === deviceParams.mobile && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[4]})` }}></div>}
+      {device !== deviceParams.mobile && <div className={styles.item} style={{ backgroundImage: `url(${loadedImages[9]})` }}></div>}
       <div className={styles.cloudLeft}></div>
       <div className={styles.cloudRight}></div>
     </Container>

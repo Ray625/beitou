@@ -4,6 +4,7 @@ import { Container, Wrapper } from '../Ui/container';
 import { useDevice } from '../../contexts/DeviceContext';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { deviceParams } from '../../utils/const';
 
 const cardList = [{
   num: '/number/icon_1.png',
@@ -84,12 +85,12 @@ const Attraction = () => {
           imgRight='svg/icon_camera.svg'
           title={t('attraction.title')}
           />
-        {device !== 3 && <div className={styles.attractionGroup}>
+        {device !== deviceParams.pc && <div className={styles.attractionGroup}>
           {cardList.map(card => {
             return <Card props={card} key={card.alt}/>
           })}
         </div>}
-        {device === 3 && <div className={styles.attractionGroup}>
+        {device === deviceParams.pc && <div className={styles.attractionGroup}>
           <div className={styles.leftCardGroup}>
             {cardList.map((card, index) => {
               if (index % 2 === 0)

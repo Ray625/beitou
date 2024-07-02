@@ -2,6 +2,7 @@ import styles from './activity_main.module.scss';
 import { useState, useEffect, useRef } from 'react';
 import { ImgTitle } from '../Ui/titleGroup';
 import { useDevice } from '../../contexts/DeviceContext';
+import { deviceParams } from '../../utils/const';
 import { activityList } from './activity_main_info';
 import { Container, Wrapper } from '../Ui/container';
 import { useTranslation } from 'react-i18next';
@@ -135,11 +136,11 @@ const ActivityBody = ({ activity, props }) => {
       <div className={styles.bodyTop}>
         <div className={styles.titleGroup} style={{ background: `${color}1A` }}>
           <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
-          {device === 0 && <h2 className={styles.title}>
+          {device === deviceParams.mobile && <h2 className={styles.title}>
             {t(titleKey)}
             {subtitleKey && <><br />{t(subtitleKey)}</>}
           </h2>}
-          {device !== 0 && <h2 className={styles.title}>
+          {device !== deviceParams.mobile && <h2 className={styles.title}>
             {t(titleKey)}
             {subtitleKey && <>・{t(subtitleKey)}</>}
           </h2>}

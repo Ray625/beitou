@@ -1,6 +1,7 @@
 import styles from './header.module.scss';
 import { useEffect, useState, } from 'react';
 import { useDevice } from '../../contexts/DeviceContext';
+import { deviceParams } from '../../utils/const';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
@@ -72,11 +73,11 @@ const Header = () => {
 
   // 透過useEffect偵測畫面寬度若為1440px以上時，把Navbar展開(畫面只有在1440px以上navbar文字才不會自動換行，因此設定1440段點，再小的螢幕header就會縮入側邊攔)
   useEffect(() => {
-    if (device === 3) {
+    if (device === deviceParams.pc) {
     setNavOpen(true)
     }
 
-    if (device === 0 || device === 1 || device === 2) {
+    if (device === deviceParams.mobile || device === deviceParams.tablet || device === deviceParams.laptop) {
       setNavOpen(false)
     }
   }, [device])
@@ -86,12 +87,12 @@ const Header = () => {
   }
 
   const handleCloseHamburger = () => {
-    if (device === 3) return
+    if (device === deviceParams.pc) return
     setNavOpen(false)
   }
 
   const handleKeyDown = (e) => {
-    if (device === 3) return
+    if (device === deviceParams.pc) return
     if (e.key === 'Enter' || e.key === ' ') {
       setNavOpen(false)
     }
@@ -125,26 +126,28 @@ const Header = () => {
           <h1 className={styles.title}>{t('title')}</h1>
           <img src="/svg/header_logo.svg" alt="logo" className={styles.logo} loading='lazy'/>
         </button>
-        <div className={styles.navList} onClick={handleCloseHamburger} onKeyDown={handleKeyDown} role="link"  tabIndex="0" >
-          {list.map((item) => {
-            return (
-              <div className={styles.navItem} key={item.id}>
-              <a href={`#${item.id}`} className={styles.link}>{t(item.textKey)}</a>
-            </div>
-            )
-          })}
-        </div>
-        <hr className={styles.hr} />
-        <button className={styles.downloadBtn} onClick={handleDownload}>
-          {t("header.download")}
-          <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} loading='lazy'/>
-        </button>
-        <div className={styles.language}>
-          <button className={`${styles.languageBtn} ${(pathname === '/zh') ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
-          <button className={`${styles.languageBtn} ${(pathname === '/en') ? styles.active : ''}`} onClick={() => handleNavigate('/en')}>English</button>
+        <div className={styles.navItemList} onClick={handleCloseHamburger} onKeyDown={handleKeyDown} role="link"  tabIndex="0">
+          <div className={styles.navList}>
+            {list.map((item) => {
+              return (
+                <div className={styles.navItem} key={item.id}>
+                <a href={`#${item.id}`} className={styles.link}>{t(item.textKey)}</a>
+              </div>
+              )
+            })}
+          </div>
+          <hr className={styles.hr} />
+          <button className={styles.downloadBtn} onClick={handleDownload}>
+            {t("header.download")}
+            <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} loading='lazy'/>
+          </button>
+          <div className={styles.language}>
+            <button className={`${styles.languageBtn} ${(pathname === '/zh') ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
+            <button className={`${styles.languageBtn} ${(pathname === '/en') ? styles.active : ''}`} onClick={() => handleNavigate('/en')}>English</button>
+          </div>
         </div>
       </nav>
-      {device === 3 && <FixedBtn />}
+      {device === deviceParams.pc && <FixedBtn />}
     </>
   )
 }

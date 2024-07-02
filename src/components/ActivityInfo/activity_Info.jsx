@@ -4,6 +4,7 @@ import { Container, Wrapper } from '../Ui/container';
 import { Describe } from '../Ui/describe';
 import { useTranslation } from 'react-i18next';
 import { useDevice } from '../../contexts/DeviceContext';
+import { deviceParams } from '../../utils/const';
 
 // 畫面下方5個圖片用eventList array.map()產生，透過num設定點擊後跳轉至main section，並改變上方tab，由父層的state控制顯示的tab(第1、2、3、4、5個)，並且設定連結a href="#id"，使畫面跳轉至main section
 const eventList = [{
@@ -69,7 +70,7 @@ const Info = ({ setActivity }) => {
         <div className={styles.eventInfo}>
           {eventList.map(item => {
             return (
-              <a href='#activity' className={styles.info} onClick={() => handleClick(item.num)} style={{backgroundImage:(t(device === 0 ? item.bgMKey : item.bgKey))}} key={item.num}>{t(item.textKey)}</a>
+              <a href='#activity' className={styles.info} onClick={() => handleClick(item.num)} style={{backgroundImage:(t(device === deviceParams.mobile ? item.bgMKey : item.bgKey))}} key={item.num}>{t(item.textKey)}</a>
             )
           })}
         </div>
