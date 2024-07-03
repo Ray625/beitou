@@ -4,12 +4,16 @@ import Homepage from "./pages/homepage";
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Navigate to="/zh" replace />, // 預設重定向到中文頁面
-  },
-  {
-    path: '/:lng',
-    element: <Homepage />,
+    element: <Homepage />
   }
+  // {
+  //   path: '/',
+  //   element: <Navigate to="/zh" replace />, // 預設重定向到中文頁面
+  // },
+  // {
+  //   path: '/:lng',
+  //   element: <Homepage />,
+  // }
 ])
 
 function App() {

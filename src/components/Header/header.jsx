@@ -141,10 +141,10 @@ const Header = () => {
             {t("header.download")}
             <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} loading='lazy'/>
           </button>
-          <div className={styles.language}>
+          {/* <div className={styles.language}>
             <button className={`${styles.languageBtn} ${(pathname === '/zh') ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
             <button className={`${styles.languageBtn} ${(pathname === '/en') ? styles.active : ''}`} onClick={() => handleNavigate('/en')}>English</button>
-          </div>
+          </div> */}
         </div>
       </nav>
       {device === deviceParams.pc && <FixedBtn />}

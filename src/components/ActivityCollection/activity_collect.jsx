@@ -17,14 +17,16 @@ const prizeList = [{
   img: '/prize/prize_LINE_2.png',
   titleKey: 'collect.prize.title2',
   subtitleKey: 'collect.prize.subtitle2',
-  noteKey: 'collect.prize.note2'
+  noteKey: 'collect.prize.note2',
+  note2Key: 'collect.prize.note2nd2'
   }, {
   id: 3,
   img: '/prize/prize_LINE_3.png',
   titleKey: 'collect.prize.title3',
   subtitleKey: 'collect.prize.subtitle3',
   noteKey: 'collect.prize.note3',
-  note2Key: 'collect.prize.note2nd'
+  note2Key: 'collect.prize.note2nd3',
+  note3Key: 'collect.prize.note3rd3'
   }, {
   id: 4,
   img: '/prize/prize_LINE_4.png',
@@ -34,7 +36,7 @@ const prizeList = [{
 },]
 
 const Prize = ({props}) => {
-  const { img, titleKey, subtitleKey, noteKey, note2Key } = props
+  const { img, titleKey, subtitleKey, noteKey, note2Key, note3Key } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
@@ -49,6 +51,7 @@ const Prize = ({props}) => {
       <div className={styles.note}>
         {t(noteKey)}
         {note2Key && <><br />{t(note2Key)}</>}
+        {note3Key && <><br />{t(note3Key)}</>}
       </div>
     </div>
   )

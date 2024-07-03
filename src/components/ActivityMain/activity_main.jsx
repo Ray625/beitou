@@ -7,9 +7,10 @@ import { activityList } from './activity_main_info';
 import { Container, Wrapper } from '../Ui/container';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 const Card = ({ color, props }) => {
-  const { titleKey, subtitleKey, bodyKey, icon } = props
+  const { titleKey, subtitleKey, timeKey, bodyKey, pointKey, icon } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
@@ -24,9 +25,13 @@ const Card = ({ color, props }) => {
         {subtitleKey && <><br />{t(subtitleKey)}</>}
       </div>
       <div className={styles.hr} style={{ backgroundColor: color }}></div>
+      {timeKey && <div className={styles.eventTime}>{t(timeKey)}</div>}
       <div className={styles.cardBody}>
         <div className={styles.cardText}>
-          {t(bodyKey)}
+          {parse(t(bodyKey))}
+          <div className={styles.cardPoint}>
+            {parse(t(pointKey))}
+          </div>
         </div>
       </div>
     </div>
@@ -125,10 +130,8 @@ const ScrollCardList = ({ list, color }) => {
 
 const ActivityBody = ({ activity, props }) => {
   const device = useDevice()
-  const { num, color, titleKey, subtitleKey, icon, dateKey, timeKey, locationKey, describeKey, cardList } = props
+  const { num, color, titleKey, subtitleKey, icon, dateKey, timeKey, locationKey, cardList } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
 
 
   return (
@@ -159,9 +162,6 @@ const ActivityBody = ({ activity, props }) => {
             <div className={styles.iconLocation} style={{backgroundColor: color}}></div>
             {t(locationKey)}
           </div>
-        </div>
-        <div className={`${styles.describe} ${pathname ==='/en' && styles.describeEn}`}>
-          {t(describeKey)}
         </div>
       </div>
       <ScrollCardList list={cardList} color={color}/>

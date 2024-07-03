@@ -11,13 +11,16 @@ const prizeList = [{
   img: '/prize/prize_FB_1.png',
   titleKey: 'collectSocial.prize.title1',
   subtitleKey: 'collectSocial.prize.subtitle1',
-  noteKey: 'collectSocial.prize.note1'
+  noteKey: 'collectSocial.prize.note1',
+  note2Key: 'collectSocial.prize.note2nd1',
 }, {
   id: 2,
   img: '/prize/prize_FB_2.png',
   titleKey: 'collectSocial.prize.title2',
   subtitleKey: 'collectSocial.prize.subtitle2',
-  noteKey: 'collectSocial.prize.note2'
+  noteKey: 'collectSocial.prize.note2',
+  note2Key: 'collectSocial.prize.note2nd2',
+  note3Key: 'collectSocial.prize.note3rd2'
   }, {
   id: 3,
   img: '/prize/prize_FB_3.png',
@@ -45,11 +48,10 @@ const prizeList = [{
 }]
 
 const Prize = ({props}) => {
-  const { img, titleKey, subtitleKey, noteKey } = props
+  const { img, titleKey, subtitleKey, noteKey, note2Key, note3Key } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
-
 
   return (
     <div className={styles.prize}>
@@ -60,6 +62,8 @@ const Prize = ({props}) => {
       <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>
       <div className={styles.note}>
         {t(noteKey)}
+        {note2Key && <><br />{t(note2Key)}</>}
+        {note3Key && <><br />{t(note3Key)}</>}
       </div>
     </div>
   )

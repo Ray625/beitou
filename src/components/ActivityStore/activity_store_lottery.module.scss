@@ -183,26 +183,26 @@
     &::after {
       content: '';
       position: absolute;
-      top: 24%;
-      left: 0;
-      width: 10vw;
-      height: 14vw;
-      background-image: url('../../../public/bg/bg_8_item_3.png');
+      top: 16%;
+      left: -8%;
+      width: 14vw;
+      height: 3000px;
+      background-image: url('../../../public/bg/bg_8_item_3.png'), url('../../../public/bg/bg_8_item_3.png'), url('../../../public/bg/bg_8_item_3.png'), url('../../../public/bg/bg_8_item_3.png');
       background-size: contain;
-      background-position: bottom center;
+      background-position: bottom center,bottom 33% center, top 33% center, top center;
       background-repeat: no-repeat;
     }
 
     &::before {
       content: '';
       position: absolute;
-      top: 68%;
-      right: 0;
-      width: 8vw;
-      height: 15vw;
-      background-image: url('../../../public/bg/bg_8_item_4.png');
+      bottom: 12%;
+      right: -6%;
+      width: 12vw;
+      height: 3000px;
+      background-image: url('../../../public/bg/bg_8_item_4.png'), url('../../../public/bg/bg_8_item_4.png'), url('../../../public/bg/bg_8_item_4.png'), url('../../../public/bg/bg_8_item_4.png');
       background-size: contain;
-      background-position: bottom center;
+      background-position: bottom center, bottom 33% center, top 33% center, top center;
       background-repeat: no-repeat;
     }
   }
@@ -243,23 +243,29 @@
   .wrapper {
     &::after {
       top: 32%;
-      left: 0;
+      left: -2%;
       width: 10vw;
       height: 14vw;
+      height: 1200px;
+      background-image: url('../../../public/bg/bg_8_item_3.png'), url('../../../public/bg/bg_8_item_3.png');
+      background-position: bottom center, top center;
     }
 
     &::before {
-      top: 48%;
+      bottom: 36%;
       right: 0;
       width: 8vw;
-      height: 15vw;
+      height: 1200px;
+      background-image: url('../../../public/bg/bg_8_item_4.png'), url('../../../public/bg/bg_8_item_4.png');
+      background-position: bottom center, top center;
     }
   }
 
   .prizeGroup {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    max-width: 1200px;
     row-gap: 40px;
     column-gap: 54px;
     margin-bottom: 72px;

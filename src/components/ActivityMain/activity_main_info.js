@@ -52,7 +52,9 @@ export const activityList = [{
   },{
     titleKey: 'main.event2.title3',
     subtitleKey: undefined,
+    timeKey: 'main.event2.time3',
     bodyKey: 'main.event2.body3',
+    pointKey: 'main.event2.point3',
     icon: '/icon/tab_2-3.png'
   },{
     titleKey: 'main.event2.title4',

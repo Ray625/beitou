@@ -52,9 +52,7 @@ const Info = ({ setActivity }) => {
           id='info'
         />
         <Describe
-          describe={t('info.description1')}
-          describe2={t('info.description2')}
-          describe3={t('info.description3')}
+          describe={t('info.description')}
           className={styles.describe}
         />
         <div className={styles.infoGroup}>
