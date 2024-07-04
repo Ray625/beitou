@@ -71,15 +71,15 @@ const Traffic = () => {
             <div className={`${styles.trafficBody} ${pathname === '/en' && styles.textAlignEn}`}>
               <ul>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" className={styles.link}>{t('traffic.transportation.park1')}</a>
+                  <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" target='_blank' rel='noopener noreferrer' className={styles.link}>{t('traffic.transportation.park1')}</a>
                   <div className={styles.point}>{t('traffic.transportation.point1')}</div>
                 </li>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" className={styles.link}>{t('traffic.transportation.park2')}</a>
+                  <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" target='_blank' rel='noopener noreferrer' className={styles.link}>{t('traffic.transportation.park2')}</a>
                   <div className={styles.point}>{t('traffic.transportation.point2')}</div>
                 </li>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" className={styles.link}>{t('traffic.transportation.park3')}</a>
+                  <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" target='_blank' rel='noopener noreferrer' className={styles.link}>{t('traffic.transportation.park3')}</a>
                   <div className={styles.point}>{t('traffic.transportation.point3')}</div>
                 </li>
               </ul>

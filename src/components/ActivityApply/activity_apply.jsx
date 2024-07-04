@@ -23,14 +23,14 @@ const cardList = [{
   dateKey: 'apply.date2',
   timeKey: 'apply.time2',
   locationKey: 'apply.location2',
-  describeKey: 'apply.describe2',
+  // describeKey: 'apply.describe2',
   onClick: () => {
     window.open('https://forms.gle/XZD7x8LJ3w2XEDWEA', '_blank');
   }
 }]
 
 const Card = ({ props }) => {
-  const { imgKey, altKey, dateKey, timeKey, locationKey, describeKey, onClick } = props
+  const { imgKey, altKey, dateKey, timeKey, locationKey, onClick } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
@@ -52,7 +52,7 @@ const Card = ({ props }) => {
           {t(locationKey)}
         </div>
       </div>
-      <div className={`${styles.describe} ${pathname === '/en' && styles.describeEn}`}>{t(describeKey)}</div>
+      {/* <div className={`${styles.describe} ${pathname === '/en' && styles.describeEn}`}>{t(describeKey)}</div> */}
       <LinkBtn
         title={t('apply.button')}
         color='#6E2148'

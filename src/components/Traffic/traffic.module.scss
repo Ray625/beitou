@@ -150,23 +150,23 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: 5vw;
-      left: 15%;
-      width: 278px;
-      height: 708px;
+      top: 4%;
+      left: 0;
+      width: 100vw;
+      height: 120px;
       background-image: url('../../../public/bg/bg_9_item_1.png');
       background-repeat: no-repeat;
-      background-position: bottom center;
+      background-position: top center;
       background-size: contain;
     }
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 5vw;
-      right: 15%;
-      width: 364px;
-      height: 792px;
+      bottom: 8%;
+      right: 0;
+      width: 100vw;
+      height: 600px;
       background-image: url('../../../public/bg/bg_9_item_2.png');
       background-repeat: no-repeat;
       background-position: bottom center;

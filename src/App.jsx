@@ -1,4 +1,5 @@
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+// import { Navigate } from "react-router-dom";
 import Homepage from "./pages/homepage";
 
 const router = createBrowserRouter([

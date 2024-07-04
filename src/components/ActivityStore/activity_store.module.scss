@@ -4,7 +4,7 @@
   height: fit-content;
   background-color: style.$dark_green;
   padding-top: 90px;
-  padding-bottom: 40px;
+  padding-bottom: 80px;
   &::before {
     content: '';
     position: absolute;
@@ -100,6 +100,7 @@
 @media screen and (min-width: 991px) {
   .container {
     padding-top: 200px;
+    padding-bottom: 108px;
   }
 
   .bg {

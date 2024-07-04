@@ -25,7 +25,7 @@ const Card = ({ color, props }) => {
         {subtitleKey && <><br />{t(subtitleKey)}</>}
       </div>
       <div className={styles.hr} style={{ backgroundColor: color }}></div>
-      {timeKey && <div className={styles.eventTime}>{t(timeKey)}</div>}
+      {timeKey && <div className={styles.cardTime}>{parse(t(timeKey))}</div>}
       <div className={styles.cardBody}>
         <div className={styles.cardText}>
           {parse(t(bodyKey))}
@@ -132,6 +132,8 @@ const ActivityBody = ({ activity, props }) => {
   const device = useDevice()
   const { num, color, titleKey, subtitleKey, icon, dateKey, timeKey, locationKey, cardList } = props
   const { t } = useTranslation()
+  // const location = useLocation()
+  // const pathname = location.pathname
 
 
   return (
@@ -163,6 +165,9 @@ const ActivityBody = ({ activity, props }) => {
             {t(locationKey)}
           </div>
         </div>
+        {/* <div className={`${styles.describe} ${pathname ==='/en' && styles.describeEn}`}>
+          {t(describeKey)}
+        </div> */}
       </div>
       <ScrollCardList list={cardList} color={color}/>
     </div>

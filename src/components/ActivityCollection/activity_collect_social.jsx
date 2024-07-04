@@ -5,6 +5,7 @@ import { Container, Wrapper } from '../Ui/container';
 import { Describe } from '../Ui/describe';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 const prizeList = [{
   id: 1,
@@ -12,15 +13,12 @@ const prizeList = [{
   titleKey: 'collectSocial.prize.title1',
   subtitleKey: 'collectSocial.prize.subtitle1',
   noteKey: 'collectSocial.prize.note1',
-  note2Key: 'collectSocial.prize.note2nd1',
 }, {
   id: 2,
   img: '/prize/prize_FB_2.png',
   titleKey: 'collectSocial.prize.title2',
   subtitleKey: 'collectSocial.prize.subtitle2',
   noteKey: 'collectSocial.prize.note2',
-  note2Key: 'collectSocial.prize.note2nd2',
-  note3Key: 'collectSocial.prize.note3rd2'
   }, {
   id: 3,
   img: '/prize/prize_FB_3.png',
@@ -48,7 +46,7 @@ const prizeList = [{
 }]
 
 const Prize = ({props}) => {
-  const { img, titleKey, subtitleKey, noteKey, note2Key, note3Key } = props
+  const { img, titleKey, subtitleKey, noteKey } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
@@ -61,9 +59,7 @@ const Prize = ({props}) => {
       <div className={`${styles.title} ${pathname === '/en' && styles.linehight28}`}>{t(titleKey)}</div>
       <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>
       <div className={styles.note}>
-        {t(noteKey)}
-        {note2Key && <><br />{t(note2Key)}</>}
-        {note3Key && <><br />{t(note3Key)}</>}
+        {parse(t(noteKey))}
       </div>
     </div>
   )
@@ -87,10 +83,10 @@ const CollectSocail = () => {
         <Describe
           describe={t('collectSocial.describe')}
         />
-        <div className={styles.point}>{t('collectSocial.point')}</div>
         <div className={styles.prizeGroup}>
           {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}
         </div>
+        <div className={styles.point}>{t('collectSocial.point')}</div>
         <LinkBtn
           title={t('collectSocial.linkBtn')}
           color='#6E2148'

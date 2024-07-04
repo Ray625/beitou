@@ -5,6 +5,7 @@ import { Container, Wrapper } from '../Ui/container';
 import { Describe } from '../Ui/describe';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 const prizeList = [{
   id: 1,
@@ -18,15 +19,12 @@ const prizeList = [{
   titleKey: 'collect.prize.title2',
   subtitleKey: 'collect.prize.subtitle2',
   noteKey: 'collect.prize.note2',
-  note2Key: 'collect.prize.note2nd2'
   }, {
   id: 3,
   img: '/prize/prize_LINE_3.png',
   titleKey: 'collect.prize.title3',
   subtitleKey: 'collect.prize.subtitle3',
   noteKey: 'collect.prize.note3',
-  note2Key: 'collect.prize.note2nd3',
-  note3Key: 'collect.prize.note3rd3'
   }, {
   id: 4,
   img: '/prize/prize_LINE_4.png',
@@ -36,7 +34,7 @@ const prizeList = [{
 },]
 
 const Prize = ({props}) => {
-  const { img, titleKey, subtitleKey, noteKey, note2Key, note3Key } = props
+  const { img, titleKey, subtitleKey, noteKey } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
@@ -49,9 +47,7 @@ const Prize = ({props}) => {
       <div className={`${styles.title} ${pathname === '/en' && styles.linehight28}`}>{t(titleKey)}</div>
       <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>
       <div className={styles.note}>
-        {t(noteKey)}
-        {note2Key && <><br />{t(note2Key)}</>}
-        {note3Key && <><br />{t(note3Key)}</>}
+        {parse(t(noteKey))}
       </div>
     </div>
   )

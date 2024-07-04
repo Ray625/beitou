@@ -59,11 +59,14 @@ export const activityList = [{
   },{
     titleKey: 'main.event2.title4',
     subtitleKey: undefined,
+    timeKey: 'main.event2.time4',
     bodyKey: 'main.event2.body4',
+    pointKey: 'main.event2.point4',
     icon: '/icon/tab_2-4.png'
   },{
     titleKey: 'main.event2.title5',
     subtitleKey: undefined,
+    timeKey: 'main.event2.time5',
     bodyKey: 'main.event2.body5',
     icon: '/icon/tab_2-5.png'
   }]
@@ -94,7 +97,8 @@ export const activityList = [{
     icon: '/icon/tab_3-3.png'
   },{
     titleKey: 'main.event3.title4',
-    subtitleKey: 'main.event3.subtitle4',
+    subtitleKey: undefined,
+    timeKey: 'main.event3.time4',
     bodyKey: 'main.event3.body4',
     icon: '/icon/tab_3-4.png'
   },{
@@ -135,7 +139,8 @@ export const activityList = [{
     icon: '/icon/tab_4-3.png'
   },{
     titleKey: 'main.event4.title4',
-    subtitleKey: 'main.event4.subtitle4',
+    subtitleKey: undefined,
+    timeKey: 'main.event4.time4',
     bodyKey: 'main.event4.body4',
     icon: '/icon/tab_4-4.png'
   },{
@@ -177,7 +182,8 @@ export const activityList = [{
   },{
     titleKey: 'main.event5.title4',
     subtitleKey: undefined,
-    bodyKey: 'main.event4.body4',
+    timeKey: 'main.event5.time4',
+    bodyKey: 'main.event5.body4',
     icon: '/icon/tab_5-4.png'
   },{
     titleKey: 'main.event5.title5',
