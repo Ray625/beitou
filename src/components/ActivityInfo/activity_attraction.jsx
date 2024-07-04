@@ -13,7 +13,8 @@ const cardList = [{
   img: '/attraction/image_1.png',
   subtitleKey: 'attraction.subtitle1',
   subtitleColor: '#109D91',
-  describeKey: 'attraction.describe1'
+  describeKey: 'attraction.describe1',
+  pointKey: 'attraction.point1'
 },{
   num: '/number/icon_2.png',
   alt: '2',
@@ -50,7 +51,7 @@ const cardList = [{
 ]
 
 const Card = ({ props }) => {
-  const { num, alt, titleKey, img, subtitleKey, subtitleColor, describeKey } = props
+  const { num, alt, titleKey, img, subtitleKey, subtitleColor, describeKey, pointKey } = props
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
@@ -67,7 +68,11 @@ const Card = ({ props }) => {
       <div className={styles.cardBody}>
         <img src={img} alt={t(titleKey)} className={styles.cardImg} loading='lazy'/>
         <div className={styles.subtitle} style={{ color: subtitleColor }}>{t(subtitleKey)}</div>
-        <p className={(pathname === '/') ? styles.describe : styles.describeEn}>{t(describeKey)}</p>
+        <p className={(pathname === '/') ? styles.describe : styles.describeEn}>{t(describeKey)}
+          <div className={styles.cardPoint}>
+            {t(pointKey)}
+          </div>
+        </p>
       </div>
     </div>
   )

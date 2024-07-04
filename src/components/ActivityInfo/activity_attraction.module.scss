@@ -130,6 +130,12 @@
   width: 84%;
 }
 
+.cardPoint {
+  margin-top: 8px;
+  font-size: style.$note_font_size;
+  line-height: 22px;
+}
+
 .attractionGroup {
   display: flex;
   flex-direction: column;
