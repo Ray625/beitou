@@ -69,7 +69,7 @@ const CollectSocail = () => {
   const { t } = useTranslation()
 
   const handleClick = () => {
-    window.open('https://user234859.pse.is/5xzb5f', '_blank')
+    window.open('https://www.facebook.com/share/p/XGNxLApkaKkJV1gm/', '_blank')
   }
 
   return (
