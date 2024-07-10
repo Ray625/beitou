@@ -2,8 +2,7 @@ import styles from './header.module.scss';
 import { useEffect, useState, } from 'react';
 import { useDevice } from '../../contexts/DeviceContext';
 import { deviceParams } from '../../utils/const';
-import { useLocation } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 // header按鈕用list array.map()產生，透過id設定點擊後跳轉至該section
@@ -68,10 +67,10 @@ const Header = () => {
   const [navOpen, setNavOpen] = useState(false)
   const device = useDevice()
   const { t } = useTranslation()
-  // const { i18n } = useTranslation()
-  // const location = useLocation()
-  // const pathname = location.pathname
-  // const navigate = useNavigate()
+  const { i18n } = useTranslation()
+  const location = useLocation()
+  const pathname = location.pathname
+  const navigate = useNavigate()
 
   // 透過useEffect偵測畫面寬度若為1440px以上時，把Navbar展開(畫面只有在1440px以上navbar文字才不會自動換行，因此設定1440段點，再小的螢幕header就會縮入側邊攔)
   useEffect(() => {
@@ -112,12 +111,12 @@ const Header = () => {
     })
   }
 
-  // const handleNavigate = (path) => {
-  //   if (pathname === path) return
-  //   navigate(path)
-  //   if (path === '/zh') i18n.changeLanguage('zh')
-  //   if (path === '/en') i18n.changeLanguage('en')
-  // };
+  const handleNavigate = (path) => {
+    if (pathname === path) return
+    navigate(path)
+    if (path === '/zh') i18n.changeLanguage('zh')
+    if (path === '/en') i18n.changeLanguage('en')
+  };
 
   return (
     <>
@@ -133,7 +132,7 @@ const Header = () => {
             {list.map((item) => {
               return (
                 <div className={styles.navItem} key={item.id}>
-                <a href={`#${item.id}`} className={styles.link}>{t(item.textKey)}</a>
+                  <a href={`#${item.id}`} className={styles.link}>{t(item.textKey)}</a>
               </div>
               )
             })}
@@ -143,10 +142,10 @@ const Header = () => {
             {t("header.download")}
             <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} loading='lazy'/>
           </button>
-          {/* <div className={styles.language}>
+          <div className={styles.language}>
             <button className={`${styles.languageBtn} ${(pathname === '/zh') ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
             <button className={`${styles.languageBtn} ${(pathname === '/en') ? styles.active : ''}`} onClick={() => handleNavigate('/en')}>English</button>
-          </div> */}
+          </div>
         </div>
       </nav>
       {device === deviceParams.pc && <FixedBtn />}

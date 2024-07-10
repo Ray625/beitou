@@ -1,13 +1,13 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-// import en from './assets/en.json'
+import en from './assets/en.json'
 import zh_tw from './assets/zh_tw.json';
 
 const resources = {
-  // en: {
-  //   translation: en
-  // },
+  en: {
+    translation: en
+  },
   zh: {
     translation: zh_tw
   }
@@ -23,8 +23,7 @@ i18n
     escapeValue: false,
     },
   detection: {
-    // order: ['path', 'navigator'],
-    order: ['path'],
+    order: ['path', 'navigator'],
     lookupFromPathIndex: 0,
     }
 })

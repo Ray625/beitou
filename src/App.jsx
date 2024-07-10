@@ -1,20 +1,15 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import { Navigate } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Homepage from "./pages/homepage";
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Homepage />
+    element: <Navigate to="/zh" replace />, // 預設重定向到中文頁面
+  },
+  {
+    path: '/:lng',
+    element: <Homepage />,
   }
-  // {
-  //   path: '/',
-  //   element: <Navigate to="/zh" replace />, // 預設重定向到中文頁面
-  // },
-  // {
-  //   path: '/:lng',
-  //   element: <Homepage />,
-  // }
 ])
 
 function App() {

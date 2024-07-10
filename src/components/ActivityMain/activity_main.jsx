@@ -165,9 +165,6 @@ const ActivityBody = ({ activity, props }) => {
             {t(locationKey)}
           </div>
         </div>
-        {/* <div className={`${styles.describe} ${pathname ==='/en' && styles.describeEn}`}>
-          {t(describeKey)}
-        </div> */}
       </div>
       <ScrollCardList list={cardList} color={color}/>
     </div>
