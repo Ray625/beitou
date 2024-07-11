@@ -65,7 +65,7 @@ const Collect = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('collect.title')}
-          img='/title/title_4.png'
+          img={t('collect.titleImg')}
           id='collect'
           />
         <TitleGroup

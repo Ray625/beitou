@@ -129,6 +129,7 @@ const Lottery = () => {
           title={t("storeLottery.title")}
           imgLeft='/svg/icon_celebrate_left.svg'
           imgRight='/svg/icon_celebrate_right.svg'
+          className={styles.sectionTitle}
         />
         <Describe describe={parse(t('storeLottery.describe'))}
         />

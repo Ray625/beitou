@@ -46,7 +46,7 @@ const Map = () => {
         />
         <div className={styles.schedule}>
           <ZoomInImg
-            src="/event/schedule.png"
+            src={t('map.scheduleImg')}
             alt={t('map.scheduleAlt')}
             changeZindex={changeZindex}
           />

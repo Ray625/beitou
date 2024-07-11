@@ -24,22 +24,22 @@
     "eventName3": "親子冒險島",
     "eventName4": "親子魔法樂園",
     "eventName5": "夏日好聲音派對",
-    "eventImg2m": "url(/highlight/highlight_2_m.png)",
-    "eventImg3m": "url(/highlight/highlight_3_m.png)",
-    "eventImg4m": "url(/highlight/highlight_4_m.png)",
-    "eventImg5m": "url(/highlight/highlight_5_m.png)",
     "eventImg1": "url(/highlight/highlight_1.png)",
     "eventImg2": "url(/highlight/highlight_2.png)",
     "eventImg3": "url(/highlight/highlight_3.png)",
     "eventImg4": "url(/highlight/highlight_4.png)",
-    "eventImg5": "url(/highlight/highlight_5.png)"
+    "eventImg5": "url(/highlight/highlight_5.png)",
+    "eventImg2m": "url(/highlight/highlight_2_m.png)",
+    "eventImg3m": "url(/highlight/highlight_3_m.png)",
+    "eventImg4m": "url(/highlight/highlight_4_m.png)",
+    "eventImg5m": "url(/highlight/highlight_5_m.png)"
   },
   "map": {
     "mapTitle": "活動地圖",
     "scheduleTitle": "活動行事曆",
     "mapImg": "/event/map.png",
     "mapImgM": "/event/map_m.png",
-    "calendarImg": "/event/schedule.png",
+    "scheduleImg": "/event/schedule.png",
     "mapAlt": "地圖",
     "scheduleAlt": "行事曆"
   },
@@ -74,6 +74,7 @@
     "location4": "地熱谷入口"
   },
   "main": {
+    "titleImg": "/title/title_2.png",
     "title": "主題活動",
     "title1": "復刻酒家菜",
     "title2": "復刻酒家菜",
@@ -172,9 +173,10 @@
     }
   },
   "apply": {
+    "titleImg": "/title/title_3.png",
     "title": "活動報名",
-    "img1": "/event/event_3.png",
-    "img2": "/event/event_4.png",
+    "img1": "/event/event_1.png",
+    "img2": "/event/event_2.png",
     "alt1": "北投小旅行",
     "alt2": "再現那卡西・北投好聲音",
     "date1": "7/6(六)~7/28(日)",
@@ -186,6 +188,7 @@
     "button": "前往報名"
   },
   "collect": {
+    "titleImg": "/title/title_4.png",
     "title": "集章之旅",
     "subtitle": "五大打卡景點",
     "describe": "活動期間113年7月5日00:00至28日21:30止，在5大打卡景點現場掃描QR Code，加入「2024北投夏日魔法節LINE官方帳號」，開始集章之旅，玩扭蛋抽獎！Samsung Galaxy S24、溫泉會館泡湯券等你抽！",
@@ -235,6 +238,7 @@
     }
   },
   "store": {
+    "titleImg": "/title/title_5.png",
     "title": "特約商店",
     "subtitle": "專屬優惠",
     "describe": "串連百家特約商店響應活動，特別推出的活動期間專案優惠！詳細商店優惠資訊請至線上特約商店地圖或至官方FB粉絲專頁查詢～",
@@ -294,6 +298,7 @@
     }
   },
   "traffic": {
+    "titleImg": "/title/title_6.png",
     "title": "交通指引",
     "describe": "區內公車線眾多，其中經過榮民總醫院的公車即有10線以上，交通便利；另有小型公車6、7、9、14等路線通駛山區道路。請多多搭乘大眾交通工具前往～",
     "transportation": {
@@ -313,6 +318,7 @@
     }
   },
   "qa": {
+    "titleImg": "/title/title_7.png",
     "title": "常見問題",
     "question1": "Q1.「2024北投夏日魔法節」的活動時間與地點？",
     "question2": "Q2.「2024北投夏日魔法節」的活動內容？",
@@ -336,6 +342,8 @@
     "answer10": "<ul><li>特約店家滿額抽獎：凡於特約店家消費滿300元以上(單筆消費)，即可獲得抽獎券，有機會獲得限量贈品，其中包含在地旅宿業者的住宿券、餐券、泡湯券和iphone 15 pro等優惠好禮。</li><li>LINE集章抽獎：活動期間於奇幻地景5大裝置物，依各裝置物告示牌掃描專屬QRcode，至「2024 北投夏日魔法節」LINE官方帳號取得集點卡，集滿3點就有機會抽中溫泉泡湯券和Samsung 手機等好禮抽獎資格，集滿全部5點就有額外次抽獎機會！邀請民眾走遍5個特色打卡裝置物。集章完，可馬上現抽，數量有限抽完為止。</li><li>社群抽獎：於「 2024 北投夏日魔法節」LINE官方帳號內集滿5點電子戳章，並將電子戳章截圖上傳至溫泉協會粉絲團，即可參加社群抽獎，獎項包括北投旅宿業者提供的住宿和泡湯券！</li></ul>"
   },
   "link": {
-    "title": "友善連結"
+    "titleImg": "/title/title_8.png",
+    "title": "友善連結",
+    "linkTitle": "台北市商業處-我是商Ya人"
   }
 }

@@ -70,7 +70,7 @@ const QA = () => {
       <Wrapper>
         <ImgTitle
           title={t('qa.title')}
-          img='/title/title_7.png'
+          img={t('qa.titleImg')}
           id='qa'
           />
         <div className={styles.qaWrapper}>

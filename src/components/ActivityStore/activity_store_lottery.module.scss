@@ -56,6 +56,10 @@
   color: white;
 }
 
+.sectionTitle {
+  max-width: 90%;
+}
+
 .point {
   width: 90%;
   margin-bottom: 24px;
@@ -68,6 +72,9 @@
 
 .pointEn {
   text-align: start;
+  ol {
+    padding-left: 20px;
+  }
 }
 
 .prizeGroup {
@@ -164,6 +171,10 @@
     margin-bottom: 24px;
   }
 
+  .sectionTitle {
+    max-width: 100%;
+  }
+
   .point {
     width: 100%;
   }
@@ -214,6 +225,10 @@
       background-position: bottom center, bottom 33% center, top 33% center, top center;
       background-repeat: no-repeat;
     }
+  }
+
+  .sectionTitle {
+    max-width: 80%;
   }
 
   .point {
@@ -269,6 +284,10 @@
       background-image: url('../../../public/bg/bg_8_item_4.png'), url('../../../public/bg/bg_8_item_4.png');
       background-position: bottom center, top center;
     }
+  }
+
+  .sectionTitle {
+    max-width: 48%;
   }
 
   .point {

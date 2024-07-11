@@ -55,7 +55,7 @@ const Traffic = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('traffic.title')}
-          img='/title/title_6.png'
+          img={t('traffic.titleImg')}
           id='traffic'
         />
         <Describe describe={t('traffic.describe')}/>

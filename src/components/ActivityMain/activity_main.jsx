@@ -180,7 +180,7 @@ const Activity = ({ activity, setActivity }) => {
       <Wrapper>
         <ImgTitle
           title={t('main.title')}
-          img='/title/title_2.png'
+          img={t('main.titleImg')}
           id='activity'
           />
         <div className={`${styles.activity} ${pathname === '/en' && styles.activityEn}`}>

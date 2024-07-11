@@ -15,7 +15,7 @@
   },
   "info": {
     "title": "Event information",
-    "titleImg": "/title/title_1.png",
+    "titleImg": "/title/title_1_en.png",
     "description": "The 2024 Beitou Summer Magic Festival focuses on two main themes, \"Banquet Cuisine\" and \"Nakasi\", focusing on replicating the century-old history and culture of Beitou. This year, we will create five major check-in spots: \"Summer Magic~Hot Spring Magician is Coming, Hot Spring for Happiness, Oil-paper Umbrella for Reunion and Satisfaction, Round Silk Fans for Good Luck, and Wind Chimes for Joyfulness.\" The leading lights, \"Hot Spring Magician\", play a light show at night! Invite the public to come here in the summer to taste delicious food, soak in hot springs, and visit the scenery of Beitou in different seasons to enjoy various tourist pleasures.",
     "time": "Time: 7/5(Fri) ~ 7/28(Sun)",
     "location": "Place: Beitou Park & Qixing Park",
@@ -23,14 +23,23 @@
     "eventName2": "Replicating Banquet Cuisine・Singing Together",
     "eventName3": "Parent-Child Adventure Island",
     "eventName4": "Parent-Child Magic Paradise",
-    "eventName5": "Summer Good Voice Party"
+    "eventName5": "Summer Good Voice Party",
+    "eventImg1": "url(/highlight/highlight_1_en.png)",
+    "eventImg2": "url(/highlight/highlight_2_en.png)",
+    "eventImg3": "url(/highlight/highlight_3_en.png)",
+    "eventImg4": "url(/highlight/highlight_4_en.png)",
+    "eventImg5": "url(/highlight/highlight_5_en.png)",
+    "eventImg2m": "url(/highlight/highlight_2_en_m.png)",
+    "eventImg3m": "url(/highlight/highlight_3_en_m.png)",
+    "eventImg4m": "url(/highlight/highlight_4_en_m.png)",
+    "eventImg5m": "url(/highlight/highlight_5_en_m.png)"
   },
   "map": {
     "mapTitle": "Event Map",
     "scheduleTitle": "Event Calendar",
-    "mapImg": "/event/map.png",
-    "mapImgM": "/event/map_m.png",
-    "calendarImg": "/event/schedule.png",
+    "mapImg": "/event/map_en.png",
+    "mapImgM": "/event/map_en_m.png",
+    "scheduleImg": "/event/schedule_en.png",
     "mapAlt": "Event Map",
     "scheduleAlt": "Event Calendar"
   },
@@ -65,6 +74,7 @@
     "location4": "Entrance of Beitou Thermal Valley"
   },
   "main": {
+    "titleImg": "/title/title_2_en.png",
     "title": "Theme activities",
     "title1": "Replicating Banquet Cuisine",
     "title2": "Replicating banquet cuisine",
@@ -163,9 +173,10 @@
     }
   },
   "apply": {
+    "titleImg": "/title/title_3_en.png",
     "title": "Register",
-    "img1": "/event/event_3.png",
-    "img2": "/event/event_4.png",
+    "img1": "/event/event_1_en.png",
+    "img2": "/event/event_2_en.png",
     "alt1": "Beitou Light Trip",
     "alt2": "The reappearance of Nakasi・Beitou Good Voice",
     "date1": "7/6(Sat)-7/28(Sun)",
@@ -177,11 +188,12 @@
     "button": "Go to register"
   },
   "collect": {
+    "titleImg": "/title/title_4_en.png",
     "title": "The journey of collecting reward points",
     "subtitle": "Five Major Check-in Spots",
     "describe": "The event is from 00:00 on July 5, 2024, to 21:30 on July 28, 2024. Scan QR codes at five major check-in spots and join the \"2024 Beitou Summer Magic Festival LINE Official Account\" to start the journey of collecting reward points and draw the capsule toy game! Samsung Galaxy S24 and hot spring club bath vouchers await you to draw!",
     "point": "The number is limited and will last until we draw all.",
-    "img": "/event/image_step.png",
+    "img": "/event/image_step_en.png",
     "alt": "Seal collection rules",
     "linkBtn": "Open the reward points card",
     "prize": {
@@ -226,6 +238,7 @@
     }
   },
   "store": {
+    "titleImg": "/title/title_5_en.png",
     "title": "Appointed Stores",
     "subtitle": "Exclusive Discounts",
     "describe": "Partner with a hundred appointed stores to respond to the event and offer exclusive discounts during the event period!For detailed store discount information, scan the QR Code on the event map or check the event\"s official website.",
@@ -235,7 +248,7 @@
   "storeLottery": {
     "title": "Lucky draw with the purchase of a certain amount",
     "describe": "The activity is from 00:00 on July 5, 2024, to 23:59 on the 28th. You can get a raffle ticket when you spend NTD 300 in a single event at an appointed store! You can get two raffle tickets for NTD 600 (and so on); the maximum single amount is five raffle tickets. IPhone 15 Pro, hot spring club accommodation coupons, and hot springs bath vouchers await you to draw!",
-    "point": "※Notice<br/>1. Please provide your real name and phone number for the raffle ticket. The organizer is not responsible if they can\"t contact the winner.<br/>2. The consumption of hot springs or accommodation vouchers does not apply to activities where a lucky draw with the purchase of a certain amount.",
+    "point": "※Notice<br/><ol><li>Please provide your real name and phone number for the raffle ticket. The organizer is not responsible if they can\"t contact the winner.</li><li>The consumption of hot springs or accommodation vouchers does not apply to activities where a lucky draw with the purchase of a certain amount.</li></ol>",
     "prize": {
       "title1": "iPhone 15 Pro",
       "title2": "SweetMe Hotspring Resort",
@@ -285,6 +298,7 @@
     }
   },
   "traffic": {
+    "titleImg": "/title/title_6_en.png",
     "title": "Transportation Guidance",
     "describe": "The area has bus routes, including more than ten that pass-through Taipei Veterans General Hospital, making transportation convenient. Besides, minibus routes, such as 6, 7, 9, and 14, run on mountainous roads. Welcome to take public transportation.",
     "transportation": {
@@ -304,6 +318,7 @@
     }
   },
   "qa": {
+    "titleImg": "/title/title_7_en.png",
     "title": "Frequently Asked Questions",
     "question1": "Q1. When and where will the \"2024 Beitou Summer Magic Festival\" be held?",
     "question2": "Q2. What are the activities of the 2024 Beitou Summer Magic Festival?",
@@ -327,6 +342,8 @@
     "answer10": "<ul><li>Lucky draws at appointed stores: Anyone who spends more than NTD300 (single purchase) will receive a lucky raffle ticket to win limited gifts. These include accommodation vouchers, meal discount coupons, hot springs bath vouchers from local hotels, and iPhone 15 Pro.</li><li>Collecting reward points on LINE's official account for drawing: During the event, at the five significant installations in the fantasy landscape, scan the exclusive QR code on the signboard of each installation to the \"2024 Beitou Summer Magic Festival\" LINE official account to obtain a reward point collection card. Collecting 3 points, you can win a hot springs bath voucher, a Samsung mobile phone, and other gifts. 5 points will give you an extra chance to win a lucky draw! Invite the public to walk through 5 unique check-in installations. After collecting reward points, you can immediately participate in the on-site drawing. The quantity is limited.</li><li>Lucky draw on social media: Collect five electronic stamps from the \"2024 Beitou Summer Magic Festival\" LINE official account, and upload the screenshot of the electronic reward points to the Hot Spring Association fan page to participate in the social media lucky draw. Prizes include accommodation and hot springs bath vouchers provided by Beitou hotel operators!</li></ul>"
   },
   "link": {
-    "title": "Link Exchange"
+    "titleImg": "/title/title_8_en.png",
+    "title": "Link Exchange",
+    "linkTitle": "Taipei City Office of Commerce<br/>Ya! I am a businessperson"
   }
 }

@@ -68,7 +68,7 @@ const Apply = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('apply.title')}
-          img='/title/title_3.png'
+          img={t('apply.titleImg')}
           id='apply'
           />
         <div className={styles.cardGroup}>

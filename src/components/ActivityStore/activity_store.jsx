@@ -19,7 +19,7 @@ const Store = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('store.title')}
-          img='/title/title_5.png'
+          img={t('store.titleImg')}
           id='store'
           />
         <TitleGroup

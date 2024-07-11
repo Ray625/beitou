@@ -93,11 +93,11 @@ const Header = () => {
   };
 
   const handleDownload = () => {
-    let pdfUrl = '/activity_book.pdf';
+    let pdfUrl = '/2024_bt_summer_festival_electronic_brochure_zh.pdf';
     if (pathname === '/zh') {
-      pdfUrl = '/activity_book.pdf'
+      pdfUrl = '/2024_bt_summer_festival_electronic_brochure_zh.pdf'
     } else if (pathname === '/en') {
-      pdfUrl = '/activity_book_en.pdf'
+      pdfUrl = '/2024_bt_summer_festival_electronic_brochure_en.pdf'
     }
     window.open(pdfUrl, '_blank');
   }
