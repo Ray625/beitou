@@ -12,8 +12,8 @@ import parse from 'html-react-parser';
 const Card = ({ color, props }) => {
   const { titleKey, subtitleKey, timeKey, bodyKey, pointKey, icon } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={`${styles.card} ${pathname === '/en' && styles.cardEn}`}>
@@ -42,8 +42,8 @@ const ScrollCardList = ({ list, color }) => {
   const [leftBtnDisable, setleftBtnDisable] = useState(true)
   const [rightBtnDisable, setRightBtnDisable] = useState(false)
   const cardRef = useRef(null)
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   // 畫面下方會有5格card超出畫面，做了用按鈕左右滾動的功能，透過checkIfScrolledToEnd偵測是否已滾動至底部，並改變左右按鈕樣式，此功能只有在PC會顯示，小螢幕則直接滑動
   const checkIfscrolledToEnd = () => {
@@ -171,8 +171,8 @@ const ActivityBody = ({ activity, props }) => {
 
 const Activity = ({ activity, setActivity }) => {
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <Container className={styles.container}>

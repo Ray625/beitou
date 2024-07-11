@@ -27,11 +27,10 @@ const trafficList = [{
 const TrafficCard = ({ props }) => {
   const { img, titleKey, describeKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
 
   return (
-    <div className={styles.traffic}>
+    <div className={`${styles.traffic} ${pathname === '/en' && styles.trafficEn}`}>
       <div className={styles.titleGroup}>
         <img src={img} alt="icon" className={styles.titleIcon} />
         <div className={styles.title}>{t(titleKey)}</div>
@@ -43,8 +42,7 @@ const TrafficCard = ({ props }) => {
 
 const Traffic = () => {
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
 
   const handleClick = () => {
     window.open('https://maps.app.goo.gl/4itsuXSkKhw5pRnr8', '_blank');

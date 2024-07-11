@@ -53,8 +53,8 @@ const cardList = [{
 const Card = ({ props }) => {
   const { num, alt, titleKey, img, subtitleKey, subtitleColor, describeKey, pointKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={styles.attractionCard}>

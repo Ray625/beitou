@@ -112,13 +112,18 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 24px;
     margin-bottom: 40px;
   }
 
   .traffic {
     width: 250px;
-    height: 304px;
+    min-height: 304px;
+  }
+
+  .trafficEn {
+    min-height: 416px;
   }
 }
 
@@ -181,5 +186,10 @@
   .traffic {
     width: 250px;
     height: fit-content;
+    min-height: unset;
+  }
+
+  .trafficEn {
+    min-height: unset;
   }
 }

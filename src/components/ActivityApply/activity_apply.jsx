@@ -30,8 +30,8 @@ const cardList = [{
 const Card = ({ props }) => {
   const { imgKey, altKey, dateKey, timeKey, locationKey, onClick } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={styles.card}>

@@ -43,8 +43,7 @@ const list = [
 // 固定畫面右下方下載電子手冊按鈕，透過useDevice偵測螢幕大小控制，只在螢幕width:1440px以上(navbar展開時)顯示
 const FixedBtn = ({onClick}) => {
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
 
   return (
     <button className={`${styles.fixedBtn} ${pathname === '/en' && styles.smallFont}`} onClick={onClick}>
@@ -63,8 +62,7 @@ const Header = () => {
   const device = useDevice()
   const { t } = useTranslation()
   const { i18n } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
   const navigate = useNavigate()
 
   // 透過useEffect偵測畫面寬度若為1440px以上時，把Navbar展開(畫面只有在1440px以上navbar文字才不會自動換行，因此設定1440段點，再小的螢幕header就會縮入側邊攔)

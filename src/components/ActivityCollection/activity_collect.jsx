@@ -36,8 +36,8 @@ const prizeList = [{
 const Prize = ({props}) => {
   const { img, titleKey, subtitleKey, noteKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={styles.prize}>

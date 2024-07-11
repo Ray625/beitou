@@ -101,8 +101,7 @@ const prizeList = [{
 const Prize = ({props}) => {
   const { img, titleKey, subtitleKey, noteKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
 
   return (
     <div className={styles.prize}>
@@ -120,6 +119,7 @@ const Prize = ({props}) => {
 
 const Lottery = () => {
   const { t } = useTranslation()
+  const { pathname } = useLocation()
 
   return (
     <Container className={styles.container}>
@@ -132,7 +132,7 @@ const Lottery = () => {
         />
         <Describe describe={parse(t('storeLottery.describe'))}
         />
-        <div className={styles.point}>{parse(t('storeLottery.point'))}
+        <div className={`${styles.point} ${pathname === '/en' && styles.pointEn}`}>{parse(t('storeLottery.point'))}
         </div>
         <div className={styles.prizeGroup}>
           {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}

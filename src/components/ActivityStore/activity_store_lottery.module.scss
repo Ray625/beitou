@@ -57,12 +57,17 @@
 }
 
 .point {
+  width: 90%;
   margin-bottom: 24px;
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
   line-height: 28px;
   text-align: center;
   opacity: 0.6;
+}
+
+.pointEn {
+  text-align: start;
 }
 
 .prizeGroup {
@@ -158,6 +163,10 @@
     height: auto;
     margin-bottom: 24px;
   }
+
+  .point {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 991px) {
@@ -208,6 +217,7 @@
   }
 
   .point {
+    width: 80%;
     margin-bottom: 64px;
   }
 
@@ -259,6 +269,10 @@
       background-image: url('../../../public/bg/bg_8_item_4.png'), url('../../../public/bg/bg_8_item_4.png');
       background-position: bottom center, top center;
     }
+  }
+
+  .point {
+    width: 60%;
   }
 
   .prizeGroup {
