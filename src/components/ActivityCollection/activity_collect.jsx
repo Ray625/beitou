@@ -42,7 +42,7 @@ const Prize = ({props}) => {
   return (
     <div className={styles.prize}>
       <div className={styles.imgWrapper}>
-        <img src={img} alt={t(titleKey)} className={styles.prizeImg} loading='lazy'/>
+        <img src={img} alt={t(titleKey)} className={styles.prizeImg} />
       </div>
       <div className={`${styles.title} ${pathname === '/en' && styles.linehight28}`}>{t(titleKey)}</div>
       <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>
@@ -78,7 +78,7 @@ const Collect = () => {
         />
         <div className={styles.point}>{t("collect.point")}</div>
         <div className={styles.rule}>
-          <img src={t('collect.img')} alt={t("collect.alt")} className={styles.img} loading='lazy'/>
+          <img src={t('collect.img')} alt={t("collect.alt")} className={styles.img} />
         </div>
         <div className={styles.prizeGroup}>
           {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}

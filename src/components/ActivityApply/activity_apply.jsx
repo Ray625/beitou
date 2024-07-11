@@ -12,9 +12,8 @@ const cardList = [{
   dateKey: 'apply.date1',
   timeKey: 'apply.time1',
   locationKey: 'apply.location1',
-  describeKey: 'apply.describe1',
   onClick: () => {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLScHfO-4_q_OtpgaUQdcjVSL8OUIuKP1Y0AjiDrOZDeiwK11aQ/viewform', '_blank')
+    window.open('https://forms.gle/CMgLUtPNjMdSFHHD9', '_blank')
   }
 }, {
   id: 2,
@@ -23,7 +22,6 @@ const cardList = [{
   dateKey: 'apply.date2',
   timeKey: 'apply.time2',
   locationKey: 'apply.location2',
-  // describeKey: 'apply.describe2',
   onClick: () => {
     window.open('https://forms.gle/XZD7x8LJ3w2XEDWEA', '_blank');
   }
@@ -37,22 +35,21 @@ const Card = ({ props }) => {
 
   return (
     <div className={styles.card}>
-      <img src={t(imgKey)} alt={t(altKey)} className={styles.img} loading='lazy'/>
-      <div className={pathname === '/' ? styles.infoGroup : styles.infoGroupEn}>
+      <img src={t(imgKey)} alt={t(altKey)} className={styles.img} />
+      <div className={pathname === '/zh' ? styles.infoGroup : styles.infoGroupEn}>
         <div className={styles.info}>
-          <img src="/svg/icon_event_day.svg" alt="icon" className={styles.icon} loading='lazy'/>
+          <img src="/svg/icon_event_day.svg" alt="icon" className={styles.icon} />
           {t(dateKey)}
         </div>
         <div className={styles.info}>
-          <img src="/svg/icon_event_time.svg" alt="icon" className={styles.icon} loading='lazy'/>
+          <img src="/svg/icon_event_time.svg" alt="icon" className={styles.icon} />
           {t(timeKey)}
         </div>
         <div className={styles.info}>
-          <img src="/svg/icon_event_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
+          <img src="/svg/icon_event_pin.svg" alt="icon" className={styles.icon} />
           {t(locationKey)}
         </div>
       </div>
-      {/* <div className={`${styles.describe} ${pathname === '/en' && styles.describeEn}`}>{t(describeKey)}</div> */}
       <LinkBtn
         title={t('apply.button')}
         color='#6E2148'

@@ -70,13 +70,21 @@
   max-width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 16px
 }
 
 .infoGroup {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.infoGroupEn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 4px;
   margin-bottom: 16px;
 }

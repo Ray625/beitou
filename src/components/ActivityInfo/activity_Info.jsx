@@ -57,11 +57,11 @@ const Info = ({ setActivity }) => {
         />
         <div className={styles.infoGroup}>
           <div className={styles.time}>
-            <img src="/svg/icon_info_time.svg" alt="icon" className={styles.icon} loading='lazy'/>
+            <img src="/svg/icon_info_time.svg" alt="icon" className={styles.icon} />
             {t('info.time')}
           </div>
           <div className={styles.location}>
-            <img src="/svg/icon_info_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
+            <img src="/svg/icon_info_pin.svg" alt="icon" className={styles.icon} />
             {t('info.location')}
           </div>
         </div>

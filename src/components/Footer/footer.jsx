@@ -3,17 +3,20 @@ import { ImgTitle } from '../Ui/titleGroup';
 import { useDevice } from '../../contexts/DeviceContext';
 import { deviceParams } from '../../utils/const';
 import { Container } from '../Ui/container';
+import { useTranslation } from 'react-i18next';
+
 
 // 下方連結用fb粉絲專頁外掛程式嵌入，沒有特別調數值，只有在小螢幕時透過網址改變顯示的寬度
 const Footer = () => {
   const device = useDevice()
+  const { t } = useTranslation()
 
   return (
     <Container className={styles.container}>
       <div className={styles.bg}></div>
       <div className={styles.wrapper}>
         <ImgTitle
-          title='友善連結'
+          title={t('link.title')}
           img='/title/title_8.png'
           id='link'
           />

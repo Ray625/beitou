@@ -18,7 +18,7 @@ const Card = ({ color, props }) => {
   return (
     <div className={`${styles.card} ${pathname === '/en' && styles.cardEn}`}>
       <div className={styles.cardIcon} style={{backgroundColor: color}}>
-        <img src={icon} alt="icon" className={styles.iconImg} loading='lazy'/>
+        <img src={icon} alt="icon" className={styles.iconImg} />
       </div>
       <div className={styles.cardTitle}>
         {t(titleKey)}
@@ -132,15 +132,13 @@ const ActivityBody = ({ activity, props }) => {
   const device = useDevice()
   const { num, color, titleKey, subtitleKey, icon, dateKey, timeKey, locationKey, cardList } = props
   const { t } = useTranslation()
-  // const location = useLocation()
-  // const pathname = location.pathname
 
 
   return (
     <div className={`${styles.activityBody} ${num !== activity ? styles.dNone : ''}  `} style={{ color: color }}>
       <div className={styles.bodyTop}>
         <div className={styles.titleGroup} style={{ background: `${color}1A` }}>
-          <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
+          <img src={icon} alt="icon" className={styles.titleIcon} />
           {device === deviceParams.mobile && <h2 className={styles.title}>
             {t(titleKey)}
             {subtitleKey && <><br />{t(subtitleKey)}</>}
@@ -149,7 +147,7 @@ const ActivityBody = ({ activity, props }) => {
             {t(titleKey)}
             {subtitleKey && <>・{t(subtitleKey)}</>}
           </h2>}
-          <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
+          <img src={icon} alt="icon" className={styles.titleIcon} />
         </div>
         <div className={styles.infoGroup}>
           <div className={styles.info}>

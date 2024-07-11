@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import KeyVisionBanner from '../components/Kv/kv';
 import Header from '../components/Header/header'
 import Info from '../components/ActivityInfo/activity_Info';
@@ -17,6 +18,27 @@ import Footer from '../components/Footer/footer';
 
 const Homepage = () => {
   const [activity, setActivity] = useState(1)
+  const location = useLocation()
+
+  useEffect(() => {
+    const handleScrollToSection = () => {
+    const { hash } = location
+    if (hash) {
+        const sectionId = hash.substring(1)
+        const section = document.getElementById(sectionId)
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' })
+        }
+      }
+    }
+
+    window.addEventListener('load', handleScrollToSection)
+
+    return () => {
+      window.removeEventListener('load', handleScrollToSection)
+    }
+  },[])
+
 
   // Info頁可透過點擊連結至Activity頁，並改變上方tab為所選活動
   const handleClick = (num) => {

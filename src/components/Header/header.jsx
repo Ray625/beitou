@@ -41,22 +41,17 @@ const list = [
   }]
 
 // 固定畫面右下方下載電子手冊按鈕，透過useDevice偵測螢幕大小控制，只在螢幕width:1440px以上(navbar展開時)顯示
-const FixedBtn = () => {
+const FixedBtn = ({onClick}) => {
   const { t } = useTranslation()
   const location = useLocation()
   const pathname = location.pathname
 
-  const handleDownload = () => {
-    const pdfUrl = '/activity_book.pdf';
-    window.open(pdfUrl, '_blank');
-  }
-
   return (
-    <button className={`${styles.fixedBtn} ${pathname === '/en' && styles.smallFont}`} onClick={handleDownload}>
+    <button className={`${styles.fixedBtn} ${pathname === '/en' && styles.smallFont}`} onClick={onClick}>
       {t("header.downloadBtnText1")}
       <br />
       {t("header.downloadBtnText2")}
-      <img src="/svg/icon_download.svg" alt="icon" className={styles.icon} loading='lazy' />
+      <img src="/svg/icon_download.svg" alt="icon" className={styles.icon}  />
     </button>
   )
 }
@@ -100,7 +95,12 @@ const Header = () => {
   };
 
   const handleDownload = () => {
-    const pdfUrl = '/activity_book.pdf';
+    let pdfUrl = '/activity_book.pdf';
+    if (pathname === '/zh') {
+      pdfUrl = '/activity_book.pdf'
+    } else if (pathname === '/en') {
+      pdfUrl = '/activity_book_en.pdf'
+    }
     window.open(pdfUrl, '_blank');
   }
 
@@ -125,7 +125,7 @@ const Header = () => {
         <button className={styles.closeBtn} onClick={handleCloseHamburger}></button>
         <button className={styles.logoGroup} onClick={handleScrollToTop}>
           <h1 className={styles.title}>{t('title')}</h1>
-          <img src="/svg/header_logo.svg" alt="logo" className={styles.logo} loading='lazy'/>
+          <img src="/svg/header_logo.svg" alt="logo" className={styles.logo} />
         </button>
         <div className={styles.navItemList} onClick={handleCloseHamburger} onKeyDown={handleKeyDown} role="link"  tabIndex="0">
           <div className={styles.navList}>
@@ -140,7 +140,7 @@ const Header = () => {
           <hr className={styles.hr} />
           <button className={styles.downloadBtn} onClick={handleDownload}>
             {t("header.download")}
-            <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} loading='lazy'/>
+            <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} />
           </button>
           <div className={styles.language}>
             <button className={`${styles.languageBtn} ${(pathname === '/zh') ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
@@ -148,7 +148,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      {device === deviceParams.pc && <FixedBtn />}
+      {device === deviceParams.pc && <FixedBtn onClick={handleDownload} />}
     </>
   )
 }

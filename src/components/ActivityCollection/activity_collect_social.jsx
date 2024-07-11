@@ -54,7 +54,7 @@ const Prize = ({props}) => {
   return (
     <div className={styles.prize}>
       <div className={styles.imgWrapper}>
-        <img src={img} alt={t(titleKey)} className={styles.prizeImg} loading='lazy'/>
+        <img src={img} alt={t(titleKey)} className={styles.prizeImg} />
       </div>
       <div className={`${styles.title} ${pathname === '/en' && styles.linehight28}`}>{t(titleKey)}</div>
       <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>

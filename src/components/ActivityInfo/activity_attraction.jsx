@@ -58,17 +58,17 @@ const Card = ({ props }) => {
 
   return (
     <div className={styles.attractionCard}>
-      <img src={num} alt={alt} className={styles.num} loading='lazy'/>
-      <div className={(pathname === '/') ? styles.titleGroup : styles.titleGroupEn}>
+      <div className={(pathname === '/zh') ? styles.titleGroup : styles.titleGroupEn}>
         <h3 className={styles.title}>
-          <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  loading='lazy'/>
+          <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  />
           {t(titleKey)}
         </h3>
       </div>
       <div className={styles.cardBody}>
-        <img src={img} alt={t(titleKey)} className={styles.cardImg} loading='lazy'/>
+        <img src={num} alt={alt} className={styles.num} />
+        <img src={img} alt={t(titleKey)} className={styles.cardImg} />
         <div className={styles.subtitle} style={{ color: subtitleColor }}>{t(subtitleKey)}</div>
-        <p className={(pathname === '/') ? styles.describe : styles.describeEn}>{t(describeKey)}
+        <p className={(pathname === '/zh') ? styles.describe : styles.describeEn}>{t(describeKey)}
           <div className={styles.cardPoint}>
             {t(pointKey)}
           </div>

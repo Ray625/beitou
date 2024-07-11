@@ -32,10 +32,10 @@ const Card = ({ props }) => {
 
   return (
     <div className={styles.card}>
-      <img src={img} alt={location} className={styles.img} loading='lazy'/>
+      <img src={img} alt={location} className={styles.img} />
       <h3 className={styles.title}>{t(titleKey)}</h3>
       <div className={styles.location}>
-        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
+        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} />
         {t(locationKey)}
       </div>
     </div>
