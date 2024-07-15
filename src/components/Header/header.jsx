@@ -60,9 +60,9 @@ const FixedBtn = ({onClick}) => {
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false)
   const device = useDevice()
-  const { t } = useTranslation()
-  const { i18n } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { pathname } = useLocation()
+  const lang = i18n.language
   const navigate = useNavigate()
 
   // 透過useEffect偵測畫面寬度若為1440px以上時，把Navbar展開(畫面只有在1440px以上navbar文字才不會自動換行，因此設定1440段點，再小的螢幕header就會縮入側邊攔)
@@ -141,8 +141,8 @@ const Header = () => {
             <img src="/svg/download_btn.svg" alt="downlowd" className={styles.downloadIcon} />
           </button>
           <div className={styles.language}>
-            <button className={`${styles.languageBtn} ${(pathname === '/zh') ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
-            <button className={`${styles.languageBtn} ${(pathname === '/en') ? styles.active : ''}`} onClick={() => handleNavigate('/en')}>English</button>
+            <button className={`${styles.languageBtn} ${(lang.includes('zh')) ? styles.active : ''}`} onClick={() => handleNavigate('/zh')}>繁體中文</button>
+            <button className={`${styles.languageBtn} ${(lang.includes('en')) ? styles.active : ''}`} onClick={() => handleNavigate('/en')}>English</button>
           </div>
         </div>
       </nav>

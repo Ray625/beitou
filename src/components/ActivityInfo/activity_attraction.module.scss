@@ -118,7 +118,7 @@
   font-weight: style.$body_font_weight;
   line-height: 28px;
   margin: 0;
-  width: 84%;
+  width: 92%;
 }
 
 .describeEn {
@@ -128,7 +128,7 @@
   font-weight: style.$body_font_weight;
   line-height: 28px;
   margin: 0;
-  width: 84%;
+  width: 92%;
 }
 
 .cardPoint {
@@ -211,6 +211,10 @@
     width: 90%;
   }
 
+  .describeEn {
+    width: 90%;
+  }
+
   .footer::after {
     width: 240px;
     height: 164px;
@@ -272,6 +276,10 @@
   }
 
   .describe {
+    width: auto;
+  }
+
+  .describeEn {
     width: auto;
   }
 

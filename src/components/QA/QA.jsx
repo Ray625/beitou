@@ -3,6 +3,7 @@ import { ImgTitle } from '../Ui/titleGroup';
 import { Container, Wrapper } from '../Ui/container';
 import { useTranslation } from 'react-i18next';
 import parse from 'html-react-parser';
+import { useLocation } from 'react-router-dom';
 
 const qaList = [{
   id: 1,
@@ -49,11 +50,12 @@ const qaList = [{
 const QACard = ({props}) => {
   const { qKey, aKey } = props
   const { t } = useTranslation()
+  const {pathname} = useLocation()
 
   return (
       <div className={styles.qa}>
-        <div className={styles.question}>{t(qKey)}</div>
-      <div className={styles.answer}>
+        <div className={`${styles.question} ${pathname === '/en' && styles.textAlignStart}`}>{t(qKey)}</div>
+      <div className={`${styles.answer} ${pathname === '/en' && styles.textAlignStart}`}>
         {parse(t(aKey))}
       </div>
       </div>

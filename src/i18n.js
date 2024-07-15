@@ -17,14 +17,15 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-  resources,
-  fallbackLng: 'zh',
-  interpolation: {
-    escapeValue: false,
-    },
-  detection: {
-    order: ['path', 'navigator'],
-    lookupFromPathIndex: 0,
+    resources,
+    supportedLngs: ['zh', 'en'],
+    fallbackLng: 'zh',
+    interpolation: {
+      escapeValue: false,
+      },
+    detection: {
+      order: ['path', 'navigator'],
+      lookupFromPathIndex: 0,
     }
 })
 

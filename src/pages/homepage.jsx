@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import KeyVisionBanner from '../components/Kv/kv';
 import Header from '../components/Header/header'
 import Info from '../components/ActivityInfo/activity_Info';
@@ -19,6 +20,8 @@ import Footer from '../components/Footer/footer';
 const Homepage = () => {
   const [activity, setActivity] = useState(1)
   const location = useLocation()
+  const { i18n } = useTranslation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScrollToSection = () => {
@@ -36,6 +39,17 @@ const Homepage = () => {
 
     return () => {
       window.removeEventListener('load', handleScrollToSection)
+    }
+  }, [])
+
+  // 如果瀏覽器語言是英文會自動將網址列跳轉至en
+  useEffect(() => {
+    const { language } = i18n
+
+    if (language.includes('en')) {
+      navigate('/en')
+    } else {
+      navigate('/zh')
     }
   },[])
 

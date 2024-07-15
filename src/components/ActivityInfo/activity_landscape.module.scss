@@ -39,6 +39,7 @@
 .title {
   font-size: style.$H3_font_size;
   font-weight: style.$title_font_weight;
+  text-align: center;
   color: white;
 }
 
@@ -48,6 +49,7 @@
   justify-content: center;
   font-size: style.$body_font_size;
   font-weight: style.$title_font_weight;
+  text-align: center;
   color: white;
   opacity: 0.6;
 }

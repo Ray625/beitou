@@ -5,6 +5,7 @@ import { useDevice } from '../../contexts/DeviceContext';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
 import { deviceParams } from '../../utils/const';
+import parse from 'html-react-parser';
 
 const cardList = [{
   num: '/number/icon_1.png',
@@ -67,7 +68,7 @@ const Card = ({ props }) => {
       <div className={styles.cardBody}>
         <img src={num} alt={alt} className={styles.num} />
         <img src={img} alt={t(titleKey)} className={styles.cardImg} />
-        <div className={styles.subtitle} style={{ color: subtitleColor }}>{t(subtitleKey)}</div>
+        <div className={styles.subtitle} style={{ color: subtitleColor }}>{parse(t(subtitleKey))}</div>
         <p className={(pathname === '/zh') ? styles.describe : styles.describeEn}>{t(describeKey)}
           <div className={styles.cardPoint}>
             {t(pointKey)}
