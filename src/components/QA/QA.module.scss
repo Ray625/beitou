@@ -53,6 +53,8 @@
   font-size: style.$font_size;
   font-weight: style.$title_font_weight;
   line-height: 28px;
+  text-align: justify;
+  text-align-last: start;
   color: style.$light_green;
 }
 
@@ -60,8 +62,17 @@
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
   color: style.$font_black;
+  line-height: 28px;
   text-align: justify;
-  text-align-last: left;
+  text-align-last: start;
+  ul {
+    margin: 0;
+    padding-left: 24px;
+  }
+}
+
+.textAlignStart {
+  text-align: start;
 }
 
 @media screen and (min-width: 768px) {

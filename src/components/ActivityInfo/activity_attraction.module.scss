@@ -45,7 +45,7 @@
 
 .num {
   position: absolute;
-  top: -4px;
+  top: -48px;
   left: 16px;
   width: 50px;
   height: auto;
@@ -60,7 +60,7 @@
 .titleGroupEn {
   display: flex;
   justify-content: flex-end;
-  width: 60%;
+  width: 64%;
   margin-bottom: 8px;
 }
 
@@ -85,6 +85,7 @@
 }
 
 .cardBody {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,7 +118,7 @@
   font-weight: style.$body_font_weight;
   line-height: 28px;
   margin: 0;
-  width: 84%;
+  width: 92%;
 }
 
 .describeEn {
@@ -127,7 +128,13 @@
   font-weight: style.$body_font_weight;
   line-height: 28px;
   margin: 0;
-  width: 84%;
+  width: 92%;
+}
+
+.cardPoint {
+  margin-top: 8px;
+  font-size: style.$note_font_size;
+  line-height: 22px;
 }
 
 .attractionGroup {
@@ -177,7 +184,7 @@
 
   .num {
     position: absolute;
-    top: -20px;
+    top: -60px;
     left: 28px;
     width: 60px;
     height: auto;
@@ -201,6 +208,10 @@
   }
 
   .describe {
+    width: 90%;
+  }
+
+  .describeEn {
     width: 90%;
   }
 
@@ -244,6 +255,10 @@
     padding-right: 28px;
   }
 
+  .attractionCard {
+    width: 522px;
+  }
+
   .cardBody {
     width: 522px;
     height: fit-content;
@@ -261,6 +276,10 @@
   }
 
   .describe {
+    width: auto;
+  }
+
+  .describeEn {
     width: auto;
   }
 

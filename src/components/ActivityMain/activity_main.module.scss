@@ -100,6 +100,11 @@
   align-items: center;
 }
 
+.titleIcon {
+  width: 28px;
+  height: 28px;
+}
+
 .dNone {
   position: absolute;
   top: 0;
@@ -222,7 +227,7 @@
   flex-direction: column;
   width: 250px;
   min-height: 320px;
-  padding: 24px;
+  padding: 20px;
   background-color: #F5F5F5;
   border-radius: 20px;
 }
@@ -232,6 +237,13 @@
   font-size: style.$H3_font_size;
   font-weight: style.$title_font_weight;
   line-height: 32px;
+}
+
+.cardTime {
+  font-size: style.$font_size_mobile;
+  font-weight: style.$title_font_weight;
+  margin-bottom: 8px;
+  line-height: 24px;
 }
 
 .hr {
@@ -252,6 +264,16 @@
   font-weight: style.$body_font_weight;
   color: style.$font_black;
   line-height: 28px;
+}
+
+.cardPoint {
+  margin-top: 8px;
+  font-size: style.$note_font_size;
+  line-height: 22px;
+  ul {
+    margin: 0;
+    padding-left: 20px;
+  }
 }
 
 .cardIcon {
@@ -323,6 +345,11 @@
   .tab.hover5:hover {
     color: #3585FF;
   }
+
+  .titleIcon {
+    width: 32px;
+    height: 32px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -334,7 +361,6 @@
   .activity {
     width: 1074px;
     height: fit-content;
-    min-height: 756px;
     padding: 44px 16px 16px 16px;
     border-radius: 20px;
   }

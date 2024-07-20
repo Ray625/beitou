@@ -12,6 +12,7 @@
 }
 
 .point {
+  width: 90%;
   margin-bottom: 24px;
   font-size: style.$body_font_size;
   font-weight: style.$body_font_weight;
@@ -95,11 +96,16 @@
     height: auto;
     margin-bottom: 24px;
   }
+
+  .point {
+    width: 100%;
+  }
 }
 
 
 @media screen and (min-width: 991px) {
   .point {
+    width: 80%;
     margin-bottom: 64px;
   }
 
@@ -163,5 +169,11 @@
     width: 100%;
     height: auto;
     margin-bottom: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .point {
+    width: 60%;
   }
 }

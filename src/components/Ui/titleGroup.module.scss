@@ -13,6 +13,11 @@
   border-radius: 12px;
 }
 
+.icon {
+  width: 28px;
+  height: 28px;
+}
+
 .title {
   margin: 0;
   padding: 0;
@@ -21,7 +26,11 @@
   font-weight: style.$title_font_weight;
   text-align: center;
   line-height: 38px;
+}
 
+.titleEn {
+  font-size: style.$font_size;
+  line-height: 24px;
 }
 
 .imgTitleGroup {
@@ -31,6 +40,11 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
+}
+
+.imgTitleGroupEn {
+  width: 100%;
+  max-width: 400px;
 }
 
 .imgTitle {
@@ -44,14 +58,28 @@
     margin-bottom: 32px;
   }
 
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+
   .title {
     font-size: style.$H2_font_size;
     line-height: 43.5px;
+  }
+
+  .titleEn {
+    font-size: style.$H3_font_size;
+    line-height: 28px;
   }
 
   .imgTitleGroup {
     width: 240px;
     height: 100px;
     margin-bottom: 40px;
+  }
+
+  .imgTitleGroupEn {
+    width: 100%;
   }
 }

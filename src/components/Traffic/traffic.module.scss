@@ -112,13 +112,18 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 24px;
     margin-bottom: 40px;
   }
 
   .traffic {
     width: 250px;
-    height: 304px;
+    min-height: 304px;
+  }
+
+  .trafficEn {
+    min-height: 416px;
   }
 }
 
@@ -150,23 +155,23 @@
     &::before {
       content: '';
       position: absolute;
-      bottom: 5vw;
-      left: 15%;
-      width: 278px;
-      height: 708px;
+      top: 4%;
+      left: 0;
+      width: 100%;
+      height: 120px;
       background-image: url('../../../public/bg/bg_9_item_1.png');
       background-repeat: no-repeat;
-      background-position: bottom center;
+      background-position: top center;
       background-size: contain;
     }
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 5vw;
-      right: 15%;
-      width: 364px;
-      height: 792px;
+      bottom: 8%;
+      right: 0;
+      width: 100%;
+      height: 600px;
       background-image: url('../../../public/bg/bg_9_item_2.png');
       background-repeat: no-repeat;
       background-position: bottom center;
@@ -181,5 +186,10 @@
   .traffic {
     width: 250px;
     height: fit-content;
+    min-height: unset;
+  }
+
+  .trafficEn {
+    min-height: unset;
   }
 }

@@ -5,24 +5,28 @@ import { Container, Wrapper } from '../Ui/container';
 import { Describe } from '../Ui/describe';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 const prizeList = [{
+  id: 1,
   img: '/prize/prize_LINE_1.png',
   titleKey: 'collect.prize.title1',
   subtitleKey: 'collect.prize.subtitle1',
   noteKey: 'collect.prize.note1'
-},{
+}, {
+  id: 2,
   img: '/prize/prize_LINE_2.png',
   titleKey: 'collect.prize.title2',
   subtitleKey: 'collect.prize.subtitle2',
-  noteKey: 'collect.prize.note2'
-},{
+  noteKey: 'collect.prize.note2',
+  }, {
+  id: 3,
   img: '/prize/prize_LINE_3.png',
   titleKey: 'collect.prize.title3',
   subtitleKey: 'collect.prize.subtitle3',
   noteKey: 'collect.prize.note3',
-  note2Key: 'collect.prize.note2nd'
-},{
+  }, {
+  id: 4,
   img: '/prize/prize_LINE_4.png',
   titleKey: 'collect.prize.title4',
   subtitleKey: 'collect.prize.subtitle4',
@@ -30,21 +34,20 @@ const prizeList = [{
 },]
 
 const Prize = ({props}) => {
-  const { img, titleKey, subtitleKey, noteKey, note2Key } = props
+  const { img, titleKey, subtitleKey, noteKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={styles.prize}>
       <div className={styles.imgWrapper}>
-        <img src={img} alt={t(titleKey)} className={styles.prizeImg} loading='lazy'/>
+        <img src={img} alt={t(titleKey)} className={styles.prizeImg} />
       </div>
       <div className={`${styles.title} ${pathname === '/en' && styles.linehight28}`}>{t(titleKey)}</div>
       <div className={`${styles.subtitle} ${pathname === '/en' && styles.linehight28}`}>{t(subtitleKey)}</div>
       <div className={styles.note}>
-        {t(noteKey)}
-        {note2Key && <><br />{t(note2Key)}</>}
+        {parse(t(noteKey))}
       </div>
     </div>
   )
@@ -62,7 +65,7 @@ const Collect = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('collect.title')}
-          img='/title/title_4.png'
+          img={t('collect.titleImg')}
           id='collect'
           />
         <TitleGroup
@@ -75,10 +78,10 @@ const Collect = () => {
         />
         <div className={styles.point}>{t("collect.point")}</div>
         <div className={styles.rule}>
-          <img src={t('collect.img')} alt={t("collect.alt")} className={styles.img} loading='lazy'/>
+          <img src={t('collect.img')} alt={t("collect.alt")} className={styles.img} />
         </div>
         <div className={styles.prizeGroup}>
-          {prizeList.map(prize => <Prize props={prize} key={prize.title} />)}
+          {prizeList.map(prize => <Prize props={prize} key={prize.id} />)}
         </div>
         <LinkBtn
           title={t("collect.linkBtn")}
