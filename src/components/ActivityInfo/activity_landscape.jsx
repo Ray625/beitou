@@ -5,18 +5,22 @@ import { useTranslation } from 'react-i18next';
 
 // 畫面用cardList array.map()產生
 const cardList = [{
+  id: 1,
   titleKey: 'landscape.title1',
   locationKey: 'landscape.location1',
   img: '/attraction/image_6.png'
-},{
+}, {
+  id: 2,
   titleKey: 'landscape.title2',
   locationKey: 'landscape.location2',
   img: '/attraction/image_7.png'
-},{
+  }, {
+  id: 3,
   titleKey: 'landscape.title3',
   locationKey: 'landscape.location3',
   img: '/attraction/image_8.png'
-},{
+  }, {
+  id: 4,
   titleKey: 'landscape.title4',
   locationKey: 'landscape.location4',
   img: '/attraction/image_9.png'
@@ -28,10 +32,10 @@ const Card = ({ props }) => {
 
   return (
     <div className={styles.card}>
-      <img src={img} alt={location} className={styles.img} loading='lazy'/>
+      <img src={img} alt={location} className={styles.img} />
       <h3 className={styles.title}>{t(titleKey)}</h3>
       <div className={styles.location}>
-        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} loading='lazy'/>
+        <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon} />
         {t(locationKey)}
       </div>
     </div>
@@ -51,8 +55,8 @@ const Landscape = () => {
         imgRight='svg/icon_star_right.svg'
         />
         <div className={styles.cardList}>
-          {cardList.map((card, index) => {
-            return <Card props={card} key={index}/>
+          {cardList.map(card => {
+            return <Card props={card} key={card.id}/>
           })}
         </div>
       </Wrapper>

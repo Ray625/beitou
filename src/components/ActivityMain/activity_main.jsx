@@ -2,30 +2,36 @@ import styles from './activity_main.module.scss';
 import { useState, useEffect, useRef } from 'react';
 import { ImgTitle } from '../Ui/titleGroup';
 import { useDevice } from '../../contexts/DeviceContext';
+import { deviceParams } from '../../utils/const';
 import { activityList } from './activity_main_info';
 import { Container, Wrapper } from '../Ui/container';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 const Card = ({ color, props }) => {
-  const { titleKey, subtitleKey, bodyKey, icon } = props
+  const { titleKey, subtitleKey, timeKey, bodyKey, pointKey, icon } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={`${styles.card} ${pathname === '/en' && styles.cardEn}`}>
       <div className={styles.cardIcon} style={{backgroundColor: color}}>
-        <img src={icon} alt="icon" className={styles.iconImg} loading='lazy'/>
+        <img src={icon} alt="icon" className={styles.iconImg} />
       </div>
       <div className={styles.cardTitle}>
         {t(titleKey)}
         {subtitleKey && <><br />{t(subtitleKey)}</>}
       </div>
       <div className={styles.hr} style={{ backgroundColor: color }}></div>
+      {timeKey && <div className={styles.cardTime}>{parse(t(timeKey))}</div>}
       <div className={styles.cardBody}>
         <div className={styles.cardText}>
-          {t(bodyKey)}
+          {parse(t(bodyKey))}
+          <div className={styles.cardPoint}>
+            {parse(t(pointKey))}
+          </div>
         </div>
       </div>
     </div>
@@ -36,8 +42,8 @@ const ScrollCardList = ({ list, color }) => {
   const [leftBtnDisable, setleftBtnDisable] = useState(true)
   const [rightBtnDisable, setRightBtnDisable] = useState(false)
   const cardRef = useRef(null)
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   // 畫面下方會有5格card超出畫面，做了用按鈕左右滾動的功能，透過checkIfScrolledToEnd偵測是否已滾動至底部，並改變左右按鈕樣式，此功能只有在PC會顯示，小螢幕則直接滑動
   const checkIfscrolledToEnd = () => {
@@ -124,26 +130,24 @@ const ScrollCardList = ({ list, color }) => {
 
 const ActivityBody = ({ activity, props }) => {
   const device = useDevice()
-  const { num, color, titleKey, subtitleKey, icon, dateKey, timeKey, locationKey, describeKey, cardList } = props
+  const { num, color, titleKey, subtitleKey, icon, dateKey, timeKey, locationKey, cardList } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
 
 
   return (
     <div className={`${styles.activityBody} ${num !== activity ? styles.dNone : ''}  `} style={{ color: color }}>
       <div className={styles.bodyTop}>
         <div className={styles.titleGroup} style={{ background: `${color}1A` }}>
-          <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
-          {device === 0 && <h2 className={styles.title}>
+          <img src={icon} alt="icon" className={styles.titleIcon} />
+          {device === deviceParams.mobile && <h2 className={styles.title}>
             {t(titleKey)}
             {subtitleKey && <><br />{t(subtitleKey)}</>}
           </h2>}
-          {device !== 0 && <h2 className={styles.title}>
+          {device !== deviceParams.mobile && <h2 className={styles.title}>
             {t(titleKey)}
             {subtitleKey && <>・{t(subtitleKey)}</>}
           </h2>}
-          <img src={icon} alt="icon" className={styles.titleIcon} loading='lazy'/>
+          <img src={icon} alt="icon" className={styles.titleIcon} />
         </div>
         <div className={styles.infoGroup}>
           <div className={styles.info}>
@@ -159,9 +163,6 @@ const ActivityBody = ({ activity, props }) => {
             {t(locationKey)}
           </div>
         </div>
-        <div className={`${styles.describe} ${pathname ==='/en' && styles.describeEn}`}>
-          {t(describeKey)}
-        </div>
       </div>
       <ScrollCardList list={cardList} color={color}/>
     </div>
@@ -170,8 +171,8 @@ const ActivityBody = ({ activity, props }) => {
 
 const Activity = ({ activity, setActivity }) => {
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <Container className={styles.container}>
@@ -179,7 +180,7 @@ const Activity = ({ activity, setActivity }) => {
       <Wrapper>
         <ImgTitle
           title={t('main.title')}
-          img='/title/title_2.png'
+          img={t('main.titleImg')}
           id='activity'
           />
         <div className={`${styles.activity} ${pathname === '/en' && styles.activityEn}`}>

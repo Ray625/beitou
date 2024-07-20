@@ -35,7 +35,7 @@
   display: flex;
   flex-flow: column;
   gap: 52px;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
   background-image: url('../../../public/bg/bg_6_item_1_m.png');
   background-size: contain;
   background-position: center;
@@ -98,12 +98,16 @@
     height: auto;
     margin-bottom: 24px;
   }
+
+  .prizeGroup {
+    margin-bottom: 52px;
+  }
 }
 
 
 @media screen and (min-width: 991px) {
   .container {
-    padding-bottom: 34px;
+    padding-bottom: 80px;
   }
 
   .wrapper {
@@ -136,7 +140,7 @@
   }
 
   .point {
-    margin-bottom: 64px;
+    margin-bottom: 32px;
   }
 
   .prizeGroup {
@@ -190,6 +194,7 @@
     grid-template-rows: 1fr 1fr;
     row-gap: 52px;
     column-gap: 44px;
+    margin-bottom: 56px;
     background-image: none;
   }
 }

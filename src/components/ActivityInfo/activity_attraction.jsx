@@ -4,6 +4,8 @@ import { Container, Wrapper } from '../Ui/container';
 import { useDevice } from '../../contexts/DeviceContext';
 import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router-dom';
+import { deviceParams } from '../../utils/const';
+import parse from 'html-react-parser';
 
 const cardList = [{
   num: '/number/icon_1.png',
@@ -12,7 +14,8 @@ const cardList = [{
   img: '/attraction/image_1.png',
   subtitleKey: 'attraction.subtitle1',
   subtitleColor: '#109D91',
-  describeKey: 'attraction.describe1'
+  describeKey: 'attraction.describe1',
+  pointKey: 'attraction.point1'
 },{
   num: '/number/icon_2.png',
   alt: '2',
@@ -49,24 +52,28 @@ const cardList = [{
 ]
 
 const Card = ({ props }) => {
-  const { num, alt, titleKey, img, subtitleKey, subtitleColor, describeKey } = props
+  const { num, alt, titleKey, img, subtitleKey, subtitleColor, describeKey, pointKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
+
 
   return (
     <div className={styles.attractionCard}>
-      <img src={num} alt={alt} className={styles.num} loading='lazy'/>
-      <div className={(pathname === '/') ? styles.titleGroup : styles.titleGroupEn}>
+      <div className={(pathname === '/zh') ? styles.titleGroup : styles.titleGroupEn}>
         <h3 className={styles.title}>
-          <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  loading='lazy'/>
+          <img src="/svg/icon_attraction_pin.svg" alt="icon" className={styles.icon}  />
           {t(titleKey)}
         </h3>
       </div>
       <div className={styles.cardBody}>
-        <img src={img} alt={t(titleKey)} className={styles.cardImg} loading='lazy'/>
-        <div className={styles.subtitle} style={{ color: subtitleColor }}>{t(subtitleKey)}</div>
-        <p className={(pathname === '/') ? styles.describe : styles.describeEn}>{t(describeKey)}</p>
+        <img src={num} alt={alt} className={styles.num} />
+        <img src={img} alt={t(titleKey)} className={styles.cardImg} />
+        <div className={styles.subtitle} style={{ color: subtitleColor }}>{parse(t(subtitleKey))}</div>
+        <p className={(pathname === '/zh') ? styles.describe : styles.describeEn}>{t(describeKey)}
+          <div className={styles.cardPoint}>
+            {t(pointKey)}
+          </div>
+        </p>
       </div>
     </div>
   )
@@ -84,12 +91,12 @@ const Attraction = () => {
           imgRight='svg/icon_camera.svg'
           title={t('attraction.title')}
           />
-        {device !== 3 && <div className={styles.attractionGroup}>
+        {device !== deviceParams.pc && <div className={styles.attractionGroup}>
           {cardList.map(card => {
             return <Card props={card} key={card.alt}/>
           })}
         </div>}
-        {device === 3 && <div className={styles.attractionGroup}>
+        {device === deviceParams.pc && <div className={styles.attractionGroup}>
           <div className={styles.leftCardGroup}>
             {cardList.map((card, index) => {
               if (index % 2 === 0)

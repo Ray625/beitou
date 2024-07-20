@@ -8,14 +8,17 @@ import { useLocation } from 'react-router-dom';
 
 // 畫面用trafficList array.map()產生，最後一個自行開車的card，因內容不同就直接寫html。與設計師討論在平板上顯示時讓card都呈現一樣高度
 const trafficList = [{
+  id: 1,
   titleKey: 'traffic.transportation.title1',
   img: '/svg/icon_go_MRT.svg',
   describeKey: 'traffic.transportation.describe1'
-},{
+}, {
+  id: 2,
   titleKey: 'traffic.transportation.title2',
   img: '/svg/icon_go_bus.svg',
   describeKey: 'traffic.transportation.describe2'
-},{
+  }, {
+  id: 3,
   titleKey: 'traffic.transportation.title3',
   img: '/svg/icon_go_taxi.svg',
   describeKey: 'traffic.transportation.describe3'
@@ -24,13 +27,12 @@ const trafficList = [{
 const TrafficCard = ({ props }) => {
   const { img, titleKey, describeKey } = props
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
 
   return (
-    <div className={styles.traffic}>
+    <div className={`${styles.traffic} ${pathname === '/en' && styles.trafficEn}`}>
       <div className={styles.titleGroup}>
-        <img src={img} alt="icon" className={styles.titleIcon} loading='lazy'/>
+        <img src={img} alt="icon" className={styles.titleIcon} />
         <div className={styles.title}>{t(titleKey)}</div>
       </div>
       <p className={`${styles.trafficBody} ${pathname === '/en' && styles.textAlignEn}`}>{t(describeKey)}</p>
@@ -40,8 +42,7 @@ const TrafficCard = ({ props }) => {
 
 const Traffic = () => {
   const { t } = useTranslation()
-  const location = useLocation()
-  const pathname = location.pathname
+  const { pathname } = useLocation()
 
   const handleClick = () => {
     window.open('https://maps.app.goo.gl/4itsuXSkKhw5pRnr8', '_blank');
@@ -54,29 +55,29 @@ const Traffic = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('traffic.title')}
-          img='/title/title_6.png'
+          img={t('traffic.titleImg')}
           id='traffic'
         />
         <Describe describe={t('traffic.describe')}/>
         <div className={styles.trafficGroup}>
-          {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.title} />)}
+          {trafficList.map(traffic => <TrafficCard props={traffic} key={traffic.id} />)}
           <div className={styles.traffic}>
             <div className={styles.titleGroup}>
-              <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} loading='lazy'/>
+              <img src='/svg/icon_go_car.svg' alt="icon" className={styles.titleIcon} />
               <div className={styles.title}>{t('traffic.transportation.title4')}</div>
             </div>
             <div className={`${styles.trafficBody} ${pathname === '/en' && styles.textAlignEn}`}>
               <ul>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" className={styles.link}>{t('traffic.transportation.park1')}</a>
+                  <a href="https://maps.app.goo.gl/eFH3dh7A8zoztT1M8" target='_blank' rel='noopener noreferrer' className={styles.link}>{t('traffic.transportation.park1')}</a>
                   <div className={styles.point}>{t('traffic.transportation.point1')}</div>
                 </li>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" className={styles.link}>{t('traffic.transportation.park2')}</a>
+                  <a href="https://maps.app.goo.gl/if2rZD4SShjN5DLj6" target='_blank' rel='noopener noreferrer' className={styles.link}>{t('traffic.transportation.park2')}</a>
                   <div className={styles.point}>{t('traffic.transportation.point2')}</div>
                 </li>
                 <li className={styles.trafficItem}>
-                  <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" className={styles.link}>{t('traffic.transportation.park3')}</a>
+                  <a href="https://maps.app.goo.gl/bzTBeZvhkh86wSfTA" target='_blank' rel='noopener noreferrer' className={styles.link}>{t('traffic.transportation.park3')}</a>
                   <div className={styles.point}>{t('traffic.transportation.point3')}</div>
                 </li>
               </ul>

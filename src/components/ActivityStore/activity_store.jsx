@@ -19,7 +19,7 @@ const Store = () => {
       <Wrapper className={styles.wrapper}>
         <ImgTitle
           title={t('store.title')}
-          img='/title/title_5.png'
+          img={t('store.titleImg')}
           id='store'
           />
         <TitleGroup
@@ -31,7 +31,7 @@ const Store = () => {
           describe={t('store.describe')}
         />
         <div className={styles.mapWrapper}>
-          <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EeiFxZZvKwfa5wnt7iBPt0tJh6JmlwY&ehbc=2E312F&ll=25.13319859043615, 121.50141742600563&z=15&output=embed&noprof=1" width="640" height="480" className={styles.map} title={t('store.iframeTitle')}></iframe>
+          <iframe sandbox="allow-scripts allow-same-origin" src="https://www.google.com/maps/d/u/0/embed?mid=1EeiFxZZvKwfa5wnt7iBPt0tJh6JmlwY&ehbc=2E312F&ll=25.13319859043615, 121.50141742600563&z=15&output=embed&noprof=1" width="640" height="480" className={styles.map} title={t('store.iframeTitle')}></iframe>
         </div>
         <LinkBtn
           title={t('store.linkBtn')}
