@@ -50,7 +50,7 @@ const KeyVisionBanner = () => {
     }
     if (loadedImages.length === images.length) {
       setTimeout(() => {
-        document.body.style.overflow = 'auto'
+        // document.body.style.overflow = 'auto'
         setIsLoading(false)
       }, 1500)
     }

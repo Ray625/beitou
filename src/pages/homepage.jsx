@@ -1,3 +1,4 @@
+import styles from './homepage.module.scss'
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -16,6 +17,7 @@ import Lottery from '../components/ActivityStore/activity_store_lottery';
 import Traffic from '../components/Traffic/traffic';
 import QA from '../components/QA/QA';
 import Footer from '../components/Footer/footer';
+import Alert from '../components/Ui/alert';
 
 const Homepage = () => {
   const [activity, setActivity] = useState(1)
@@ -60,7 +62,8 @@ const Homepage = () => {
   }
 
   return (
-    <div>
+    <div className={styles.homepage}>
+      <Alert />
       <Header />
       <KeyVisionBanner />
       <Info setActivity={setActivity} />
