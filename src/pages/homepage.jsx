@@ -17,7 +17,7 @@ import Lottery from '../components/ActivityStore/activity_store_lottery';
 import Traffic from '../components/Traffic/traffic';
 import QA from '../components/QA/QA';
 import Footer from '../components/Footer/footer';
-import Alert from '../components/Ui/alert';
+
 
 const Homepage = () => {
   const [activity, setActivity] = useState(1)
@@ -63,7 +63,6 @@ const Homepage = () => {
 
   return (
     <div className={styles.homepage}>
-      <Alert />
       <Header />
       <KeyVisionBanner />
       <Info setActivity={setActivity} />

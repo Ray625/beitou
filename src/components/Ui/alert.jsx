@@ -17,7 +17,7 @@ const Alert = () => {
   }
 
   return (
-    <div className={`${styles.wrapper} ${!alertOpen ? styles.close: ''}`}>
+    <div className={`${styles.wrapper} ${!alertOpen ? styles.close : ''}`}>
       <div className={styles.alertBox}>
         <button className={styles.closeBtn} onClick={handleClose}></button>
         <h3 className={styles.title}>2024北投夏日魔法節 颱風公告</h3>

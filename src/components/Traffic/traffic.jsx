@@ -11,7 +11,8 @@ const trafficList = [{
   id: 1,
   titleKey: 'traffic.transportation.title1',
   img: '/svg/icon_go_MRT.svg',
-  describeKey: 'traffic.transportation.describe1'
+  describeKey: 'traffic.transportation.describe1',
+  pointKey: 'traffic.transportation.cardPoint1'
 }, {
   id: 2,
   titleKey: 'traffic.transportation.title2',
@@ -25,7 +26,7 @@ const trafficList = [{
 }]
 
 const TrafficCard = ({ props }) => {
-  const { img, titleKey, describeKey } = props
+  const { img, titleKey, describeKey, pointKey } = props
   const { t } = useTranslation()
   const { pathname } = useLocation()
 
@@ -36,6 +37,7 @@ const TrafficCard = ({ props }) => {
         <div className={styles.title}>{t(titleKey)}</div>
       </div>
       <p className={`${styles.trafficBody} ${pathname === '/en' && styles.textAlignEn}`}>{t(describeKey)}</p>
+      {pointKey && <p className={styles.cardPoint}>{t(pointKey)}</p>}
     </div>
   )
 }
