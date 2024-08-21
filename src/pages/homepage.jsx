@@ -44,6 +44,20 @@ const Homepage = () => {
     }
   }, [])
 
+  useEffect(() => {
+    const pathParts = location.pathname.split("/");
+    const lng = pathParts[1];
+    const validLngs = ["en", "zh"];
+
+    if (lng.length > 20) {
+      navigate("/zh");
+    }
+
+    if (!validLngs.includes(lng)) {
+      navigate("/zh");
+    }
+  }, [location, navigate]);
+
   // 如果瀏覽器語言是英文會自動將網址列跳轉至en
   useEffect(() => {
     const { language } = i18n
